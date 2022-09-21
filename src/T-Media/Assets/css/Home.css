@@ -1,0 +1,104 @@
+.HeroContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.663), rgba(0, 0, 0, 0.671)),
+    url("../../Assets/img/grand.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.Hero::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 5px;
+  height: 35%;
+  margin-top: 1em;
+  background-color: var(--secondary);
+  left: 7em;
+}
+
+.Hero {
+  margin: auto 0;
+  color: whitesmoke;
+}
+
+.Hero h1 {
+  font-size: 40px;
+  font-weight: 900;
+  width: 80%;
+  text-transform: uppercase;
+  margin: auto auto;
+}
+
+.Hero h2 {
+  /* text-align: left; */
+  width: 50%;
+  margin-left: 8.9rem;
+  margin-top: 1em;
+}
+
+.Hero button {
+  border-radius: 4px;
+  background: none;
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--secondary);
+  outline: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-left: 9rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.Hero button::before {
+  background: #fff;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: -1;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.Hero button:hover::before {
+  height: 500%;
+}
+
+.Hero button:hover {
+  color: var(--darkgrey);
+}
+@media (max-width: 800px) {
+  .Hero h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .Hero h2 {
+    margin: 1em auto 0;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .Hero button {
+    text-align: center;
+    /* transform: translate(-50,-50%); */
+    margin: 1rem auto 1em;
+    display: block;
+  }
+
+  .Hero::before {
+    display: none;
+  }
+}

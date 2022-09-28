@@ -14,8 +14,8 @@
 
 .whatwe {
   margin: 10% 0 0 0;
-  min-width: 70%;
-  min-height: 50%;
+  max-width: 50%;
+  min-height: 90%;
   padding: 5%;
   background: rgba(250, 235, 99, 0.139);
   border-radius: 3px;
@@ -49,6 +49,9 @@
   line-height: 1.5em;
   position: relative;
 }
+.medias{
+  width: 50%;
+}
 
 .medias img {
   position: relative;
@@ -62,11 +65,11 @@
 }
 
 .medias video {
-  width: 35%;
-  border-radius: 50%;
+  width: 30%;
+  border-radius: 60%;
   position: absolute;
   right: 4rem;
-  z-index: 1;
+  z-index: 0;
 }
 
 .blink {

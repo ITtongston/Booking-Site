@@ -20,9 +20,15 @@ const Hero = () => {
         Book Advisory and consultation Sessions with Entrepreneurial Experts
         Today!
       </h2>
-      <button type="button" data-aos="fade-down" data-aos-once="true" className="Herobtn2">
+     <div className="Btncont">
+     <button type="button" data-aos="fade-down" data-aos-once="true" className="Herobtn2">
         See Our Services
       </button>
+      <div className="secondBtn"><button type="button"  data-aos="fade-up" data-aos-once="true"  className="Herobtn2">
+        Book Our Hubs
+      </button>
+      </div>
+     </div>
     </div>
     <Features />
   </div>

@@ -1,8 +1,11 @@
 import Group from '../Assets/consultimg/group.jpg'
+import Cooperate from '../Assets/consultimg/cooperate.jpg'
+import Business from '../Assets/consultimg/Businesses.jpg'
+import Thinking from '../Assets/consultimg/Thinking.jpg'
 
 export const products = [
     {id: '1',
-    img: Group,
+    img: Business,
      prodName: 'Consulting and Business Advisory',
      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
 },
@@ -14,13 +17,13 @@ export const products = [
 },
   
 {id: '3',
-    img: Group,
+    img: Cooperate,
      prodName: 'Adivsory and Consulting: HRM,BD,Finance and IT',
      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
 },
 
 {id: '4',
-    img: Group,
+    img: Thinking,
      prodName: 'TEEC',
      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
 },

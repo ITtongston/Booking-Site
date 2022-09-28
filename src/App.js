@@ -3,7 +3,7 @@ import BookHome from './T-Institute/T-bookin-page/pages/Book-Home'
 import HoldingsHome from './pages/HoldingsHome';
 import Contact from './T-Institute/T-bookin-page/pages/Book-Contact';
 import About from './T-Institute/T-bookin-page/pages/Book-About';
-import InstutesHome from './T-Institute/pages/InstutesHome';
+import InstutesHome from './T-Institute/pages/InstitutesHome';
 import {useEffect, useState} from 'react'
 import HashLoader from "react-spinners/HashLoader";
 

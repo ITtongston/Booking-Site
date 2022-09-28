@@ -4,7 +4,7 @@ import { FaUsers, FaHands, FaGlobeAfrica } from "react-icons/fa";
 
 const Features = () => {
   return (
-    <div className="featurescont">
+    <div data-aos="fade-up" className="featurescont">
       <div className="pointers">
         <div>
           <FaUsers className="featicon1" size={40} />

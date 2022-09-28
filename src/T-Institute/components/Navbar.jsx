@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaStream, FaTimes } from "react-icons/fa";
 import "../Assets/css/Navbar.css";
 import Logo from "../Assets/img/logo.png";
-import CustomLink from "../T-bookin-page/components/CustomLink";
+import CustomLink from "./CustomLink";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
         <CustomLink to="/about">About</CustomLink>
         <CustomLink to="/contact">Contact Us</CustomLink>
         <li className="nav-item book">
-          <Link to="/">Book An Apointment</Link>
+          <Link to="/">Book Our Services</Link>
         </li>
       </ul>
       <div className="hamburger" onClick={hambclickhandler}>

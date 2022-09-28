@@ -5,7 +5,7 @@ const HoldingsHome = () => {
   return (
     <div>
       Welcome to T-Holdings
-      <Link to="/T-Institute/pages/institutes-Home">T-Instutes</Link>
+      <Link to="/T-Institute/pages/institutes-Home"> Go to T-Instutes</Link>
     </div>
   );
 };

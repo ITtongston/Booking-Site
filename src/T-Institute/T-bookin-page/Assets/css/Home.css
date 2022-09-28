@@ -40,7 +40,46 @@
   margin-top: 1em;
 }
 
-.Hero button {
+.Hero .secondBtn button {
+  border-radius: 4px;
+  background: #fff;
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--darkgrey);
+  outline: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-left: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.Hero .secondBtn button::before {
+  background: rgba(98, 2, 2, 0.871);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: -1;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.Hero .secondBtn button:hover::before {
+  height: 500%;
+}
+
+.Hero  .secondBtn button:hover {
+  color: #fff;
+  border: none;
+}
+.Hero  button {
   border-radius: 4px;
   background: none;
   white-space: nowrap;
@@ -71,12 +110,17 @@
   transition: all 0.6s ease;
 }
 
-.Hero button:hover::before {
+.Hero  button:hover::before {
   height: 500%;
 }
 
-.Hero button:hover {
+.Hero  button:hover {
   color: var(--darkgrey);
+}
+
+.Btncont{
+  display: flex;
+  gap: 10px;
 }
 @media (max-width: 800px) {
   .Hero h1 {

@@ -3,6 +3,7 @@ import "../Assets/css/OurOffers.css";
 import Oneon1 from "../Assets/consultimg/1on1.jpg";
 import ProdustsSummary from "./ProdustsSummary";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const OurOffers = ({ products }) => {
@@ -12,12 +13,15 @@ const OurOffers = ({ products }) => {
         <h2>What we offer</h2>
         <div className="conAdvice">
           <div className="offerwrap">
-            <div className="imagecon">
+            <div className="imagecon" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
               <img src={Oneon1} alt="1on1" />
             </div>
             <div className="AdCon">
               <h3>Advisory And Consultations</h3>
-              <p className="consultP">
+              <p className="consultP" data-aos="fade-left"
+     data-aos-offset="100"
+     data-aos-easing="ease-in-sine">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Repellat sed voluptates perspiciatis dolores dolor minus,
                 distinctio nostrum at dolore! Tempora repellendus pariatur
@@ -29,7 +33,7 @@ const OurOffers = ({ products }) => {
                 elit. Reprehenderit dolore quod ipsa culpa.
               </p>
               <div className="span">
-                <a href="/">View our services</a>
+                <Link to="/">View our services</Link>
               </div>
             </div>
           </div>
@@ -47,32 +51,51 @@ const OurOffers = ({ products }) => {
            <div className="moreservices"><a href="/">Explore more <span><FaAngleDoubleRight size={25}/></span></a></div>
           </div>
         </div>
-        <div className="spaces">
-          <h2>Experience Comfort and Productivity At Its Peak</h2>
-          <div className="space1">
-            <h4>Product Title1</h4>
-            <p></p>
+        <div className="Hubs">
+          <h2>Experience workplace Profitabilty with Our Entreprenuerial Hubs and services</h2>
+          <div className="Hub1">
+            <h4>Training and Meeting Rooms</h4>
+            <img src="" alt="" />
             <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Wifi Availability</li>
+              <li>Projector Setup</li>
+              <li>White Board</li>
+              <li>HDMI Cable</li>
+              <li>Constant Power Supply</li>
+              <li>TV screen Setup</li>
             </ol>
             <button>
-              <a href="/">Book Now</a>
+            <Link to="/">Book Now</Link>
             </button>
           </div>
-          <div className="space2">
-            <h4>Product Title2</h4>
-            <p></p>
+          <div className="Hub2">
+            <h4>Your Own Virtual Office</h4>
+            <img src="" alt="" />
             <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Valid for incorporation</li>
+              <li>tax registration</li>
+              <li>With Admin, legal, education, HR, media, data & finance services</li>
             </ol>
             <button>
-              <a href="/">Book Now</a>
+            <Link to="/">Book Now</Link>
+            </button>
+          </div>
+          <div className="Hub3">
+            <h4>Admin, Education, Finance, Media, HR, Data, Legal Services </h4>
+            <img src="" alt="" />
+            <ol>
+              <li>Administrative services through the Executive Admin Den</li>
+              <li>Accounting and Audit Services through the Finance & Accounting Den</li>
+              <li>Accounting and Audit Services</li>
+              <li>Multimedia, branding, digital marketing, events management services
+              </li>
+              <li>Data Analytics training; consulting; data collection and research
+              </li>
+              <li>Recruitment, Talent and Incentive Management, Organizational Structuring and Performance Management services
+              </li>
+            </ol>
+            <button>
+              <Link to="/">Book Now</Link>
             </button>
           </div>
         </div>

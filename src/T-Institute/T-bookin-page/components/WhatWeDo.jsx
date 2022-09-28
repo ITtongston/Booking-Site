@@ -6,7 +6,8 @@ import infograph from "../Assets/vid/infograph15.mp4";
 const WhatWeDo = () => {
   return (
     <div className="whatweCont">
-      <div className="whatwe">
+      <div className="whatwe" data-aos="fade-up"
+     data-aos-duration="2000">
       <h2>
           What We Stand For <span className="blink">__</span>?
       </h2>

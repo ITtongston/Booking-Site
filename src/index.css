@@ -7,7 +7,6 @@
 }
 
 :root {
-  --primary: #6948ff;
   --secondary: rgba(239, 214, 77, 0.523);
   --darkgrey: #22262a;
   --lightgrey: #d3d3d3;
@@ -21,15 +20,10 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 body {
-  color: #333;
+  color:black;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
-}
-
-.primary-color {
-  color: var(--primary);
 }

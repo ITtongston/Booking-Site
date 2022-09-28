@@ -1,6 +1,7 @@
 import React from "react";
 import "../Assets/css/OurOffers.css";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProdustsSummary = ({ img, info, prodName }) => {
   return (
@@ -10,9 +11,9 @@ const ProdustsSummary = ({ img, info, prodName }) => {
           <h4>{prodName} </h4>
           <p>{info}</p>
           <div className="span">
-            <a href="/">
+            <Link to="/">
               Learn more <FaArrowRight id="hidden" />
-            </a>
+            </Link>
           </div>
         </div>
     </div>

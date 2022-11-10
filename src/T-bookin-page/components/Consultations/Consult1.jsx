@@ -103,7 +103,7 @@ const Consult1 = () => {
               textDecoration: "none",
             }}
           >
-            CBA
+            MEDIA
           </Typography>
         </BgBox>
         <img src={Business} alt="" />
@@ -111,7 +111,7 @@ const Consult1 = () => {
 
       <Box sx={{ px: 5, pt: 6 }}>
         <Typography variant="h6" sx={{ fontSize: "25px", fontWeight: "bold" }}>
-          Consulting And Advisory Board
+        Multimedia and Branding
         </Typography>
         <Typography component="p" sx={{width: "60%", fontSize: "16px", letterSpacing: "2px", mt: 3}}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae

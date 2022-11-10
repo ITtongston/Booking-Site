@@ -5,7 +5,7 @@ const AnimatedText = () => {
     return (
         <TextAnimation.Slide 
         target="services" 
-        text={['Entreprenuerial experts','Real-time Professionals','and Work-place Comfort']} 
+        text={['Entreprenuerial experts','Real-time Professionals','Work-place Comfort']} 
         cname="textAnimation"
         id="textAnimation__slide"
         animation={{

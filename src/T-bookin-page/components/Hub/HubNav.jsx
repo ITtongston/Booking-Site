@@ -73,19 +73,19 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '90%', my: '7em' }}>
-        <Typography variant="h5" sx={{fontWeight: 'bold', fontSize: '25px'}}>Workplace Profitabilty with Our Entreprenuerial Hubs and services</Typography>
+    <Box sx={{ width: '90%', my: '7em', mx: "5em"}}>
+        <Typography variant="h5" sx={{fontWeight: 'bold', fontSize: '30px',mb: '2em', color: "#373434"}}>Workplace Profitabilty with Our Entreprenuerial Hubs</Typography>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', my: '1em' }}>
         <StyledTabs value={value} onChange={handleChange} textColor="inherit"
   indicatorColor="Secondary" sx={{color: 'black'}}
-  centered variant="scrollable"
+   variant="scrollable"
   scrollButtons="auto">
           <Tab label="Training Rooms" {...a11yProps(0)} />
           <Tab label="Virtual Office" {...a11yProps(1)} />
           <Tab label="Co-WorkingSpace" {...a11yProps(2)} />
           <Tab label="Meeting Room" {...a11yProps(3)} />
-          <Tab label="Media,Finance,Admin,HR,Data and Legal Services" {...a11yProps(4)} />
-          <Tab label="Programmers Den" {...a11yProps(5)} />
+          {/* <Tab label="Media,Finance,Admin,HR,Data and Legal Services" {...a11yProps(4)} />
+          <Tab label="Programmers Den" {...a11yProps(5)} /> */}
         </StyledTabs>
       </Box>
       <TabPanel value={value} index={0}>

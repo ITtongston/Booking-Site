@@ -42,6 +42,7 @@ const VirtualOffice = () => {
   return (
     <ContainerBox className="Hub1">
       <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 3, width: 400, mb: '10%'}}>
+        <Typography sx={{color: "#0C0145"}}> Your Office with a Difference</Typography>
         <Typography variant="h6" sx={{fontWeight: 'bold'}}>Virtual Office</Typography>
         <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aliquam accusamus quasi quam, animi voluptate modi at quas repellendus explicabo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, ea omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas sint et suscipit incidunt cupiditate.</Typography>
         <Button sx={{fontSize: 12, fontWeight: 400, textDecoration: 'underline', color: '#FFEB3B'}}>Learn More</Button>

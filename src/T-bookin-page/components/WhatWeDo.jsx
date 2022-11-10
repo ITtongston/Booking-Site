@@ -11,8 +11,7 @@ const WhatWeDo = () => {
           What We Stand For <span className="blink">__</span>?
       </h2>
         <p className="biggerp">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-          repellendus corrupti vitae odio ratione sunt officia
+         We bridge the gap between Value-oriented Work-Spaces and Entrepreneurial Services for your Business and Brand  
         </p>
         <p className="smallerp">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique

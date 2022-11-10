@@ -46,10 +46,10 @@ const BookingForm = () => {
   const Submithandler = () => {}
 
   return (
-    <div style={{display: "flex", alignItems: 'center', justifyContent: 'center', flexDirection: "column", backgroundColor: "#FFF9B9", opacity: 0.5}}>
-      <form style={{width: "30%", marginTop: "4%" }} onSubmit={Submithandler}>
+    <div style={{display: "flex", alignItems: 'center', justifyContent: 'center', backgroundColor: "#FFF9B9", opacity: 0.5, }}>
+      <form style={{width: "30%", margin: "4%" , border: '2px solid black', borderRadius: "10px", padding: "2em"}} onSubmit={Submithandler}>
       <h6 style={{ fontSize: "25px", textAlign: "center", opacity: "0.5"}}>
-        Personal Information
+        Service Details
       </h6>
         
         {Inputs.map((input) => (
@@ -62,8 +62,6 @@ const BookingForm = () => {
         ))}
         <button type="submit" style={{padding: "10px", borderRadius: "15px", width: "20%"}}>Submit</button>
       </form>
-
-      <Calendly ></Calendly>
     </div>
   );
 };

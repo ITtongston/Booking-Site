@@ -33,7 +33,7 @@ const CardBox3 = () => {
         </List>
       </CardContent>
       <CardActions>
-        <Button sx={{color: "#862828", fontWeight: 'bold'}} size="small" variant='text' component={Link} to='/'>Buy Your Plan</Button>
+        <Button sx={{color: "#862828", fontWeight: 'bold'}} size="small" variant='text' component={Link} to='/'>View Our Plans</Button>
       </CardActions>
     </Card>
   );

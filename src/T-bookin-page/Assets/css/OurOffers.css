@@ -24,7 +24,7 @@ position: relative;
     align-items: center;
     justify-content: center;
     gap: 8rem;
-    margin-top: 2em;
+    margin-bottom: 4em;
 }
 
 .imagecon > img{
@@ -70,10 +70,11 @@ position: relative;
     background: linear-gradient(rgb(198, 5, 5), rgba(122, 27, 27, 0.835));
     margin-left: 45%;
     margin-top: 4em;
-    
+    color: white;
     border-radius: 4em;
-    padding: 15px 20px;
+    padding: 10px 15px;
     transition: all 0.5s ease;
+    font-size: 14px;
     
  }
 
@@ -189,8 +190,10 @@ visibility: visible;
  }
 
  .productListcon .prodlist h4{
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
  }
 
  .moreservices {

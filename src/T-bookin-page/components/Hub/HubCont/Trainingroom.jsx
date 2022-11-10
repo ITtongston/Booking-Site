@@ -46,8 +46,8 @@ const Trainingroom = () => {
         <Button sx={{fontSize: 12, fontWeight: 400, textDecoration: 'underline', color: '#FFEB3B'}}>Learn More</Button>
       </Box>
       
-      <Divider sx={{ml: 4}}orientation="vertical" variant="middle" flexItem />
-      <BoxFeatures>
+      <Divider sx={{py: 7}} orientation="vertical" variant="middle" />
+      <BoxFeatures> 
         <div data-aos="fade-up" data-aos-duration="900"><CardBox1/></div>
         <img src={MeetImg} alt="" className="img"/>
       </BoxFeatures>

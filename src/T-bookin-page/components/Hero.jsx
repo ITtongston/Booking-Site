@@ -1,7 +1,7 @@
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import "../Assets/css/Home.css";
+import "../Assets/css/Hero.css";
 import Features from "../components/Features";
 import AnimatedText from './Animations/AnimatedText';
 
@@ -18,8 +18,7 @@ const Hero = () => {
         <AnimatedText/>
       </h1>
       <h2 data-aos="fade-up">
-        Book Advisory and consultation Sessions with Us
-        Today!
+       Esteemed Experience at Your Finger Tips
       </h2>
      <div className="Btncont">
       <div className="secondBtn">

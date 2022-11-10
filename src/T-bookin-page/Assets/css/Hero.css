@@ -39,7 +39,10 @@
 .Hero h2 {
   width: 50%;
   margin-left: 5%;
-  margin-top: 1em;
+  margin-top: 1em ;
+  font-size: 25px;
+  padding: 10px 0 ;
+  width: 60%;
 }
 
 .Hero .secondBtn .white button {

@@ -1,12 +1,13 @@
 import {Route, Routes} from 'react-router-dom';
-import BookHome from'./T-bookin-page/pages/Book-Home';
-import Contact from './T-bookin-page/pages/Book-Contact';
-import About from './T-bookin-page/pages/Book-About';
+import BookHome from'./E-Hub/pages/Book-Home';
+import Contact from './E-Hub/pages/Book-Contact';
+import About from './E-Hub/pages/Book-About';
 import {useEffect, useState} from 'react'
 import HashLoader from "react-spinners/HashLoader";
-import TrainingFlow from './T-bookin-page/pages/TrainingRoom/TrainingFlow';
-import Consult1 from './T-bookin-page/components/Consultations/Consult1';
-import BookingForm from './T-bookin-page/components/Consultations/Form/BookingForm';
+import TrainingFlow from './E-Hub/pages/TrainingRoom/TrainingFlow';
+import Media from './E-Hub/components/Consultations/Media/Media';
+import BookingForm from './E-Hub/components/Consultations/Form/BookingForm';
+import NavBar from './E-Hub/components/Navbar'
 
 const override = {
   position: "absolute",
@@ -35,13 +36,13 @@ function App() {
       <HashLoader color={'#D0021B'} loading={spinner} cssOverride={override}  size={50} />
      : 
     <div>
-    {/* <Navbar/> */}
+    <NavBar/>
     <Routes>
       <Route path="/" element= {<BookHome />} />
       <Route path="/contact" element= {<Contact />} />
       <Route path="/about" element= {<About/>} />
       <Route path="/trainingflow" element= {<TrainingFlow/>} />
-      <Route path="/cba" element= {<Consult1/>} />
+      <Route path="/media" element= {<Media/>} />
       <Route path="/bookform" element= {<BookingForm/>} />
     </Routes>
     </div>

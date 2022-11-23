@@ -1,0 +1,186 @@
+.HeroContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.663), rgba(0, 0, 0, 0.507)),
+    url("../../Assets/img/grand.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.Hero::before {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 5px;
+  height: 35%;
+  margin-top: 1em;
+  background-color: var(--secondary);
+  left: 5em;
+
+}
+
+.Hero {
+  margin: auto 0;
+  color: whitesmoke;
+}
+
+.Hero h1{
+  font-size: 30px;
+  font-weight: 900;
+  width: 100%;
+  text-transform: uppercase;
+  margin: auto auto auto 3%;
+  /* border: 2px solid red; */
+  
+}
+
+.Hero h2 {
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 1em ;
+  font-size: 25px;
+  padding: 10px 0 ;
+  width: 60%;
+}
+
+.Hero .secondBtn .white button {
+  border-radius: 4px;
+  background: #fff;
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--darkgrey);
+  outline: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-left: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.Hero .secondBtn .white button::before {
+  background: rgba(98, 2, 2, 0.871);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: -1;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.Hero .secondBtn .white button:hover::before {
+  height: 500%;
+}
+
+.Hero  .secondBtn .white button:hover {
+  color: #fff;
+  border: none;
+}
+
+.Hero .secondBtn .transp button {
+  border-radius: 4px;
+  background: none;
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--secondary);
+  outline: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-left: 9rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.Hero .secondBtn .transp button::before {
+  background: #fff;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: -1;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.Hero .secondBtn .transp button:hover::before {
+  height: 500%;
+}
+
+.Hero  .secondBtn .transp button:hover {
+  color: var(--darkgrey);
+}
+
+.Hero .Btncont{
+  display: flex;
+  align-items: center;
+  /* border: solid red 1px; */
+}
+.Hero .Btncont .secondBtn{
+  padding-left: 0;
+  /* border: solid red 5px; */
+  margin-left: -10%;
+}
+
+
+@media (max-width: 800px) {
+  .Hero h1 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin: 1em auto 0;
+    width: 80%;
+  }
+
+  .Hero h2 {
+    margin: 1em auto 0;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .Hero  .Btncont .secondBtn  button {
+    padding: 5px 5px;
+    margin: 0 auto;
+  }
+  
+  .Hero::before {
+    display: none;
+  }
+
+  .Hero .secondBtn .transp button {
+    margin-left: none;
+  }
+
+  .Hero .Btncont{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  }
+
+  .Hero  .Btncont .secondBtn  {
+    display: flex;
+    gap: 1.5em;
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .Hero h1{
+    width: 70%;
+  }
+}

@@ -1,0 +1,374 @@
+.cont {
+    padding-left: 3%;
+    margin-top: 10em;
+}
+.cont > h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+position: relative;
+}
+
+.cont > h2::before{
+    position: absolute;
+        width: 10%;
+        height: 2px;
+        content: '';
+        top: 100%;
+        border-radius: 2px;
+        background-color:  rgba(239, 27, 3, 0.672);
+}
+
+.offerwrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    margin-bottom: 4em;
+}
+
+.imagecon > img{
+    border-radius: 5px;
+   
+   
+}
+
+.conAdvice{
+    padding: 5% 2% 2%;
+}
+
+.conAdvice .consultP{
+    padding-top: 1em;
+    width: 90%;
+    text-align: right;
+    font-size: 15px;
+}
+
+.conAdvice h3{
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 0.7em;
+    width: 100%;
+}
+
+.conAdvice h3::before{
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    content: '';
+    top: 100%;
+    border-radius: 2px;
+    background-color:  rgba(239, 27, 3, 0.672);
+}
+
+.AdCon .span{
+    margin-top: 2rem;
+}
+
+ .AdCon .span a {
+    background: linear-gradient(rgb(198, 5, 5), rgba(122, 27, 27, 0.835));
+    margin-left: 45%;
+    margin-top: 4em;
+    color: white;
+    border-radius: 4em;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+    font-size: 14px;
+    
+ }
+
+ .AdCon .span a:hover{
+    background: linear-gradient(rgb(233, 116, 116), rgba(122, 27, 27, 0.835)); 
+
+ }
+
+.classh4 h4{
+padding: 4% 2%;
+font-size: 18px;
+color: rgba(0, 0, 0, 0.801);
+position: relative;
+letter-spacing: 2px;
+}
+
+.classh4 h4::before{
+    position: absolute;
+    width: 6%;
+    height: 1.5em;
+    content: '';
+    z-index: -1;
+    border-radius: 2px;
+    background-color: rgba(239, 207, 3, 0.601);
+}
+
+ .adconList {
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(244, 244, 244, 0.218);
+    margin: 0 2%;
+    padding: 3% 3%;
+    border: solid rgba(0, 0, 0, 0.264) 1px;
+    max-width: 100%;
+ }
+
+ .adcontent{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+
+ .productListcon .prodlist {
+    position: relative;
+    list-style: none;
+    min-width: 30%;
+    min-height: 200px;
+    border-radius: 5px;
+    background-color: rgba(244, 244, 244, 0.25);
+    padding-bottom: 1em;
+    margin: 0 auto;
+    transition: transform 0.4s ease;
+ }
+
+ .productListcon .prodlist:hover {
+    border: 0.3px solid rgba(244, 244, 244, 0.25);
+    border-radius: 2px;
+    transform: scale(1.05);
+    box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.163);
+ }
+ .productListcon .prodlist img{
+    position: relative;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    
+ }
+
+ .productListcon .prodlist p{
+    padding: 2%;
+    position: relative;
+    font-size: 14px;
+ }
+
+ .productListcon .prodlist .span{
+    margin-top: 0.3em;
+    
+ }
+
+ .productListcon .span a{  
+    background: linear-gradient(rgba(149, 7, 7, 0.805), rgba(122, 27, 27, 0.731));
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    border-radius: 3px;
+    padding: 7px 7px;
+    transition: all 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: white;
+ }
+
+ .productListcon .prodlist .span a:hover{
+    background: linear-gradient(rgba(157, 101, 101, 0.805), rgba(122, 27, 27, 0.731));
+    gap: 9px;
+ }
+
+ .productListcon .prodlist .span a #hidden{
+visibility: hidden;
+ }
+
+ .productListcon .prodlist .span a:hover #hidden{
+visibility: visible;
+ }
+
+ .productListcon .prodlist h4{
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+ }
+
+ .moreservices {
+    padding: 2%;
+ }
+  .moreservices a{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.682);
+    padding: 1em 0 0 0;
+    transition: all 0.1s ease;
+ }
+
+ .moreservices a > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    animation: DoubleArrow 1s linear infinite;
+ }
+
+ .moreservices a:hover{
+color: black;
+ }
+
+
+ 
+@keyframes DoubleArrow {
+    0% {
+      opacity: 1;
+    }
+  
+    40% {
+      opacity: 0.5
+    }
+  
+    75% {
+      opacity: 0.7;
+    }
+
+    100%{
+        opacity: 1;
+
+    }
+}
+
+
+@media (max-width: 1034px) {
+    .adcontent{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3em;
+     }
+
+     .adconList{
+        padding: 7%;
+     }
+
+     .cont > h2::before{
+        position: absolute;
+        width: 20%;
+        height: 2px;
+        content: '';
+        top: 100%;
+        border-radius: 2px;
+        background-color:  rgba(239, 27, 3, 0.672);
+}
+
+.offerwrap{
+    display: flex;
+   flex-direction: column;
+    gap: 5rem;
+    margin-top: 2em;
+}
+
+.imagecon > img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.conAdvice .consultP{
+    width: 70%;
+    margin: 2% auto 4%;
+}
+
+.conAdvice h3{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 24px;
+    
+}
+
+}
+
+  
+
+
+  
+@media (max-width: 900px) {
+    .adcontent{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        max-width: 70%;
+        margin: 0 auto; 
+        align-items: center;
+        justify-content: center;
+     }
+     .adconList{
+        padding: 6% 2% 6% ;
+        margin: 6% 2%;
+     }
+
+
+     .classh4 h4{
+        margin: 15% 0 1%;
+     }
+     .classh4 h4::before{
+        width: 10%;
+     }
+
+     .offerwrap{
+        display: flex;
+       flex-direction: column;
+        gap: 5rem;
+        margin-top: 2em;
+    }
+    .cont > h2{
+        margin-top: 5em;
+        font-size: 25px;
+        
+    }
+
+    .cont > h2::before{
+        position: absolute;
+        width: 20%;
+        height: 2px;
+        content: '';
+        top: 100%;
+        border-radius: 2px;
+        background-color:  rgba(239, 27, 3, 0.672);
+    }
+.Adcon{
+ padding: 2%;
+ margin: 3%;
+}
+    .imagecon > img{
+        border-radius: 5px;
+       width: 90%;
+       display: block;
+       margin: 0 auto;
+    }
+
+    
+    .conAdvice h3{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 20px;
+        
+    }
+
+    .conAdvice .consultP{
+        text-align: justify;
+        margin: 2% auto 4%;
+        
+    }
+
+    .AdCon .span a{
+        padding: 10px 10px;
+    }
+    
+}
+
+  

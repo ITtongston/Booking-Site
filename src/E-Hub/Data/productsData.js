@@ -13,32 +13,22 @@ export const products = [
 
 {id: '2',
     img: Group,
-     prodName: 'Admin,HR And Legal Consulting',
+     prodName: 'Admin and HR',
      info: 'Lorepsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
      DetailsLink: '/'
 },
   
 {id: '3',
     img: Cooperate,
-     prodName: 'Media',
+     prodName: 'Data and Research',
      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
-     DetailsLink: '/media'
+     DetailsLink: '/'
 },
 
 {id: '4',
     img: Thinking,
-     prodName: 'Entrepreneurial Education',
+     prodName: 'Legal services',
      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
      DetailsLink: '/'
-},
-// {id: '5',
-//     img: Group,
-//      prodName: 'Entreprenuer Consulting Thinking',
-//      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
-// },
-// {id: '6',
-//     img: Group,
-//      prodName: 'Adivsory and Consulting: HRM, BD,FINANCE and IT',
-//      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
-// },
+}
 ]

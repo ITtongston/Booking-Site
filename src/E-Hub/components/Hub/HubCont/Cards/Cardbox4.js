@@ -6,25 +6,24 @@ import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { Box } from "@mui/system";
-import { Typography,ListItemText,ListItemIcon } from "@mui/material";
-import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
+import { ListItemIcon, ListItemText, Typography } from "@mui/material";
+import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-
 const Adons = [
   {
     id: 1,
-    adon: 'Projector & WhiteBoard'
+    adon: 'Wi-Fi'
   },
   {
     id: 2,
-    adon: "Wi-Fi",
+    adon: "Projector & WhiteBoard",
   },
   {
     id: 3,
-    adon: "Equipped Pantry & Green Relaxation Lounge",
+    adon: "Free Parking & Public Transport Nearby",
   },
   {
     id: 4,
@@ -32,23 +31,49 @@ const Adons = [
   },
   {
     id: 5,
-    adon: "Free Parking & Public Transport Nearby",
+    adon: "Equipped Pantry & Green Relaxation Lounge",
   },
   {
     id: 6,
     adon: "Access to Entrepreneurial Content through blogs & newsletters",
   },
-]
 
-const CardBox2 = () => {
+//   Equipped Pantry
+// Access Green Relaxation Lounge
+// Nearby Food Facilities
+
+// Access Entrepreneurial Thinkers Network
+// Access Entrepreneurial Content through blogs & newsletters
+// Access Tongston's entrepreneurial products & services
+
+  {
+    id: 7,
+    adon: "Access Tongston's entrepreneurial products & services ",
+  },
+  {
+    id: 8,
+    adon: "Nearby Food Facilities",
+  },
+  // {
+  //   id: 9,
+  //   adon: "Lor",
+  // },
+  // {
+  //   id: 10,
+  //   adon: "Lor",
+  // },
+];
+
+const CardBox4 = () => {
   return (
-    <Card sx={{ minWidth: { sm: 250, xs: 200 }, ml: { sm: 6, xs: "0 auto" } }}>
+    <Card sx={{ minWidth: { sm: 300, xs: 200 }, ml: { sm: 6, xs: "0 auto" } }}>
       <CardContent>
-        <DashboardCustomizeIcon sx={{ fontSize: 40, ml: 5 }} />
+        <AssuredWorkloadIcon sx={{ fontSize: 40, ml: 5 }} />
         <Divider sx={{}} variant="middle" flexItem />
         <Box sx={{ mt: 3 }}>
-          <Typography sx={{ fontSize: "14px" , minWidth: {sm: '100%'}}}>
-          
+          <Typography
+            sx={{ fontSize: "14px", minWidth: { xs: 300, sm: "100%" } }}
+          >
             <span>NGN6,000 per User/hr</span> <br />
             <span>NGN22,000 per User/day</span> <br />
             NGN20,000 per User/month
@@ -56,7 +81,7 @@ const CardBox2 = () => {
         </Box>
 
         <List sx={{ backgroundColor: "#ffffe6", borderRadius: "5px", mt: 3 }}>
-        {Adons.map((item) => (
+          {Adons.map((item) => (
             <ListItem key={item.id} disablePadding={true}>
               <ListItemIcon><CheckCircleIcon fontSize='small'/></ListItemIcon>
               <ListItemText>{item.adon}</ListItemText>
@@ -79,5 +104,4 @@ const CardBox2 = () => {
   );
 };
 
-export default CardBox2;
-
+export default CardBox4;

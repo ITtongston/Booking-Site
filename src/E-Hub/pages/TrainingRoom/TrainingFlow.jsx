@@ -1,10 +1,11 @@
-import * as React from "react";
+import React, {useState} from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Typography from "@mui/material/Typography";
+import Details from "./TrainingRoomForm";
 
 const steps = [
   "Fill In Your Details",
@@ -13,83 +14,55 @@ const steps = [
 ];
 
 export default function TrainingFlow() {
-  const [activeStep, setActiveStep] = React.useState(2);
-  const [skipped, setSkipped] = React.useState(new Set());
-
-  const isStepOptional = (step) => {
-    return step === 1;
-  };
-
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
-  };
-
+  const [activeStep, setActiveStep] = useState(0);
+ 
   const handleNext = () => {
-    // let newSkipped = skipped;
-    // if (isStepSkipped(activeStep)) {
-    //   newSkipped = new Set(newSkipped.values());
-    //   newSkipped.delete(activeStep);
-    // }
-
+   
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    // setSkipped(newSkipped);
+  
   };
 
-  //   setInterval(()=>(setActiveStep((prevActiveStep) => prevActiveStep + 1)
-  //   ), 3000);
+    // setInterval(()=>(setActiveStep((prevActiveStep) => prevActiveStep + 1)
+    // ), 3000);
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  //   prevent users from skipping
+ const nextHandler = ()=>{
+  setActiveStep((prevActiveStep) => prevActiveStep + 1);
+ }
+  
+  let flowContent;
 
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
-
-  const flowContent = () => {
     if (activeStep === 0) {
-      return "First";
-    } else if (activeStep === 1) {
-      return " Hi";
-    } else if (activeStep === 2) {
-      return " third";
+      flowContent = <Details  onNext={nextHandler}/>;
+      
+    } 
+    console.log(activeStep); 
+
+    if (activeStep === 1) {
+     flowContent = 'Second';
     }
-  };
+
+    if (activeStep === 2) {
+      flowContent = 'Third';
+    }
+  
 
   return (
     <Box sx={{ width: "90%", px: 6, pt: 5 }}>
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
-          const stepProps = {};
-          const labelProps = {};
-          if (isStepOptional(index)) {
-            labelProps.optional = <Typography variant="caption"></Typography>;
-          }
-          if (isStepSkipped(index)) {
-            stepProps.completed = false;
-          }
           return (
-            <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
+            <Step key={label}>
+              <StepLabel>{label}</StepLabel>
             </Step>
           );
         })}
       </Stepper>
       <React.Fragment>
-        <Typography sx={{ mt: 2, mb: 1 }}>{flowContent()}</Typography>
+        <Typography sx={{ mt: 6, mb: 1 }}>{flowContent}</Typography>
       </React.Fragment>
 
       {activeStep === 3 ? (

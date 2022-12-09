@@ -4,9 +4,10 @@ import { styled } from "@mui/material/styles";
 import { Button } from "@mui/material";
 
 
-const BookBtn = styled(Button)`
+export const BookBtn = styled(Button)`
     outline: none;
     transition: 0.3s all linear;
+    
     &:hover {
       background-color: #970b04;
       color: white;

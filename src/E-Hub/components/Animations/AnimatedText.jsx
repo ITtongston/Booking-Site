@@ -1,11 +1,12 @@
 import TextAnimation from "react-text-animations";
+import './slide.css'
 
 
 const AnimatedText = () => {
     return (
         <TextAnimation.Slide 
         target="services" 
-        text={['Entreprenuerial experts','Real-time Professionals','WorkSpace Comfort']} 
+        text={['Entrepreneurial workspaces','Entrepreneurial enterprise','Entrepreneurial media','Entrepreneurial education']} 
         cname="textAnimation"
         id="textAnimation__slide"
         animation={{

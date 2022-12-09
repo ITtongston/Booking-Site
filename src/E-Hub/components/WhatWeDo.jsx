@@ -1,4 +1,5 @@
 import React from "react";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import "../Assets/css/WhatWeDo.css";
 import Picture from '../Assets/img/Picture.png'
 const WhatWeDo = () => {
@@ -13,13 +14,11 @@ const WhatWeDo = () => {
          We bridge the gap between Value-oriented Work-Spaces and Entrepreneurial Services for your Business and Brand  
         </p>
         <p className="smallerp">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-          odio accusantium velit officia laborum, autem quod repudiandae aut eos
-          deleniti fugiat excepturi suscipit atque perspiciatis dicta voluptas
-          doloribus libero. Sunt.
+        Tongston Entrepreneurial Hub offers world-class award-winning services that make you or your business more valuable, influential and profitable, whichever industry you are in, wherever you are in the world. Tongston is a frequently profiled multi-award-winning global education, media, finance and enterprise/business brand.
         </p>
       </div>
       <div className="medias">
+        <div className="speech"><FaQuoteLeft size={20}/><p style={{fontSize: '16px', fontWeight: 600, color: 'rgba(15, 15, 18, 0.95)'}}>More than a platform to meet, work, learn, network & access Tongston’s world-class entrepreneurial Education, Media, Finance, Legal, Technology, HR, Data, Research & Admin services.</p><FaQuoteRight size={20}style={{color: 'red', float: 'right', marginBottom: '2rem', marginRight: '3rem'}}/></div>
         <img className="img1" src={Picture} alt="female"/>
       </div>
     </div>

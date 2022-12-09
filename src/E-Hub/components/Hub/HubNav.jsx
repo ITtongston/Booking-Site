@@ -1,35 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
-import Trainingroom from './HubCont/Trainingroom';
-import CoworkSpace from './HubCont/Coworkspace';
-import VirtualOffice from './HubCont/VirtualOffice';
-
+import React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import { styled } from "@mui/material/styles";
+import Trainingroom from "./HubCont/Trainingroom";
+import CoworkSpace from "./HubCont/Coworkspace";
+import VirtualOffice from "./HubCont/VirtualOffice";
+import MeetingRoom from './HubCont/MeetingRoom';
 
 const StyledTabs = styled(Tabs)`
-
-  & .MuiTab-textColorInherit{
+  & .MuiTab-textColorInherit {
     color: rgb(26, 26, 26);
     font-size: 1rem;
     font-weight: 600;
   }
 
-  & .MuiTab-textColorInherit:hover{
+  & .MuiTab-textColorInherit:hover {
     color: black;
   }
 
-  & .MuiTabs-indicator{
+  & .MuiTabs-indicator {
     color: rgb(26, 26, 26);
-background-color: rgb(179, 36, 0);
-height: 4px;
-border-radius: 2px;
+    background-color: rgb(179, 36, 0);
+    height: 4px;
+    border-radius: 2px;
   }
-
- 
 `;
 
 function TabPanel(props) {
@@ -42,6 +39,7 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      sx={{my: 10}}
     >
       {value === index && (
         <Box>
@@ -61,7 +59,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -73,30 +71,53 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '90%', my: '7em', mx: "4em"}}>
-        <Typography variant="h5" sx={{fontWeight: 'bold', fontSize: '30px',mb: '2em', color: "#373434"}}>WorkSpace Profitabilty with Our Entreprenuerial Hubs</Typography>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', my: '1em' }}>
-        <StyledTabs value={value} onChange={handleChange} textColor="inherit"
-  indicatorColor="Secondary" sx={{color: 'black'}}
-   variant="scrollable"
-  scrollButtons="auto">
-          <Tab label="Training Rooms" {...a11yProps(0)} />
-          <Tab label="Virtual Office" {...a11yProps(1)} />
-          <Tab label="Co-WorkingSpace" {...a11yProps(2)} />
-          <Tab label="Meeting Room" {...a11yProps(3)} />
-          {/* <Tab label="Media,Finance,Admin,HR,Data and Legal Services" {...a11yProps(4)} />
+    <Box sx={{ width: "90%", my: "7em" , margin: '0 auto'}}>
+      <Box >
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            fontSize: "30px",
+            mb: "2em",
+            color: "#373434",
+          }}
+        >
+          WorkSpace Profitabilty with Our Entreprenuerial Hubs
+        </Typography>
+        <Box sx={{ borderBottom: 1, borderColor: "divider", my: "1em" }}>
+          <StyledTabs
+            value={value}
+            onChange={handleChange}
+            textColor="inherit"
+            indicatorColor="Secondary"
+            sx={{ color: "black",textAlign: "center" }}
+            centered
+            variant="scrollable"
+            allowScrollButtonsMobile
+           
+          >
+            <Tab label="Training Rooms" {...a11yProps(0)} />
+            <Tab label="Virtual Office" {...a11yProps(1)} />
+            <Tab label="Co-WorkingSpace" {...a11yProps(2)} />
+            <Tab label="Meeting Room" {...a11yProps(3)} />
+            {/* <Tab label="Media,Finance,Admin,HR,Data and Legal Services" {...a11yProps(4)} />
           <Tab label="Programmers Den" {...a11yProps(5)} /> */}
-        </StyledTabs>
+          </StyledTabs>
+        </Box>
+        <TabPanel value={value} index={0}>
+          <Trainingroom />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <VirtualOffice />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <CoworkSpace />
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <MeetingRoom />
+        </TabPanel>
       </Box>
-      <TabPanel value={value} index={0}>
-        <Trainingroom/>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-      <VirtualOffice/>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-      <CoworkSpace/>
-      </TabPanel>
     </Box>
   );
 }

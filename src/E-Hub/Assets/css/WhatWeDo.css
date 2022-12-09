@@ -4,10 +4,11 @@
   background-position-x: 150%;
   height: 100%;
   width: 100%;
-  padding: 10% 4%;
+  padding: 10% 3%;
   display: flex;
   gap: 10em;
-  margin: 0 0 5% 0;
+  justify-content: space-between;
+  margin: 0 0 3% 0;
 }
 
 .whatwe {
@@ -30,7 +31,7 @@
 }
 
 .whatwe .smallerp {
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 10px;
   width: 90%;
   position: relative;
@@ -45,19 +46,27 @@
   text-transform: uppercase;
 }
 .medias{
-  max-width: 60%;
+  max-width: 75%;
   display: flex;
   align-items: center;
   position: relative;
   margin-top: 5em;
+  /* border: 2px solid red; */
   
 }
 
 .medias .img1 {
   position: relative ;
-  top: 11%;
+  top: 5%;
   left: 19%;
-  max-width: 85%;
+  max-width: 75%;
+  
+}
+
+.medias .speech{
+  position: absolute;
+  width: 35%;
+  
 }
 
 .blink {
@@ -96,8 +105,9 @@
   .whatweCont{
     margin-top: 10%;
     flex-direction: column;
-    gap: 4em;
+    gap: 2rem;
     background: none;
+    margin-top: 2rem;
 
   }
   .whatwe{
@@ -141,18 +151,51 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
   }
+  
   .whatwe{
     padding: 5% 5% 2%;;
     max-width: 70%;
     min-height: 70%;
-    /* background: none; */
+    margin-top: rem;
+    /* background: no50ne; */
   }
 
+  .medias{
+    width: 100%;
+  }
+  
   .medias .img1{
 top: 5%;
-max-width: 95%;
+max-width: 70%;
 left: 15%;
   }
+
+  .medias .speech{
+top: 5%;
+max-width: 60%;
+left: 8%;
+/* border: 2px solid red; */
+  }
+
+}
+
+@media (max-width: 1200px){
+  .whatweCont{
+    margin-top:5rem;
+}
+
+.medias{
+  width: 90%;
+}
+
+.medias .img1{
+  top: 5%;
+  max-width: 70%;
+  left: 30%;
+  border: 2px solid red;
+    }
 
 }

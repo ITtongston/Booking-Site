@@ -9,7 +9,7 @@ const ProdustsSummary = ({ img, info, prodName,route }) => {
        <div className="prodlist">
           <img src={img} alt="" />
           <h4>{prodName} </h4>
-          <p>{info}</p>
+          <p style={{textAlign: 'center'}}>{info}</p>
           <div className="span">
             <Link to={route}>
               Learn more <FaArrowRight id="hidden" />

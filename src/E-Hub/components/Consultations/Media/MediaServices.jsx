@@ -281,11 +281,11 @@ const MediaServices = () => {
   `;
 
   return (
-    <Box sx={{ mt: "9rem" }}>
+    <Box sx={{ mt: "9rem" , px: '3%' }}>
       <Box>
         <Box>
           <BrandingCon>
-            <Box sx={{ width: "50%" }}>
+            <Box  id="branding" sx={{ width: "50%"}} >
               <h4 style={{ fontWeight: 600, fontSize: "20px" }}>
                 Branding
               </h4>
@@ -298,6 +298,7 @@ const MediaServices = () => {
               <Box>{items}</Box>
               <ButtonConsult/>
             </Box>
+
             <Box sx={{ width: "40%" }}>
               <ImgBox
                 sx={{
@@ -311,7 +312,7 @@ const MediaServices = () => {
           </BrandingCon>
           <Box>
             <DigitalCon>
-              <Box sx={{ width: "50%" }}>
+              <Box id="digital" sx={{ width: "50%" }}>
                 <h4 style={{ fontWeight: 600, fontSize: "20px" }}>
                   Digital Marketing
                 </h4>
@@ -336,7 +337,7 @@ const MediaServices = () => {
               </Box>
             </DigitalCon>
             <PreProduction>
-              <Box sx={{ width: "50%" }}>
+              <Box id="preprod"sx={{ width: "50%" }}>
                 <h4 style={{ fontWeight: 600, fontSize: "20px" }}>
                   Pre-Production
                 </h4>
@@ -362,7 +363,7 @@ const MediaServices = () => {
               </Box>
             </PreProduction>
             <Production>
-              <Box sx={{ width: "50%" }}>
+              <Box id="prod"sx={{ width: "50%" }}>
                 <h4 style={{ fontWeight: 600, fontSize: "20px" }}>
                   Production
                 </h4>
@@ -387,7 +388,7 @@ const MediaServices = () => {
               </Box>
             </Production>
             <PostProduction>
-              <Box sx={{ width: "50%" }}>
+              <Box id="postprod" sx={{ width: "50%" }}>
                 <h4 style={{ fontWeight: 600, fontSize: "20px" }}>
                   Post Production
                 </h4>
@@ -412,7 +413,7 @@ const MediaServices = () => {
               </Box>
             </PostProduction>
             <Web>
-              <Box sx={{ width: "50%" }}>
+              <Box id="web"sx={{ width: "50%" }}>
                 <h4 style={{ fontWeight: 600, fontSize: "20px" }}>
                   Web Development and Maintenance
                 </h4>
@@ -432,14 +433,12 @@ const MediaServices = () => {
                     borderBottomRightRadius: "15px",
                   }}
                 >
-                  <h4 style={{ fontSize: "20px" }}>Make your Brand Gobal</h4>
+                   <h4 style={{ fontSize: "20px" }}>Make your Brand Gobal</h4>
                 </ImgBox5>
               </Box>
             </Web>
           </Box>
         </Box>
-        <Box></Box>
-        <Box></Box>
       </Box>
     </Box>
   );

@@ -62,7 +62,10 @@ const VirtualOffice = () => {
       <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 3, width:{sm: 400, xs: 300}, mb: '10%'}}>
         <Typography variant='h6' sx={{color: "#0C0145", fontSize: {xs: '11px', sm: '13px'}, fontWeight: 600}}> Your Office with a Difference</Typography>
         <Typography variant="h5" sx={{fontWeight: 'bold', fontSize: {sm: '16px'}}}>Virtual Office</Typography>
-        <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aliquam accusamus quasi quam, animi voluptate modi at quas repellendus explicabo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, ea omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas sint et suscipit incidunt cupiditate.</Typography>
+        <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Access business address, telephone answering service and hub green lounge. Valid for incorporation and tax registration.
+
+        Alongside the virtual office, access our entrepreneurial workspaces (meeting & training room), our entrepreneurial enterprise consulting services (admin, technology, legal, HR, data & accounting); entrepreneurial education and media services for all your business/brand needs.
+</Typography>
         <Button sx={{fontSize: 12, fontWeight: 400, textDecoration: 'underline', color: "#862828"}}>Learn More</Button>
       </Box>
       <Divider sx={{ml: 4, display: {xs: 'none', sm: 'block'}}}orientation="vertical" variant="middle" flexItem />

@@ -51,8 +51,8 @@ export default function TrainingFlow() {
   
 
   return (
-    <Box sx={{ width: "90%", px: 6, pt: 5 }}>
-      <Stepper activeStep={activeStep}>
+    <Box sx={{ width: "100%",  pt: 5 }}>
+      <Stepper sx={{ width: "100%",  pt: 2, px: 2 }} activeStep={activeStep}>
         {steps.map((label, index) => {
           return (
             <Step key={label}>

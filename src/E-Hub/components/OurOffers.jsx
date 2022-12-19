@@ -18,6 +18,11 @@ text-align: left;
 & li {
   margin-top: 5px;
 }
+
+& li span{
+  font-weight: bold;
+  font-size: 17px;
+}
 `;
 
 const OurOffers = ({ products }) => {
@@ -39,8 +44,8 @@ const OurOffers = ({ products }) => {
             </div>
             <div className="AdCon">
               <h3>
-                Value at its peak with our Entrepreneurial
-                Consulting Services
+              Focus on Your Core Business with our Entreprise-in-a-box and Consulting Services
+
               </h3>
               <div
                 className="consultP"
@@ -48,34 +53,31 @@ const OurOffers = ({ products }) => {
                 data-aos-offset="100"
                 data-aos-easing="ease-in-sine"
               >
-                <p style={{fontSize: '17px', fontWeight: 550, wordSpacing: '5px',textAlign: 'center'}}>
-                  Tongston provides a range of enterprise consulting services
-                  across administration, accounting, audit, legal, governance,
-                  data, HR functions to free up your time to focus on your core
-                  business.
-                </p>
+                {/* <p style={{fontSize: '17px', fontWeight: 550, wordSpacing: '5px',textAlign: 'center'}}>
+                  
+                </p> */}
 
                 <StyledUL>
-                  <h4>Services are available on-demand, including</h4>
+                  {/* <h4>Available on-demand</h4> */}
                   <li>
                   
-                    Administrative Services through the Executive Admin Den
+                    <span>Administrative Services</span> through the Executive Admin Den
                   </li>
                   <li>
-                    Accounting and Audit Services through the Finance &
+                    <span>Accounting & Audit Services</span>  through the Finance &
                     Accounting Den
                   </li>
                   <li>
-                    Legal, Governance & Corporate Secretarial Services through
-                    the Legal, Governance & Corporate Sec. Den
+                    <span>Legal, Governance & Corporate Secretarial Services</span> through
+                    the Legal & Governance Den
                   </li>
                   <li>
-                    Data consulting; collection and research Services through
-                    the Research Den
+                    <span>Data Consulting, Collection, Analysis and Research Services</span> through
+                    the Data & Research Den
                   </li>
                   <li>
-                    Recruitment, Talent and Incentive Management, Organizational
-                    Structuring and Performance Management services through the
+                    <span>Recruitment, Talent & Incentive Management, Organizational
+                    Structuring and Performance Management Services</span> through the
                     HR Den
                   </li>
                 </StyledUL>
@@ -95,7 +97,7 @@ const OurOffers = ({ products }) => {
               {products.map((product) => {
                 return (
                   <article key={product.id}>
-                    {" "}
+                  
                     <ProdustsSummary
                       info={product.info}
                       img={product.img}

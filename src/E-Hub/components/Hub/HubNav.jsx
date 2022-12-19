@@ -83,7 +83,7 @@ export default function BasicTabs() {
             color: "#373434",
           }}
         >
-          WorkSpace Profitability with Our Entreprenuerial Hubs
+          WorkSpace Profitability with Our Entrepreneurial WorkSpaces
         </Typography>
         <Box sx={{ borderBottom: 1, borderColor: "divider", my: "1em" }}>
           <StyledTabs

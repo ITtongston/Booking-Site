@@ -22,7 +22,7 @@ const Features = () => {
         </div>
         <div>
           <FaUsersCog className="featicon3" size={40} />
-          <h3 style={{padding: '0.5rem 0', fontWeight: 700,fontSize: '20px'}}> UPSCALE YOUR HUMAN CAPITAL</h3>
+          <h3 style={{padding: '0.5rem 0', fontWeight: 700,fontSize: '20px'}}> UPSKILL YOUR HUMAN CAPITAL</h3>
           <p style={{fontSize: "16px", fontWeight: 600}}>
             Leverage our Entrepreneurial Education Courses on Data Science, Entrepreneurship & Intrapreneurship, Programming, Finance & Fund-Raising, Career & Business Advisory
           </p>

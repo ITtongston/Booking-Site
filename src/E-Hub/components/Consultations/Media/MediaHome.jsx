@@ -59,7 +59,7 @@ const MediaHome = () => {
       <StyledContainer>
         <Box sx={{ width: "50%", marginBottom: "6rem" }}>
           <h3 style={{ fontSize: "1.7rem" }}>
-            We can help you break through the noise
+            We help you break through the noise
           </h3>
           <p style={{ width: "70%", marginTop: "1rem" }}>
             Elevate your brand with our suite of products and services. Make

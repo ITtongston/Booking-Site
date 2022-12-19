@@ -62,21 +62,16 @@ const Meetingroom = () => {
         }}
       >
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{
             color: "#0C0145",
-            fontSize: { xs: "11px", sm: "13px" },
+            fontSize: { xs: "11px", sm: "17px", mb: 1 },
             fontWeight: 600,
           }}
         >
           Meeting Room For Your Team
         </Typography>
-        <Typography
-          variant="h5"
-          sx={{ fontWeight: "bold", fontSize: { sm: "16px" } }}
-        >
-          Meeting Room
-        </Typography>
+        
         <Typography component="p" sx={{ fontSize: "15px", pt: "3" }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
           aliquam accusamus quasi quam, animi voluptate modi at quas repellendus

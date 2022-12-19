@@ -61,8 +61,8 @@ const CoworkingSpace = () => {
   return (
     <ContainerBox className="Hub1">
       <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 3, width:{sm: 400, xs: 300}, mb: '10%'}}>
-        <Typography variant='h6' sx={{color: "#0C0145", fontSize: {xs: '11px', sm: '13px'}, fontWeight: 600}}> Your Own WorkSpace</Typography>
-        <Typography variant="h5" sx={{fontWeight: 'bold', fontSize: {sm: '16px'}}}>Co-WorkingSpace</Typography>
+        <Typography variant='h5' sx={{color: "#0C0145", fontSize: {xs: '11px', sm: '17px'}, fontWeight: 600, mb: 1}}> Your Own WorkSpace</Typography>
+       
         <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aliquam accusamus quasi quam, animi voluptate modi at quas repellendus explicabo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, ea omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas sint et suscipit incidunt cupiditate.</Typography>
         <Button sx={{fontSize: 12, fontWeight: 400, textDecoration: 'underline', color: "#862828"}}>Learn More</Button>
       </Box>

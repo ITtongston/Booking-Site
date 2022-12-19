@@ -1,34 +1,38 @@
-import Group from '../Assets/consultimg/group.jpg'
-import Cooperate from '../Assets/consultimg/cooperate.jpg'
-import Business from '../Assets/consultimg/Businesses.jpg'
-import Thinking from '../Assets/consultimg/Thinking.jpg'
+import Group from "../Assets/consultimg/group.jpg";
+import Cooperate from "../Assets/consultimg/cooperate.jpg";
+import Business from "../Assets/consultimg/Businesses.jpg";
+import Thinking from "../Assets/consultimg/Thinking.jpg";
 
 export const products = [
-    {id: '1',
+  {
+    id: "1",
     img: Business,
-     prodName: 'Finance and Accounting',
-     info: 'Access organisation standard Accounting and Audit Services for all business needs',
-     DetailsLink: '/'
-},
+    prodName: "Finance & Accounting",
+    info: "Access organisation standard Finance and Accounting Services for all business needs",
+    DetailsLink: "/",
+  },
 
-{id: '2',
+  {
+    id: "2",
     img: Group,
-     prodName: 'HR and Admin',
-     info: 'HR and Admin services via Recruitment, Talent and Incentive Management, Organizational Structuring and Performance Management',
-     DetailsLink: '/'
-},
-  
-{id: '3',
-    img: Cooperate,
-     prodName: 'Data and Research',
-     info: 'Data consulting, data collection and research Services through the Data Research Den',
-     DetailsLink: '/'
-},
+    prodName: "HR & Admin",
+    info: "Access Administration, Recruitment, Talent and Incentive Management, Organizational Structuring and Performance Management services",
+    DetailsLink: "/",
+  },
 
-{id: '4',
+  {
+    id: "3",
+    img: Cooperate,
+    prodName: "Data & Research",
+    info: "Access Data Consulting, Collection, Analysis and Research Services",
+    DetailsLink: "/",
+  },
+
+  {
+    id: "4",
     img: Thinking,
-     prodName: 'Legal services',
-     info: 'Legal, Governance & Corporate Secretarial Services through the Legal, Governance & Corporate Sec Den',
-     DetailsLink: '/'
-}
-]
+    prodName: "Legal & Governance",
+    info: "Access Legal, Governance & Corporate Secretarial Services",
+    DetailsLink: "/",
+  },
+];

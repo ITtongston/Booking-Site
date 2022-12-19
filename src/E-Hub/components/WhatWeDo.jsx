@@ -11,10 +11,11 @@ const WhatWeDo = () => {
           What We Stand For <span className="blink">__</span>?
       </h2>
         <p className="biggerp">
-         We bridge the gap between Value-oriented Work-Spaces and Entrepreneurial Services for your Business and Brand  
+         We bridge the gap between Value-oriented Work-Spaces & Education, Media, Enterprise Services for your Brand  
         </p>
         <p className="smallerp">
-        Tongston Entrepreneurial Hub offers world-class award-winning services that make you or your business more valuable, influential and profitable, whichever industry you are in, wherever you are in the world. Tongston is a frequently profiled multi-award-winning global education, media, finance and enterprise/business brand.
+        Tongston Entrepreneurial Hub offers world-class award-winning services that make you or your business more valuable, influential & profitable, whichever industry you are in, wherever you are in the world. 
+        <p style={{marginTop: '10px'}}> Tongston is a frequently profiled multi-award-winning global education, media, finance & enterprise brand.</p>
         </p>
       </div>
       <div className="medias">

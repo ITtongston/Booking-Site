@@ -79,8 +79,9 @@ const CardBox4 = () => {
             NGN20,000 per User/month
           </Typography>
         </Box>
-
+        
         <List sx={{ backgroundColor: "#ffffe6", borderRadius: "5px", mt: 3 }}>
+        <spans style={{margin: '10px 0 15px 15px'}} >Access:</spans>
           {Adons.map((item) => (
             <ListItem key={item.id} disablePadding={true}>
               <ListItemIcon><CheckCircleIcon fontSize='small'/></ListItemIcon>
@@ -95,7 +96,7 @@ const CardBox4 = () => {
           size="small"
           variant="text"
           component={Link}
-          to="/"
+          to="/meetingflow"
         >
           Book this Space
         </Button>

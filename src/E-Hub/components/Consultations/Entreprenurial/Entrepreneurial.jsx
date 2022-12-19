@@ -8,26 +8,26 @@ const courses = [
   {
     id: 1,
     title: "Data Science",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti odit at magni",
-    path: '/data'
+    text: "Data science training targeted at individuals between ages 15 and 50 who want to be well grounded in data science, analysis and research in whatever field thier in.",
+    path: "/data",
   },
   {
     id: 2,
     title: "Tongston Introduction to Entrepreneurial Education",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti odit at magni.",
-    path: '/'
+    text: " Introductory entrepreneurial education for professional, career, academic, business performance improvement and development.",
+    path: "/Tieec",
   },
   {
     id: 3,
     title: "Career & Business Advisory Session",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti odit at magni.",
-    path: '/'
+    path: "/",
   },
   {
     id: 4,
     title: "Programmers Den",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti odit at magni",
-    path: '/'
+    text: "A platform to learn programming and leverage our access to new technologies such as Vue.js, NodeJs, Javascript and Python",
+    path: "/",
   },
 ];
 
@@ -101,10 +101,13 @@ const Entrepreneurial = () => {
             <StyledBox key={items.id}>
               <h2 style={{ width: "100%" }}>{items.title}</h2>
               <p>{items.text}</p>
-              <Btn component={Link} to={items.path} sx={{ color: "rgba(217, 6, 6, 1)" }}>
+              <Btn
+                component={Link}
+                to={items.path}
+                sx={{ color: "rgba(217, 6, 6, 1)" }}
+              >
                 More
                 <span>
-                  {" "}
                   <FaCaretRight />
                 </span>
               </Btn>

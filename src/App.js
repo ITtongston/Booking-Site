@@ -9,6 +9,10 @@ import Media from "./E-Hub/components/Consultations/Media/Media";
 import BookingForm from "./E-Hub/components/Consultations/Form/MediaBookingForm";
 // import NavBar from './E-Hub/components/Navbar'
 import Data from "./E-Hub/components/Consultations/Entreprenurial/Data";
+import TIEEC from "./E-Hub/components/Consultations/Entreprenurial/TIEEC";
+import MeetingFlow from "./E-Hub/pages/MeetingRoom/MeetingFlow";
+import CoworkigFlow from "./E-Hub/pages/CoworkingSpace/CoworkingFlow";
+
 
 const override = {
   position: "absolute",
@@ -47,9 +51,12 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/trainingflow" element={<TrainingFlow />} />
+            <Route path="/meetingflow" element={<MeetingFlow />} />
+            <Route path="/coworkingflow" element={<CoworkigFlow />} />
             <Route path="/media" element={<Media />} />
             <Route path="/bookform" element={<BookingForm />} />
             <Route path="/data" element={<Data />} />
+            <Route path="/Tieec" element={<TIEEC />} />
           </Routes>
         </div>
       )}

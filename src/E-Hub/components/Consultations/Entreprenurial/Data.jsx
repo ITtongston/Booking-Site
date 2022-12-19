@@ -11,11 +11,11 @@ position: relative;
 & .imageBg {
   width: 100%;
   height: 80vh;
-  background: url(${Data2}) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.663), rgba(0, 0, 0, 0.507)), url(${Data2}) center no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 4px solid rgba(198, 31, 31, 0.97);
+  border-bottom: 2px solid rgba(198, 31, 31, 0.97);
   flex-direction: column;
 
 }
@@ -23,7 +23,7 @@ position: relative;
 
 `;
 
-export let StyledButton = styled.button`
+export const StyledButton = styled.button`
     min-width: 130px;
     height: 40px;
     padding: 5px 10px;

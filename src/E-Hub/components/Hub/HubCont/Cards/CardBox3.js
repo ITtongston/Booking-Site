@@ -16,15 +16,15 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 const Adons = [
   {
     id: 1,
-    adon: "Access business address,",
+    adon: "Business address",
   },
   {
     id: 2,
-    adon: "telephone answering service",
+    adon: "Telephone answering service",
   },
   {
     id: 3,
-    adon: "hub green lounge",
+    adon: "Hub green lounge",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const Adons = [
   },
   {
     id: 5,
-    adon: "Access admin, legal, entrepreneurial education, HR, media, data &amp; finance services for all your business needs.",
+    adon: "Admin, legal, entrepreneurial education, HR, media, data &amp; finance services for all your business needs.",
   },
   
   //   Equipped Pantry
@@ -67,6 +67,9 @@ const CardBox3 = () => {
         </Box>
 
         <List sx={{ backgroundColor: "#ffffe6", borderRadius: "5px", mt: 3 }}>
+      
+          <spans style={{margin: '10px 0 15px 15px'}} >Access:</spans>
+
           {Adons.map((item) => (
             <ListItem key={item.id} disablePadding={true}>
               <ListItemIcon>

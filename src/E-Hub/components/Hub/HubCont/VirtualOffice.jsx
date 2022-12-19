@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import CardBox3 from './Cards/CardBox3';
-import MeetImg from '../../../Assets/img/meeting-room.jpg'
+import Training from '../../../Assets/img/Trainingroom.jpg'
 import Divider from '@mui/material/Divider';
 import backpat from '../../../Assets/img/Picture3.png'
 import Button from "@mui/material/Button";
@@ -71,7 +71,7 @@ const VirtualOffice = () => {
       <Divider sx={{ml: 4, display: {xs: 'none', sm: 'block'}}}orientation="vertical" variant="middle" flexItem />
       <BoxFeatures>
         <div data-aos="fade-up" data-aos-duration="900"><CardBox3/></div>
-        <img src={MeetImg} alt="" className="img"/>
+        <img src={Training} alt="" className="img"/>
       </BoxFeatures>
     </ContainerBox>
   );

@@ -136,7 +136,7 @@ letter-spacing: 2px;
  .productListcon .prodlist:hover {
     border: 0.3px solid rgba(244, 244, 244, 0.25);
     border-radius: 2px;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
     box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.163);
  }
  .productListcon .prodlist img{

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import CardBox2 from './Cards/CardBox2';
-import MeetImg from '../../../Assets/img/meeting-room.jpg'
+import Coworking from '../../../Assets/img/coworking.jpg'
 import Divider from '@mui/material/Divider';
 import backpat from '../../../Assets/img/Picture3.png'
 import Button from "@mui/material/Button";
@@ -69,7 +69,7 @@ const CoworkingSpace = () => {
       <Divider sx={{ml: 4, display: {xs: 'none', sm: 'block'}}}orientation="vertical" variant="middle" flexItem />
       <BoxFeatures>
         <div data-aos="fade-up" data-aos-duration="900"><CardBox2/></div>
-        <img src={MeetImg} alt="" className="img"/>
+        <img src={Coworking} alt="" className="img"/>
       </BoxFeatures>
     </ContainerBox>
   );

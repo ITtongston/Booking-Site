@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import CardBox1 from './Cards/CardBox1';
-import MeetImg from '../../../Assets/img/meeting-room.jpg'
+import Training from '../../../Assets/img/Trainingroom.jpg'
 import Divider from '@mui/material/Divider';
 import backpat from '../../../Assets/img/Picture3.png'
 import Button from "@mui/material/Button";
@@ -17,7 +17,7 @@ gap: 10%;
 margin-left: 1em;
 
 & .img{
-  border-radius: 60% 40% 19% 81% / 45% 43% 57% 55%     ;
+  border-radius: 47% 53% 77% 23% / 37% 40% 60% 63% ;
   max-width: 40%;
   margin-bottom: 40%;
   // margin-right: 4em;
@@ -60,16 +60,16 @@ padding:0 5%;
 const Trainingroom = () => {
   return (
     <ContainerBox className="Hub1">
-      <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 3, width:{sm: 400, xs: 300}, mb: '10%'}}>
-        <Typography variant='h6' sx={{color: "#0C0145", fontSize: {xs: '11px', sm: '13px'}, fontWeight: 600}}> Training Room For Your Team</Typography>
-        <Typography variant="h5" sx={{fontWeight: 'bold', fontSize: {sm: '16px'}}}>Training Room</Typography>
-        <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aliquam accusamus quasi quam, animi voluptate modi at quas repellendus explicabo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, ea omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas sint et suscipit incidunt cupiditate.</Typography>
+      <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 2, width:{sm: 400, xs: 300}, mb: '10%'}}>
+        <Typography variant='h5' sx={{color: "#0C0145", fontSize: {xs: '11px', sm: '16px'}, fontWeight: 600, mb: 1}}> Training Room For Your Team</Typography>
+        <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Our entrepreneurial training & meeting rooms are state-of-the-art in the heart of the city of Abuja, fully equipped with projector, white boards, HMDI & VGA converters, TV screen, video and audio conferencing facilities and Wi-Fi.
+</Typography>
         <Button sx={{fontSize: 12, fontWeight: 400, textDecoration: 'underline', color: "#862828"}}>Learn More</Button>
       </Box>
       <Divider sx={{ml: 4, display: {xs: 'none', sm: 'block'}}}orientation="vertical" variant="middle" flexItem />
       <BoxFeatures>
         <div data-aos="fade-up" data-aos-duration="900"><CardBox1/></div>
-        <img src={MeetImg} alt="" className="img"/>
+        <img src={Training} alt="" className="img"/>
       </BoxFeatures>
     </ContainerBox>
   );

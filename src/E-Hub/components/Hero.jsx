@@ -22,7 +22,7 @@ const Hero = (props) => {
       top 2rem;
 
       & img{
-        width: 6rem;
+        width: 13rem;
       }
 
       `;
@@ -37,8 +37,8 @@ const Hero = (props) => {
           <AnimatedText />
         </h1>
         <h2 data-aos="fade-up">
-          Become a valuable,influential and profitable brand with{" "}
-          <span style={{ color: "yellow" }}>Tongston Entrepreneurial Hub</span>
+          Become a valuable, influential & profitable brand with
+          <span style={{ color: "yellow",marginLeft: '10px'}}>Tongston Entrepreneurial Hub</span>
         </h2>
         <div className="Btncont">
           <div className="secondBtn">

@@ -48,12 +48,11 @@ const OurOffers = ({ products }) => {
                 data-aos-offset="100"
                 data-aos-easing="ease-in-sine"
               >
-                <p style={{fontSize: '17px', fontWeight: 550, wordSpacing: '7px'}}>
+                <p style={{fontSize: '17px', fontWeight: 550, wordSpacing: '5px',textAlign: 'center'}}>
                   Tongston provides a range of enterprise consulting services
                   across administration, accounting, audit, legal, governance,
                   data, HR functions to free up your time to focus on your core
-                  business, whilst ensuring you achieve value, influence &
-                  profitability
+                  business.
                 </p>
 
                 <StyledUL>

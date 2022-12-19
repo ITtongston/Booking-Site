@@ -6,8 +6,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import CourseContent from "./NavContents/CourseContent";
-import Overviewer from "./NavContents/Overview";
+import CourseContent from "./DataNavContents/CourseContent";
+import Overviewer from "./DataNavContents/Overview";
 import { styled } from "@mui/system";
 
 const StyledTab = styled(Tabs)`
@@ -17,6 +17,7 @@ padding: 0 2%;
   & .MuiTab-textColorInherit {
     font-size: 0.8rem;
     font-weight: 600;
+    color: ;
   }
 
 
@@ -82,7 +83,7 @@ export default function FullWidthTabs() {
           aria-label="full width tabs example"
           centered
           allowScrollButtonsMobile
-      
+          sx={{backgroundColor: 'rgba(1, 2, 50, 0.97)'}}
         >
           
             <Tab sx={{ml: 3}}label="Course Overview" {...a11yProps(0)} />

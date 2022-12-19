@@ -83,7 +83,7 @@ export default function BasicTabs() {
             color: "#373434",
           }}
         >
-          WorkSpace Profitabilty with Our Entreprenuerial Hubs
+          WorkSpace Profitability with Our Entreprenuerial Hubs
         </Typography>
         <Box sx={{ borderBottom: 1, borderColor: "divider", my: "1em" }}>
           <StyledTabs
@@ -97,9 +97,9 @@ export default function BasicTabs() {
             allowScrollButtonsMobile
            
           >
-            <Tab label="Training Rooms" {...a11yProps(0)} />
+            <Tab label="Training Room" {...a11yProps(0)} />
             <Tab label="Virtual Office" {...a11yProps(1)} />
-            <Tab label="Co-WorkingSpace" {...a11yProps(2)} />
+            <Tab label="CoWorking Space" {...a11yProps(2)} />
             <Tab label="Meeting Room" {...a11yProps(3)} />
             {/* <Tab label="Media,Finance,Admin,HR,Data and Legal Services" {...a11yProps(4)} />
           <Tab label="Programmers Den" {...a11yProps(5)} /> */}

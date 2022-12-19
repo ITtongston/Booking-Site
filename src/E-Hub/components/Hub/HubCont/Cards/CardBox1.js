@@ -10,12 +10,12 @@ import { ListItemIcon, ListItemText, Typography } from "@mui/material";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const Adons = [
   {
     id: 1,
-    adon: 'Wi-Fi'
+    adon: "Wi-Fi",
   },
   {
     id: 2,
@@ -38,13 +38,13 @@ const Adons = [
     adon: "Access to Entrepreneurial Content through blogs & newsletters",
   },
 
-//   Equipped Pantry
-// Access Green Relaxation Lounge
-// Nearby Food Facilities
+  //   Equipped Pantry
+  // Access Green Relaxation Lounge
+  // Nearby Food Facilities
 
-// Access Entrepreneurial Thinkers Network
-// Access Entrepreneurial Content through blogs & newsletters
-// Access Tongston's entrepreneurial products & services
+  // Access Entrepreneurial Thinkers Network
+  // Access Entrepreneurial Content through blogs & newsletters
+  // Access Tongston's entrepreneurial products & services
 
   {
     id: 7,
@@ -66,7 +66,13 @@ const Adons = [
 
 const CardBox1 = () => {
   return (
-    <Card sx={{ minWidth: { sm: 250, xs: 200 }, ml: { sm: 6, xs: "0 auto" },my: { sm: '3rem'} }}>
+    <Card
+      sx={{
+        minWidth: { sm: 250, xs: 200 },
+        ml: { sm: 6, xs: "0 auto" },
+        my: { sm: "3rem" },
+      }}
+    >
       <CardContent>
         <MeetingRoomIcon sx={{ fontSize: 40, ml: 5 }} />
         <Divider sx={{}} variant="middle" flexItem />
@@ -81,10 +87,13 @@ const CardBox1 = () => {
         </Box>
 
         <List sx={{ backgroundColor: "#ffffe6", borderRadius: "5px", mt: 3 }}>
+          <spans style={{ margin: "10px 0 20px 15px" }}>Access:</spans>
           {Adons.map((item) => (
             <ListItem key={item.id} disablePadding={true}>
-              <ListItemIcon><CheckCircleIcon fontSize='small'/></ListItemIcon>
-              <ListItemText sx={{color: ''}}>{item.adon}</ListItemText>
+              <ListItemIcon>
+                <CheckCircleIcon fontSize="small" />
+              </ListItemIcon>
+              <ListItemText sx={{  }}>{item.adon}</ListItemText>
             </ListItem>
           ))}
         </List>

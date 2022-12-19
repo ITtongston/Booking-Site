@@ -6,11 +6,11 @@ import Select from "@mui/material/Select";
 
 
 
-const MediaServicesDropDown = () => {
+const MediaServicesDropDown = ({values,onHandleChange}) => {
   return (
     <div>
         <FormControl sx={{ m: 1, width: 200 }}>
-          <InputLabel htmlFor="grouped-native-select">
+          <InputLabel sx={{ fontWeight: 'bold'}}htmlFor="grouped-native-select">
             Media Service
           </InputLabel>
           <Select
@@ -18,7 +18,7 @@ const MediaServicesDropDown = () => {
             id="grouped-native-select"
             label="Media Service of Interest"
             name="mediaService"
-            onChange={handleOnchange}
+            onChange={onHandleChange}
             value={values.mediaService}
           >
             <option aria-label="None" value="" />

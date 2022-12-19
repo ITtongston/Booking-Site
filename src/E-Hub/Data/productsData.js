@@ -7,28 +7,28 @@ export const products = [
     {id: '1',
     img: Business,
      prodName: 'Finance and Accounting',
-     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
+     info: 'Access organisation standard Accounting and Audit Services for all business needs',
      DetailsLink: '/'
 },
 
 {id: '2',
     img: Group,
-     prodName: 'Admin and HR',
-     info: 'Lorepsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
+     prodName: 'HR and Admin',
+     info: 'HR and Admin services via Recruitment, Talent and Incentive Management, Organizational Structuring and Performance Management',
      DetailsLink: '/'
 },
   
 {id: '3',
     img: Cooperate,
      prodName: 'Data and Research',
-     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
+     info: 'Data consulting, data collection and research Services through the Data Research Den',
      DetailsLink: '/'
 },
 
 {id: '4',
     img: Thinking,
      prodName: 'Legal services',
-     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a earum perspiciatis dolor sit amet consect',
+     info: 'Legal, Governance & Corporate Secretarial Services through the Legal, Governance & Corporate Sec Den',
      DetailsLink: '/'
 }
 ]

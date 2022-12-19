@@ -4,6 +4,74 @@ import { useState } from "react";
 import styled from "styled-components";
 import FormBg from '../../../Assets/img/mediaformBg.svg'
 import Handshake from '../../../Assets/img/handshake.gif';
+import ServicesDropdown from '../../Consultations/Form/MediaServicesDropDown'
+import { FaEnvelope } from "react-icons/fa";
+
+
+// styles
+
+const StyledCont = styled.div`
+    display: flex;
+    align-items: center;
+    jusify-content: center;
+    flex-direction: column;
+    padding: 4% 0;
+    gap: 2em;
+  background: url(${FormBg}) center no-repeat; 
+  background-size: 100vw ;
+  `;
+
+  const Header = styled.div`
+
+  & h2{
+    display: flex;
+    align-center: center;
+    font-weight: bold;
+  }
+
+  & h2 img{
+    width: 4rem;
+    border-radius: 50%;
+
+  }
+
+  `;
+
+  const StyledTextarea = styled.textarea`
+margin: 1rem 0;
+border: none;
+border-bottom: 2px solid #2E2C2C;
+padding: 2px 4px 2px;
+outline: none;
+width: 100%;
+background-color: transparent; 
+&::placeholder{
+ opacity: 0.8;
+}
+  `;
+
+
+  const StyledButton = styled.button`
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 30%;
+  cursor: pointer;
+  margin: 1rem auto 0;
+  background: transparent;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+gap: 10px;
+transition: 0.3s all ease;
+font-weight: 600;
+
+  &:hover{
+    gap: 15px;
+  }
+  
+  `
+
 
 const BookingForm = () => {
   const [values, setValues] = useState({
@@ -13,9 +81,9 @@ const BookingForm = () => {
     organisationEmail: "",
     organisationPhone: "",
     address: "",
-    date: "",
-    price: "hour",
+    dateOfInterest: "",
     mediaService: "",
+    moreInfo: ""
   });
 
   const Inputs = [
@@ -47,45 +115,19 @@ const BookingForm = () => {
       id: 4,
       name: "address",
       type: "text",
-      placeholder: "organisations address",
+      placeholder: "organisation's address",
       errowMessage: "Field is required...",
       label: "Address",
     },
     {
       id: 5,
-      name: "date",
+      name: "dateOfInterest",
       type: "date",
       label: "Date of Interest",
     },
   ];
 
-  const StyledCont = styled.div`
-    display: flex;
-    align-items: center;
-    jusify-content: center;
-    flex-direction: column;
-    padding: 4% 0;
-    gap: 2em;
-  background: url(${FormBg}) center no-repeat; 
-  background-size: 100vw ;
-  `;
-
-  const Header = styled.div`
-
-  & h2{
-    display: flex;
-    align-center: center;
-    font-weight: bold;
-  }
-
-  & h2 img{
-    width: 4rem;
-    border-radius: 50%;
-
-  }
-
-  `
-
+  
   const handleOnchange = (e) => {
     const { name, type, checked, value } = e.target;
 
@@ -131,49 +173,14 @@ const BookingForm = () => {
         ))}
 
         <br />
-        {/* <div>
-          <div>
-            <input
-              type="radio"
-              value="hours"
-              onChange={handleOnchange}
-              name="price"
-              id=""
-              checked={values.price === 'hour'}
-            />{" "}
-            <label htmlFor="">Hourly</label>
-          </div>
-          <input
-            type="radio"
-            value="day"
-            onChange={handleOnchange}
-            name="price"
-            id="days"
-            checked={values.price === 'days'}
-          />
-          days
-          <input
-            type="radio"
-            value="month"
-            onChange={handleOnchange}
-            name="price"
-            id="month"
-            checked={values.price === 'month'}
-          />
-          month
-        </div> */}
-        <button
+        <ServicesDropdown values={values} onHandleChange={handleOnchange}/>
+        <StyledTextarea placeholder="enter any other detail..." name="moreInfo" onChange={handleOnchange} min="300" max="1000"/>
+        <StyledButton
           type="submit"
-          style={{
-            padding: "10px 10px",
-            borderRadius: "10px",
-            width: "30%",
-            cursor: "pointer",
-            margin: "1rem auto 0",
-          }}
+          
         >
-          Submit
-        </button>
+          Submit <FaEnvelope size={15}/>
+        </StyledButton>
       </form>
     </StyledCont>
   );

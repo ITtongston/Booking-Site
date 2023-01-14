@@ -21,6 +21,28 @@ const ContBox = styled(Box)`
   background-size: 100vw;
   backround-image: ;
 `;
+
+const StyledButton = styled.button`
+  max-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 7px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid rgba(207, 175, 2, 0.98);
+  background: rgba(207, 175, 2, 0.98);
+
+  &:hover {
+    background: transparent;
+    color: rgba(207, 175, 2, 0.98);
+  }
+`;
+
 export default function TrainingFlow() {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -44,7 +66,7 @@ export default function TrainingFlow() {
       <div
         style={{
           display: "flex",
-          AlignItems: "center",
+          alignItems: "center",
           justifyContent: "center",
           height: "50vh",
         }}
@@ -69,35 +91,30 @@ export default function TrainingFlow() {
         <Typography sx={{ my: 6, mb: 1 }}>{flowContent}</Typography>
       </React.Fragment>
 
-      {activeStep === 2 ? (
+      {activeStep > 1 && (
         <React.Fragment>
           <div
             style={{
               display: "flex",
-              AlignItems: "center",
+              alignItems: "center",
               justifyContent: "center",
-              height: "50vh",
+              height: "100%",
+              flexDirection: "column",
+              gap: "0.5rem",
             }}
           >
-            <Typography sx={{mt: 5, fontSize: '20px'}}>
+            <Typography sx={{ mt: 5, fontSize: "20px" }}>
               Thanks For your Esteemed Interest in our Training Room, kindly
               check your email for confirmation!
             </Typography>
-          </div>
-        </React.Fragment>
-      ) : (
-        <React.Fragment>
-          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-            <Button
-              color="inherit"
-              disabled={activeStep === 0}
-              onClick={handleBack}
-              sx={{ mr: 1 }}
+            <StyledButton
+              onClick={() =>
+                setActiveStep((prevActiveStep) => prevActiveStep - prevActiveStep)
+              }
             >
-              Back
-            </Button>
-            <Box sx={{ flex: "1 1 auto" }} />
-          </Box>
+              Go Back
+            </StyledButton>
+          </div>
         </React.Fragment>
       )}
     </ContBox>

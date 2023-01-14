@@ -9,9 +9,10 @@
 }
 
 
+
 .featurescont{
     display: block;
-    z-index: 5;
+    /* z-index: 5; */
     position: absolute;
     top: 90%;
     max-width: 80%;
@@ -33,7 +34,7 @@
     color: --darkgrey;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .pointers{
         flex-direction: column;
         gap: 3em;
@@ -52,4 +53,7 @@
     border-radius: 5px;
     box-shadow: none;
     }
+    .pointers .divs ~ p{
+        font-size: 12;
+        }
 }

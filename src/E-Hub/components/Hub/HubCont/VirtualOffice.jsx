@@ -59,11 +59,10 @@ padding:0 5%;
 const VirtualOffice = () => {
   return (
     <ContainerBox className="Hub1">
-      <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 3, width:{sm: 400, xs: 300}, mb: '10%'}}>
+      <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 3, width: {sm: 500, xs: 300}, mb: '10%'}}>
         <Typography variant='h6' sx={{color: "#0C0145", fontSize: {xs: '11px', sm: '17px'}, fontWeight: 600, mb: 1}}> Your Office with a Difference</Typography>
         <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Access business address, telephone answering service and hub green lounge. Valid for incorporation and tax registration.
-
-        Alongside the virtual office, access our entrepreneurial workspaces (meeting & training room), our entrepreneurial enterprise consulting services (admin, technology, legal, HR, data & accounting); entrepreneurial education and media services for all your business/brand needs.
+        Alongside the virtual office, access our entrepreneurial workspaces (meeting & training room), our entrepreneurial enterprise consulting services (admin, technology, legal, HR, data & accounting) entrepreneurial education and media services for all your brand needs.
 </Typography>
         <Button sx={{fontSize: 12, fontWeight: 400, textDecoration: 'underline', color: "#862828"}}>Learn More</Button>
       </Box>

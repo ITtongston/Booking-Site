@@ -80,9 +80,14 @@ const CardBox1 = () => {
           <Typography
             sx={{ fontSize: "14px", minWidth: { xs: 300, sm: "100%" } }}
           >
-            <span>NGN6,000 per User/hr</span> <br />
-            <span>NGN22,000 per User/day</span> <br />
-            NGN20,000 per User/month
+            <span>
+              <i>from ₦25,270 /day</i>
+            </span>
+            <br />
+            <span>
+              <i>from ₦113,715 /week</i>
+            </span>
+            <br />
           </Typography>
         </Box>
 
@@ -93,7 +98,7 @@ const CardBox1 = () => {
               <ListItemIcon>
                 <CheckCircleIcon fontSize="small" />
               </ListItemIcon>
-              <ListItemText sx={{  }}>{item.adon}</ListItemText>
+              <ListItemText sx={{}}>{item.adon}</ListItemText>
             </ListItem>
           ))}
         </List>

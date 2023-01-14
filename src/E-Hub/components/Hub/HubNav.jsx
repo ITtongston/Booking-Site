@@ -71,7 +71,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "90%", my: "7em" , margin: '0 auto'}}>
+    <Box sx={{ width: "90%" , margin: '8rem auto 5rem'}}>
       <Box >
         <Typography
           variant="h5"
@@ -83,6 +83,7 @@ export default function BasicTabs() {
             color: "#373434",
           }}
         >
+
           WorkSpace Profitability with Our Entrepreneurial WorkSpaces
         </Typography>
         <Box sx={{ borderBottom: 1, borderColor: "divider", my: "1em" }}>

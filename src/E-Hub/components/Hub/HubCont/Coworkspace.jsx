@@ -63,7 +63,9 @@ const CoworkingSpace = () => {
       <Box sx={{border: 'solid 2px #b3b3b3', borderRadius: '5px', p: 3, width:{sm: 400, xs: 300}, mb: '10%'}}>
         <Typography variant='h5' sx={{color: "#0C0145", fontSize: {xs: '11px', sm: '17px'}, fontWeight: 600, mb: 1}}> Your Own WorkSpace</Typography>
        
-        <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aliquam accusamus quasi quam, animi voluptate modi at quas repellendus explicabo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, ea omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas sint et suscipit incidunt cupiditate.</Typography>
+        <Typography component="p" sx={{fontSize: '15px', pt: '3'}}>Our entrepreneurial coworking space is designed with you being an entrepreneurial thinker in mind. It’s a great place to access media, enterprise, education services; and network with others to make your business - valuable, influential & profitable.
+
+Drop in and hot desk in our entrepreneurial workspace today!</Typography>
         <Button sx={{fontSize: 12, fontWeight: 400, textDecoration: 'underline', color: "#862828"}}>Learn More</Button>
       </Box>
       <Divider sx={{ml: 4, display: {xs: 'none', sm: 'block'}}}orientation="vertical" variant="middle" flexItem />

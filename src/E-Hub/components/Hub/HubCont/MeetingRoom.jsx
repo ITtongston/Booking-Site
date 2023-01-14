@@ -71,13 +71,9 @@ const Meetingroom = () => {
         >
           Meeting Room For Your Team
         </Typography>
-        
+
         <Typography component="p" sx={{ fontSize: "15px", pt: "3" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          aliquam accusamus quasi quam, animi voluptate modi at quas repellendus
-          explicabo! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Eaque, ea omnis. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Id voluptas sint et suscipit incidunt cupiditate.
+        Our entrepreneurial training & meeting rooms are state-of-the-art in the heart of the city of Abuja, fully equipped with projector, white boards, HMDI & VGA converters, TV screen, video and audio conferencing facilities and Wi-Fi.
         </Typography>
         <Button
           sx={{

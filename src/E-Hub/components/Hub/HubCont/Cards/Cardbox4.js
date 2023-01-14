@@ -54,14 +54,7 @@ const Adons = [
     id: 8,
     adon: "Nearby Food Facilities",
   },
-  // {
-  //   id: 9,
-  //   adon: "Lor",
-  // },
-  // {
-  //   id: 10,
-  //   adon: "Lor",
-  // },
+  
 ];
 
 const CardBox4 = () => {
@@ -74,9 +67,8 @@ const CardBox4 = () => {
           <Typography
             sx={{ fontSize: "14px", minWidth: { xs: 300, sm: "100%" } }}
           >
-            <span>NGN6,000 per User/hr</span> <br />
-            <span>NGN22,000 per User/day</span> <br />
-            NGN20,000 per User/month
+             <span> <i>from ₦ 15,200  /day</i></span> <br />
+            <span><i>from ₦68,400  /week</i></span> <br/>
           </Typography>
         </Box>
         

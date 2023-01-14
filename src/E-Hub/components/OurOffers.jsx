@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import BasicTabs from "./Hub/HubNav";
 import Divider from "@mui/material/Divider";
 import styled from "styled-components";
+import { Typography } from "@mui/material";
 
 
 
@@ -43,10 +44,16 @@ const OurOffers = ({ products }) => {
               <img src={Oneon1} alt="1on1" />
             </div>
             <div className="AdCon">
-              <h3>
+              <Typography
+              variant="h5"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "30px",
+                color: "#373434",
+              }}>
               Focus on Your Core Business with our Entreprise-in-a-box and Consulting Services
 
-              </h3>
+              </Typography>
               <div
                 className="consultP"
                 data-aos="fade-in"
@@ -89,7 +96,8 @@ const OurOffers = ({ products }) => {
           </div>
           <div className="classh4">
             <h4>
-              Consult Us <span></span>
+            Need a Bespoke solution? Consult us!
+ <span></span>
             </h4>
           </div>
           <div className="adconList">

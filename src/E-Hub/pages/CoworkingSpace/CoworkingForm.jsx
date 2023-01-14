@@ -7,38 +7,32 @@ import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import { Oval } from "svg-loaders-react";
 import dayjs from "dayjs";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { Box } from "@mui/system";
+import { Paper, Box } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import workspaceApi from "../../api/workspaceApi";
 
 const FormBg = styled.div`
-// background: rgba(98, 105, 158, 0.1);
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100vh;
-
-
-}
+  // background: rgba(98, 105, 158, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-const FormCont = styled.div`
+const FormCont = styled(Paper)`
   display: flex;
   align-items: center;
   justify-content: center;
   // gap: 1rem;
   position: relative;
-  max-width: 70%;
-
-  padding: 2%;
-  margin: 3rem 0;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px 1px rgba(7, 8, 8, 0.2);
-  background: rgba(243, 247, 250, 0.66);
+  max-width: 60%;
+  background-color: #fcf8dc;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23a2a2a1' fill-opacity='0.29'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
+  padding: 0 1.5%;
 
   & .imgdiv {
-    width: 90%;
+    width: 70%;
     border-radius: 40% 60% 21% 79% / 40% 10% 90% 60%;
   }
 
@@ -47,7 +41,7 @@ const FormCont = styled.div`
     height: 70%;
     width: 100%;
     display: flex;
-    padding: 3% 3%;
+    padding: 3% 1%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -112,7 +106,7 @@ const IncreaseBtn = styled.div`
 
   & button {
     background-color: rgba(216, 164, 2, 1);
-    width: 40px;
+    width: 30px;
     height: 30px;
     outline: none;
     border-radius: 3px;
@@ -158,13 +152,27 @@ const StyledButton = styled.button`
 
 const Imgcon = styled.div`
   position: relative;
-  width: 70%;
+  width: 80%;
+
   & h3 {
     margin-bottom: 10px;
   }
 `;
 
-const Details = ({ onNext }) => {
+const Textarea = styled.textarea`
+  width: 100%;
+  height: 5rem;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid rgba(4, 4, 4, 0.34);
+  padding-left: 10px;
+
+  &:focus {
+    border: 2px solid rgba(148, 216, 255, 0.66);
+  }
+`;
+
+const Details = ({ onNext, goBack }) => {
   // states
   const [inputValues, setInputValues] = useState({
     FullName: "",
@@ -174,15 +182,23 @@ const Details = ({ onNext }) => {
     address: "",
     checkIn: "",
     Dates: "daily",
+    orgName: "",
+    UseFor: "",
   });
+
   const [CheckInDate, setCheckInDate] = React.useState(dayjs("2014-08-18").$d);
+  const [CheckOutDate, setCheckOutDate] = React.useState(
+    dayjs("2014-08-18").$d
+  );
+  
+  console.log(inputValues.UseFor);
 
-  // console.log(CheckInDate.$d);
-
-  const [DayPrice, setDayPrice] = useState(25000);
-  const [weekPrice, setWeekPrice] = useState(400000);
+  const [DayPrice, setDayPrice] = useState(3800);
+  const [weekPrice, setWeekPrice] = useState(17100);
   const [dayDuration, setDAyDuration] = useState(1);
   const [weekDuration, setWeekDuration] = useState(1);
+  const [noDayDesk, setDayNoDesk] = useState(1);
+  const [noWeekDesk, setWeekNoDesk] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
   // styles
@@ -197,20 +213,27 @@ const Details = ({ onNext }) => {
     },
     {
       id: 2,
+      type: "text",
+      label: "Organisation's Name",
+      placeholder: "Enter your city",
+      name: "orgName",
+    },
+    {
+      id: 3,
       type: "email",
       label: "Contact Email",
       placeholder: "name@email.com",
       name: "contactEmail",
     },
     {
-      id: 3,
+      id: 4,
       type: "text",
       label: "Phone Number",
       placeholder: "phone number...",
       name: "PhoneNumber",
     },
     {
-      id: 4,
+      id: 5,
       type: "number",
       max: "20",
       min: "1",
@@ -220,20 +243,29 @@ const Details = ({ onNext }) => {
     },
 
     {
-      id: 5,
+      id: 6,
       type: "text",
-      label: "Address",
+      label: "Organisation's Address",
       placeholder: "enter address",
       name: "address",
     },
     {
-      id: 6,
+      id: 7,
       type: "text",
       label: "Check-in Time",
       placeholder: "input a preferred time",
       name: "checkIn",
     },
+    {
+      id: 8,
+      type: "text",
+      label: "Check-Out Time",
+      placeholder: "input a preferred time",
+      name: "checkOut",
+    },
   ];
+
+  // handlers
 
   const handleOnchange = (e) => {
     const { value, type, checked, name } = e.target;
@@ -241,8 +273,12 @@ const Details = ({ onNext }) => {
     setInputValues((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleDate = (newValue) => {
+  const handleInDate = (newValue) => {
     setCheckInDate(newValue);
+  };
+
+  const handleOutDate = (newValue) => {
+    setCheckOutDate(newValue);
   };
 
   let isChecked;
@@ -254,36 +290,74 @@ const Details = ({ onNext }) => {
     isChecked = false;
   }
 
+  const handleDAyDeskincrease = () => {
+    setDayNoDesk((prev) => prev + 1);
+    if (noDayDesk === 1)
+      setDayPrice((prevAmount) => prevAmount * (noDayDesk + 1));
+    if (noDayDesk > 1)
+      setDayPrice((prevAmount) => prevAmount + 3800 * dayDuration);
+  };
+
+  const handleDAyDeskDecrease = () => {
+    if (noDayDesk === 1) return;
+    else {
+      setDayPrice((prevAmount) => prevAmount - 3800 * dayDuration);
+      setDayNoDesk((prev) => prev - 1);
+    }
+  };
+
+  const handleWeekDeskincrease = () => {
+    setWeekNoDesk((prev) => prev + 1);
+    if (noWeekDesk === 1)
+      setWeekPrice((prevAmount) => prevAmount * (noWeekDesk + 1));
+    if (noWeekDesk > 1)
+      setWeekPrice((prevAmount) => prevAmount + 17100 * weekDuration);
+  };
+
+  const handleWeekDeskDecrease = () => {
+    if (noWeekDesk === 1) return;
+    else {
+      setWeekPrice((prevAmount) => prevAmount - 17100 * weekDuration);
+      setWeekNoDesk((prev) => prev - 1);
+    }
+  };
+
   const handleDaysIncrease = () => {
-    setDayPrice((prevAmount) => prevAmount + 25000);
+    setDayPrice((prevAmount) => prevAmount + noDayDesk * 3800);
     setDAyDuration((prevDuration) => prevDuration + 1);
   };
+
   const handleDaysDecrease = () => {
-    if (DayPrice < 25000) {
-      return;
-    } else if (DayPrice === 25000) {
-      return;
-    } else {
-      setDayPrice((prevAmount) => prevAmount - 25000);
+    if (DayPrice < 3800 || DayPrice === 3800) return;
+    else if (DayPrice > 3800 && dayDuration === 1) return;
+    else {
+      setDayPrice((prevAmount) => prevAmount - noDayDesk * 3800);
       setDAyDuration((prevDuration) => prevDuration - 1);
     }
   };
 
   const handleWeekIncrease = () => {
-    setWeekPrice((prevAmount) => prevAmount + 400000);
+    setWeekPrice((prevAmount) => prevAmount + noWeekDesk * 17100);
     setWeekDuration((prevDuration) => prevDuration + 1);
   };
 
   const handleWeekDecrease = () => {
-    if (weekPrice < 400000) {
-      return;
-    } else if (weekPrice === 400000) {
-      return;
-    } else {
-      setWeekPrice((prevAmount) => prevAmount - 400000);
+    if (weekPrice < 17100 || weekPrice === 17100) return;
+    else if (weekPrice > 17100 && weekDuration === 1) return;
+    else {
+      setWeekPrice((prevAmount) => prevAmount - noWeekDesk * 17100);
       setWeekDuration((prevDuration) => prevDuration - 1);
     }
   };
+
+  let naira = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "NGN",
+    useGrouping: true,
+  });
+
+  const finalTotalDayPrice = naira.format(DayPrice);
+  const finalTotalWeekPrice = naira.format(weekPrice);
 
   // payments
 
@@ -306,13 +380,29 @@ const Details = ({ onNext }) => {
   };
 
   const handleFlutterPayment = useFlutterwave(config);
-
   // handles Form submission and Payments
 
   const handleSummitPayment = async (e) => {
-    e.preventDefault();
-    //
     setIsLoading(true);
+    e.preventDefault();
+
+    try {
+      const formBody = {
+        name: inputValues.FullName,
+        email: inputValues.contactEmail,
+        Phone: inputValues.PhoneNumber,
+        checkInTime: CheckInDate,
+        capacity: inputValues.capacity,
+        address: inputValues.address,
+        CheckInDate: inputValues.Dates,
+        finalTotalDayPrice,
+        finalTotalWeekPrice,
+      };
+      const response = await workspaceApi.post("/workspace.json", formBody);
+      console.log(response);
+    } catch (err) {
+      console.log(err.message);
+    }
 
     // submitForm details
 
@@ -321,12 +411,17 @@ const Details = ({ onNext }) => {
       onNext: onNext(),
       callback: (response) => {
         console.log(response);
-        // if response.ok do something
-        // else do something
-        closePaymentModal(); // this will close the modal programmatically
+        if (response.status === "completed") {
+          closePaymentModal(); // this will close the modal programmatically
+          onNext();
+        }else{
+          closePaymentModal();
+        }
       },
+
       onClose: () => {
         setIsLoading(false);
+        goBack();
       },
     });
   };
@@ -358,19 +453,51 @@ const Details = ({ onNext }) => {
                 </div>
               ))}
             </InputCont>
-            <Box sx={{ mr: "50%", mt: 3 }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "1rem",
+                mt: 3,
+              }}
+            >
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DesktopDatePicker
                   label="Check-In Date"
                   inputFormat="MM/DD/YYYY"
                   value={CheckInDate.$d}
                   name="CheckInDate"
-                  onChange={handleDate}
+                  onChange={handleInDate}
+                  renderInput={(params) => <TextField {...params} />}
+                  sx={{ width: 100 }}
+                />
+              </LocalizationProvider>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DesktopDatePicker
+                  label="Check-Out Date"
+                  inputFormat="MM/DD/YYYY"
+                  value={CheckOutDate.$d}
+                  name="CheckOutDate"
+                  onChange={handleOutDate}
                   renderInput={(params) => <TextField {...params} />}
                   sx={{}}
                 />
               </LocalizationProvider>
             </Box>
+            <div style={{ marginTop: "1rem" }}>
+              <label
+                htmlFor=""
+                style={{ fontWeight: 600, color: "rgba(21, 21, 19, 0.87)" }}
+              >
+                Reason for Use
+              </label>
+            </div>
+            <Textarea
+              name="UseFor"
+              value={inputValues.UseFor}
+              onChange={handleOnchange}
+            />
+
             <DurAmount>
               <RadioInput>
                 <span
@@ -388,7 +515,14 @@ const Details = ({ onNext }) => {
                       id="days"
                       checked={inputValues.Dates === "daily"}
                     />
-                    <label htmlFor="" style={{ marginLeft: "5px" }}>
+                    <label
+                      htmlFor=""
+                      style={{
+                        marginLeft: "5px",
+                        color: "rgba(21, 21, 19, 0.87)",
+                        fontSize: "13px",
+                      }}
+                    >
                       Per Day
                     </label>
                   </div>
@@ -406,12 +540,51 @@ const Details = ({ onNext }) => {
                       style={{
                         marginLeft: "5px",
                         color: "rgba(21, 21, 19, 0.87)",
+                        fontSize: "13px",
                       }}
                     >
                       Per Week
                     </label>
                   </div>
                 </div>
+                {isChecked && (
+                  <div
+                    style={{
+                      border: "1px solid rgba(216, 164, 2, 1)",
+                      borderRadius: "5px",
+                      padding: "4px",
+                    }}
+                  >
+                    <span>{noDayDesk} Desk/s per day</span>
+                    <IncreaseBtn>
+                      <button type="button" onClick={handleDAyDeskincrease}>
+                        <FaPlus />
+                      </button>
+                      <button type="button" onClick={handleDAyDeskDecrease}>
+                        <FaMinus />
+                      </button>
+                    </IncreaseBtn>
+                  </div>
+                )}
+                {!isChecked && (
+                  <div
+                    style={{
+                      border: "1px solid rgba(216, 164, 2, 1)",
+                      borderRadius: "5px",
+                      padding: "4px",
+                    }}
+                  >
+                    <span>{noWeekDesk} Desk/s per week</span>
+                    <IncreaseBtn>
+                      <button type="button" onClick={handleWeekDeskincrease}>
+                        <FaPlus />
+                      </button>
+                      <button type="button" onClick={handleWeekDeskDecrease}>
+                        <FaMinus />
+                      </button>
+                    </IncreaseBtn>
+                  </div>
+                )}
               </RadioInput>
 
               <div>
@@ -433,20 +606,28 @@ const Details = ({ onNext }) => {
                           fontFamily: "fantasy",
                         }}
                       >
-                        Amount: NGN {DayPrice}
+                        Amount: {finalTotalDayPrice}
                       </span>
-                      <span style={{ fontFamily: "fantasy" }}>
-                        Duration {dayDuration} Day/s
-                      </span>
+                      <div
+                        style={{
+                          border: "1px solid rgba(216, 164, 2, 1)",
+                          borderRadius: "5px",
+                          padding: "4px",
+                        }}
+                      >
+                        <span style={{ fontFamily: "fantasy" }}>
+                          Duration {dayDuration} Day/s
+                        </span>
+                        <IncreaseBtn>
+                          <button type="button" onClick={handleDaysIncrease}>
+                            <FaPlus />
+                          </button>
+                          <button type="button" onClick={handleDaysDecrease}>
+                            <FaMinus />
+                          </button>
+                        </IncreaseBtn>
+                      </div>
                     </SpanDiv>
-                    <IncreaseBtn>
-                      <button type="button" onClick={handleDaysIncrease}>
-                        <FaPlus />
-                      </button>
-                      <button type="button" onClick={handleDaysDecrease}>
-                        <FaMinus />
-                      </button>
-                    </IncreaseBtn>
                   </div>
                 )}
                 {!isChecked && (
@@ -467,20 +648,28 @@ const Details = ({ onNext }) => {
                           fontFamily: "fantasy",
                         }}
                       >
-                        Amount: NGN {weekPrice}
+                        Amount: {finalTotalWeekPrice}
                       </span>
-                      <span style={{ fontFamily: "fantasy" }}>
-                        Duration {weekDuration} week/s
-                      </span>
+                      <div
+                        style={{
+                          border: "1px solid rgba(216, 164, 2, 1)",
+                          borderRadius: "5px",
+                          padding: "4px",
+                        }}
+                      >
+                        <span style={{ fontFamily: "fantasy" }}>
+                          Duration {weekDuration} week/s
+                        </span>
+                        <IncreaseBtn>
+                          <button type="button" onClick={handleWeekIncrease}>
+                            <FaPlus />
+                          </button>
+                          <button type="button" onClick={handleWeekDecrease}>
+                            <FaMinus />
+                          </button>
+                        </IncreaseBtn>
+                      </div>
                     </SpanDiv>
-                    <IncreaseBtn>
-                      <button type="button" onClick={handleWeekIncrease}>
-                        <FaPlus />
-                      </button>
-                      <button type="button" onClick={handleWeekDecrease}>
-                        <FaMinus />
-                      </button>
-                    </IncreaseBtn>
                   </div>
                 )}
               </div>

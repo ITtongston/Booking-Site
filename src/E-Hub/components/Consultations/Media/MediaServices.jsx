@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { ListItem, ListItemIcon, Typography} from "@mui/material";
+import { ListItem, ListItemIcon,ListItemText, Typography} from "@mui/material";
 import EditAttributesIcon from "@mui/icons-material/EditAttributes";
 import { styled } from "@mui/material/styles";
 import Director from "../../../Assets/img/Director.jpg";
@@ -38,7 +38,7 @@ const MediaServices = () => {
   const items = ListItems.map((item) => (
     <ListItem key={item.id} sx={{}}>
       <ListItemIcon>{item.icon}</ListItemIcon>
-      <listItemText>{item.text}</listItemText>
+      <ListItemText>{item.text}</ListItemText>
     </ListItem>
   ));
 

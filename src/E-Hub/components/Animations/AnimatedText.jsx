@@ -1,5 +1,5 @@
 import TextAnimation from "react-text-animations";
-import './slide.css'
+
 
 
 const AnimatedText = () => {

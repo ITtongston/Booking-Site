@@ -4,14 +4,14 @@ import { FaCity, FaHands, FaUsersCog } from "react-icons/fa";
 
 const Feature1 = () => {
   return (
-    <div className="featurescont1">
+    <div data-aos-duration="1000" data-aos="fade-up" className="featurescont1">
       <div className="pointers1">
-        <div>
+        <div className="divs">
           <FaCity className="featicon1" size={40} />
           <h3
             style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px" }}
           >
-            OUR WORKSPACES
+            OUR ENTREPRENEURIAL WORKSPACES
           </h3>
           <p style={{ fontSize: "16px", fontWeight: 600 }}>
             Access to state of the art WorkSpace, Meeting Room and a Virtual
@@ -23,7 +23,7 @@ const Feature1 = () => {
           <h3
             style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px" }}
           >
-            EXQISITE SERVICES
+            MEDIA & ENTERPRISE SERVICES
           </h3>
           <p style={{ fontSize: "16px", fontWeight: 600 }}>
             Boost Your profitability with Professional Media, HR, Legal and
@@ -35,25 +35,12 @@ const Feature1 = () => {
           <h3
             style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px" }}
           >
-            {" "}
-            SCALE YOUR HUMAN CAPITAL
+            UPSKILL YOUR HUMAN CAPITAL
           </h3>
           <p style={{ fontSize: "16px", fontWeight: 600 }}>
-            Leverage our Courses on Data science, Entrepreneurship and
-            Technology
-          </p>
-        </div>
-        <div>
-          <FaUsersCog className="featicon3" size={40} />
-          <h3
-            style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px" }}
-          >
-            {" "}
-            SCALE YOUR HUMAN CAPITAL
-          </h3>
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>
-            Leverage our Courses on Data science, Entrepreneurship and
-            Technology
+            Leverage our Entrepreneurial Education Courses on Data Science,
+            Entrepreneurship & Intrapreneurship, Programming, Finance &
+            Fund-Raising, Career & Business Advisory
           </p>
         </div>
       </div>

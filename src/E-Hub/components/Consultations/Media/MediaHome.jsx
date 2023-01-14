@@ -1,9 +1,9 @@
-import { Box,Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import media from "../../../Assets/img/Mediahome.jpg";
-
 import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -51,12 +51,20 @@ const BoxBg = styled(Box)`
 const MediaHome = () => {
   return (
     <div>
-      <h3
-        style={{ textAlign: "center", fontSize: "1.5rem", marginTop: "2rem" }}
+      <Typography
+        variant="h5"
+        sx={{
+          fontWeight: "bold",
+          textAlign: "center",
+          fontSize: "30px",
+          mb: "2em",
+          mt: "1.5em",
+          color: "#373434",
+        }}
       >
         Entreprenuerial Multimedia
-      </h3>
-      <StyledContainer>
+      </Typography>
+      <StyledContainer data-aos="fade-up" data-aos-duration="1000">
         <Box sx={{ width: "50%", marginBottom: "6rem" }}>
           <h3 style={{ fontSize: "1.7rem" }}>
             We help you break through the noise
@@ -78,7 +86,7 @@ const MediaHome = () => {
             component={Link}
             to="/media"
           >
-            Explore 
+            Explore
           </Button>
         </Box>
         <Box sx={{ width: "40%" }}>

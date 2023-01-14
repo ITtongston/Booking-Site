@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, Button } from "@mui/material";
+import { Box} from "@mui/material";
 import { Link } from "react-router-dom";
 import { FaCaretRight } from "react-icons/fa";
+import { Typography } from "@mui/material";
 
 const courses = [
   {
@@ -15,13 +16,13 @@ const courses = [
     id: 2,
     title: "Tongston Introduction to Entrepreneurial Education",
     text: " Introductory entrepreneurial education for professional, career, academic, business performance improvement and development.",
-    path: "/Tieec",
+    path: "http://tieec.webflow.io/",
   },
   {
     id: 3,
     title: "Career & Business Advisory Session",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti odit at magni.",
-    path: "/",
+    path: "https://mailchi.mp/ace0a675887b/careerbusiness_advisory",
   },
   {
     id: 4,
@@ -79,8 +80,11 @@ const StyledDiv = styled.div`
   justify-content: center;
 `;
 
-const Btn = styled(Button)`
+const Btn = styled.a`
   color: rgba(217, 6, 6, 1);
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
 
   & span {
     display: flex;
@@ -93,19 +97,24 @@ const Entrepreneurial = () => {
   return (
     <>
       <div style={{ margin: "10% 0", padding: "0 4%" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            fontSize: "30px",
+            mb: "2em",
+            color: "#373434",
+          }}
+        >
           Entrepreneurial Education
-        </h2>
+        </Typography>
         <StyledDiv>
           {courses.map((items) => (
             <StyledBox key={items.id}>
               <h2 style={{ width: "100%" }}>{items.title}</h2>
               <p>{items.text}</p>
-              <Btn
-                component={Link}
-                to={items.path}
-                sx={{ color: "rgba(217, 6, 6, 1)" }}
-              >
+              <Btn href={items.path} sx={{ color: "rgba(217, 6, 6, 1)" }}>
                 More
                 <span>
                   <FaCaretRight />

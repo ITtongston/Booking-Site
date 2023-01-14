@@ -72,6 +72,7 @@ const Media = () => {
   const BgBox = styled(Box)`
     background: url(${redB}) center no-repeat;
     // background-size: cover;
+    background-size: 100%;
 
     & .help {
       position: relative;

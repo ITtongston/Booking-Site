@@ -35,22 +35,6 @@ const Adons = [
     adon: "Admin, legal, entrepreneurial education, HR, media, data &amp; finance services for all your business needs.",
   },
   
-  //   Equipped Pantry
-  // Access Green Relaxation Lounge
-  // Nearby Food Facilities
-
-  // Access Entrepreneurial Thinkers Network
-  // Access Entrepreneurial Content through blogs & newsletters
-  // Access Tongston's entrepreneurial products & services
-
-  // {
-  //   id: 9,
-  //   adon: "Lor",
-  // },
-  // {
-  //   id: 10,
-  //   adon: "Lor",
-  // },
 ];
 
 const CardBox3 = () => {
@@ -86,7 +70,7 @@ const CardBox3 = () => {
           size="small"
           variant="text"
           component={Link}
-          to="/"
+          to="/plans"
         >
           View Our Plans
         </Button>

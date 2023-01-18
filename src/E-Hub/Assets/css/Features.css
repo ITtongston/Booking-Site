@@ -12,7 +12,6 @@
 
 .featurescont{
     display: block;
-    /* z-index: 5; */
     position: absolute;
     top: 90%;
     max-width: 80%;

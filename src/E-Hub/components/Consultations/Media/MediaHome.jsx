@@ -11,7 +11,17 @@ const StyledContainer = styled.div`
   align-items: center;
   padding: 0 5%;
   margin: 4rem 0;
+
+  @media (max-width: 1000px) {
+    & {
+      flex-direction: column;
+    }
+
+    
+  }
 `;
+// {}
+
 
 const BoxBg = styled(Box)`
   background: url(${media}) no-repeat center;
@@ -65,7 +75,7 @@ const MediaHome = () => {
         Entreprenuerial Multimedia
       </Typography>
       <StyledContainer data-aos="fade-up" data-aos-duration="1000">
-        <Box sx={{ width: "50%", marginBottom: "6rem" }}>
+        <Box sx={{ width: {sm: '50%', xs: '100%'}, marginBottom: "6rem" }}>
           <h3 style={{ fontSize: "1.7rem" }}>
             We help you break through the noise
           </h3>
@@ -89,7 +99,7 @@ const MediaHome = () => {
             Explore
           </Button>
         </Box>
-        <Box sx={{ width: "40%" }}>
+        <Box sx={{ width: {sm: '50%', xs: '90%'}}}>
           <BoxBg>
             <h4>Become That Choice Brand!</h4>
           </BoxBg>

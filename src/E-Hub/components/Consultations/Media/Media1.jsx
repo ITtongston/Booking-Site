@@ -90,7 +90,7 @@ const Media = () => {
     }
   `;
 
-    const IntroBox = styled(Box)`
+  const IntroBox = styled(Box)`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
@@ -99,7 +99,8 @@ const Media = () => {
       width: 100%;
     }
 
-    @media
+    @media (max-width: 1000px) {
+    }
   `;
 
   const ServicesList = styled(Box)`
@@ -151,16 +152,18 @@ const Media = () => {
         </Typography>
         <Typography
           component="p"
-          sx={{ width: "60%", fontSize: "16px", letterSpacing: "2px", mt: 3 }}
+          sx={{ width: "60%", fontSize: "25px", letterSpacing: "2px", mt: 3 }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae
-          nulla qui sequi amet accusantium, provident natus? Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Id porro quod sint sapiente.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-          maiores nesciunt, eveniet quae culpa voluptatem doloremque id enim.
-          Quidem culpa reiciendis aut obcaecati eaque vero quibusdam est natus
-          iusto praesentium.
+          Tongston Entrepreneurship Media is an award-winning media agency with
+          the ability to make the most out of your media spend, whilst making
+          you or your institution or government valuable, influential and
+          profitable.
         </Typography>
+        <p style={{ marginTop: "10px", width: "60%", fontSize: "16px", letterSpacing: "2px" }}>
+          Whatever your needs are, we have the solution and more! Our aim is to
+          make you valuable, influential & profitable. Break through the noise
+          and stand out today
+        </p>
 
         <Box sx={{ my: 10 }}>
           <Typography

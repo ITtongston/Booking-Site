@@ -6,7 +6,7 @@ import Training from "../../../Assets/img/Trainingroom.jpg";
 import Divider from "@mui/material/Divider";
 import backpat from "../../../Assets/img/Picture3.png";
 import Button from "@mui/material/Button";
-import { Train } from "@mui/icons-material";
+
 
 const BoxFeatures = styled(Box)`
   display: flex;
@@ -51,6 +51,7 @@ const ContainerBox = styled(Box)`
 // SC
 
 const Trainingroom = () => {
+  
   return (
     <ContainerBox className="Hub1">
       <Box

@@ -1,8 +1,6 @@
 import React from "react";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import styled from "styled-components";
 import { ThreeDots } from "svg-loaders-react";
-import "../Assets/css/mapstyle.css";
 import { Typography } from "@mui/material";
 
 const Centralise = styled.div`
@@ -24,10 +22,9 @@ const GoogleContainer = () => {
             style={{ width: "100%", height: "100%", borderRadius: "15px" }}
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=Emeka%20ayaoko%20street%20abuja&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           ></iframe>
         </div>
       </Centralise>

@@ -44,6 +44,7 @@ const StyledBox = styled(Box)`
   border: 1px solid #000;
   color: #000;
   background: transparent;
+  margin: 0 auto;
 
   &:hover h2 {
     transform: scale(0.9);
@@ -70,6 +71,10 @@ const StyledBox = styled(Box)`
     top: 0;
     left: 0;
   }
+
+  @media (max-width: 800px) {
+    max-width: 80%;
+  }
 `;
 
 const StyledDiv = styled.div`
@@ -78,6 +83,15 @@ const StyledDiv = styled.div`
   gap: 2em;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
 `;
 
 const Btn = styled.a`

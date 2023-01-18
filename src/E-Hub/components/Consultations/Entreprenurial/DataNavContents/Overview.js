@@ -42,21 +42,16 @@ const TargetUl = styled.ul`
 const Unique = styled.div`
   margin: 2rem 0;
 
-  & h3{
+  & h3 {
     font-size: 25px;
   }
 `;
 
-
-
 const TargetAudience = styled.div`
-
-& h3{
-  font-size: 25px;
-}
-
+  & h3 {
+    font-size: 25px;
+  }
 `;
-
 
 const Values = [
   {
@@ -94,34 +89,33 @@ const Values = [
 ];
 
 const BuyButton = styled(Link)`
-min-width: 130px;
-height: 40px;
-padding: 5px 10px;
-font-weight: bold;
-cursor: pointer;
-transition: all 0.3s ease;
-position: relative;
-display: inline-block;
-outline: none;
-border-radius: 20px;
-z-index: 0;
-background: #fff;
-overflow: hidden;
-border: 2px solid rgba(1, 2, 50, 0.97);
-color: rgba(1, 2, 50, 0.97); 
-font-size: 17px;
-text-align: center;
+  min-width: 130px;
+  height: 40px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid rgba(1, 2, 50, 0.97);
+  color: rgba(1, 2, 50, 0.97);
+  font-size: 17px;
+  text-align: center;
 
-
-&:hover {
+  &:hover {
     color: #fff;
   }
 
-&:hover:after {
+  &:hover:after {
     height: 100%;
   }
 
-&:after {
+  &:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -130,8 +124,8 @@ text-align: center;
     bottom: 0;
     height: 0;
     width: 100%;
-    background:rgba(1, 2, 50, 0.97);
-}
+    background: rgba(1, 2, 50, 0.97);
+  }
 `;
 const Overviews = () => {
   return (
@@ -171,11 +165,20 @@ const Overviews = () => {
         </Box>
       </OverviewHighLight>
       <Box>
-        <h1 style={{width:'60%',margin: '4rem auto 0',textAlign: 'center'}}>
+        <h1
+          style={{ width: "60%", margin: "4rem auto 0", textAlign: "center" }}
+        >
           Start or Advance your career with Our top Course in Data Science
         </h1>
         <Typography
-          sx={{ width: "60%", py: 3, wordSpacing: "2px", fontSize: "20px", margin: '0 auto',textAlign:'center' }}
+          sx={{
+            width: "60%",
+            py: 3,
+            wordSpacing: "2px",
+            fontSize: "20px",
+            margin: "0 auto",
+            textAlign: "center",
+          }}
         >
           The world is currently revolving around data, as such all employees
           (intrapreneurs) and Employers of labor entrepreneurs need the ability
@@ -183,7 +186,7 @@ const Overviews = () => {
           marketing and operational data no matter the field and profession of
           interest.
         </Typography>
-        <TargetAudience >
+        <TargetAudience>
           <h3 style={{ marginBottom: "10px" }}>
             Target Audience for this Course
           </h3>
@@ -208,7 +211,7 @@ const Overviews = () => {
         <Unique>
           <h3>Unique Value proposition</h3>
           {Values.map((value) => (
-            <List sx={{width: '50%'}} key={value.id}>
+            <List sx={{ width: "50%" }} key={value.id}>
               <ListItem disablePadding={true}>
                 <ListItemIcon>{value.icon}</ListItemIcon>
                 <ListItemText>{value.text}</ListItemText>
@@ -217,7 +220,7 @@ const Overviews = () => {
           ))}
         </Unique>
 
-        <BuyButton to='/'>Buy Now</BuyButton>
+        <BuyButton to="/">Buy Now</BuyButton>
       </Box>
     </div>
   );

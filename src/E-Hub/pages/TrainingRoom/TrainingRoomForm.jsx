@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import training from "../../Assets/img/training.jpg";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
-import { Oval } from "svg-loaders-react";
+import { Oval} from "svg-loaders-react";
 import dayjs from "dayjs";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { Box } from "@mui/system";

@@ -4,12 +4,12 @@ import "../Assets/css/WhatWeDo.css";
 import Picture from "../Assets/img/Picture.png";
 
 const WhatWeDo = () => {
-  
+
   return (
     <div className="whatweCont">
       <div className="whatwe" data-aos="fade-up" data-aos-duration="2000">
         <h2>
-          What We Stand For <span className="blink">__</span>?
+          What We Stand For <span className="blink">__</span>
         </h2>
         <p className="biggerp">
           We bridge the gap between Value-oriented Work-Spaces & Education,

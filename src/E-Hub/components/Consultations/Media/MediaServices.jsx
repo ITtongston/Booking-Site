@@ -15,7 +15,7 @@ const MediaServices = () => {
   const ListItems = [
     {
       id: 1,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cumque voluptate rem.",
+      text: "Website Design & Dev.								₦ 49,999",
       icon: <EditAttributesIcon />,
     },
     {
@@ -36,7 +36,7 @@ const MediaServices = () => {
   ];
 
   const items = ListItems.map((item) => (
-    <ListItem key={item.id} sx={{}}>
+    <ListItem disablePadding="true" key={item.id} sx={{}}>
       <ListItemIcon>{item.icon}</ListItemIcon>
       <ListItemText>{item.text}</ListItemText>
     </ListItem>
@@ -290,10 +290,7 @@ const MediaServices = () => {
                 Branding
               </h4>
               <Typography component="p" sx={{ width: "60%", py: "1rem" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
-                quod. Hic veritatis perspiciatis perferendis nemo nobis eum,
-                officiis asperiores a dolorem quo qui saepe eveniet ipsam
-                corrupti?
+              Corporate Branding is the core of our business focus. Elevate your brand with our suite of products and services. Make customized decisions for your business. We are an award-winning communications agency with the ability to make the most out of your marketing spend.
               </Typography>
               <Box>{items}</Box>
               <ButtonConsult/>

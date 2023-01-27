@@ -324,7 +324,7 @@ const Details = ({ onNext, goBack }) => {
   };
 
   const handleOnChecked = (e) => {
-    const { type, checked, name } = e.target;
+    const {checked, name } = e.target;
     setCheckedStates((prevStates) => ({ ...prevStates, [name]: checked }));
   };
 

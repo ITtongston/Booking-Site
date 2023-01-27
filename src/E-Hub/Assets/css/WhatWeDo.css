@@ -4,11 +4,11 @@
   background-position-x: 150%;
   height: 100%;
   width: 100%;
-  padding: 10% 3%;
+  padding: 12% 3%;
   display: flex;
   gap: 7em;
   justify-content: space-between;
-  margin: 1% 0 3% 0;
+  margin: 15% 0 3% 0;
 }
 
 .whatwe {
@@ -107,14 +107,12 @@
     gap: 3rem;
     padding: 0 2%;
     background: none;
-    border: solid red 2px;
     margin-top: -15%;
   }
 
   .whatwe{
-   
-    max-width: 80%;
-    border: solid red 2px;
+    min-width: 90%;
+    max-height: 80%;
   }
 
   .whatwe h2{

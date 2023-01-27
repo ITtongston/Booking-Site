@@ -5,6 +5,7 @@ import media from "../../../Assets/img/Mediahome.jpg";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
+
 const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -17,7 +18,6 @@ const StyledContainer = styled.div`
       flex-direction: column;
     }
 
-    
   }
 `;
 // {}
@@ -66,7 +66,7 @@ const MediaHome = () => {
         sx={{
           fontWeight: "bold",
           textAlign: "center",
-          fontSize: "30px",
+          fontSize: {sm: '30px', xs: '20px'},
           mb: "2em",
           mt: "1.5em",
           color: "#373434",

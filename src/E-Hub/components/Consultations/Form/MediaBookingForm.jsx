@@ -22,6 +22,10 @@ const StyledCont = styled.div`
   `;
 
   const Header = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 2%;
 
   & h2{
     display: flex;
@@ -30,9 +34,18 @@ const StyledCont = styled.div`
   }
 
   & h2 img{
-    width: 4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
+    object-fit: cover;
+  }
 
+  @media (max-width: 1000px) {
+    & h2{
+      font-size: 20px;
+      width: 70%;
+      text-align: center;
+    }
   }
 
   `;
@@ -48,13 +61,13 @@ background-color: transparent;
 &::placeholder{
  opacity: 0.8;
 }
-  `;
+`;
 
 
   const StyledButton = styled.button`
   padding: 10px 10px;
   border-radius: 10px;
-  width: 30%;
+  width: 40%;
   cursor: pointer;
   margin: 1rem auto 0;
   background: transparent;
@@ -69,10 +82,17 @@ font-weight: 600;
   &:hover{
     gap: 15px;
   }
-  
-  `
-
-
+  @media (max-width: 1000px){
+    width: 50%;
+  }
+`
+  const Styledform = styled.form`
+  max-width: 60%;
+  min-width: 35%;
+  @media (max-width: 1000px){
+    min-width: 70%;
+  }
+`
 const BookingForm = () => {
   const [values, setValues] = useState({
     organisationName: "",
@@ -148,9 +168,8 @@ const BookingForm = () => {
         <h2>Help Us Know More About Your Media Interest! <img src={Handshake} alt="hand"/></h2>
       </Header>
 
-      <form
+      <Styledform
         style={{
-          width: "45%",
           margin: "0 auto",
           border: "2px solid black",
           borderRadius: "10px",
@@ -181,7 +200,7 @@ const BookingForm = () => {
         >
           Submit <FaEnvelope size={15}/>
         </StyledButton>
-      </form>
+      </Styledform>
     </StyledCont>
   );
 };

@@ -25,6 +25,12 @@ const Hero = (props) => {
         width: 13rem;
       }
 
+      @media (max-width: 900px){
+        & img{
+          width: 5rem;
+        }
+      }
+
       `;
 
   return (
@@ -38,7 +44,9 @@ const Hero = (props) => {
         </h1>
         <h2 data-aos="fade-up">
           Become a valuable, influential & profitable brand with
-          <span style={{ color: "yellow",marginLeft: '10px'}}>Tongston Entrepreneurial Hub</span>
+          <span style={{ color: "yellow", marginLeft: "10px" }}>
+            Tongston Entrepreneurial Hub
+          </span>
         </h2>
         <div className="Btncont">
           <div className="secondBtn">

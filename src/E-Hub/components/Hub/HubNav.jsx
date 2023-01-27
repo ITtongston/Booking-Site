@@ -78,7 +78,7 @@ export default function BasicTabs() {
           sx={{
             fontWeight: "bold",
             textAlign: "center",
-            fontSize: "30px",
+            fontSize: {sm: '30px', xs: '20px'},
             mb: "2em",
             color: "#373434",
           }}

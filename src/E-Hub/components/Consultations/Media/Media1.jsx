@@ -22,56 +22,40 @@ const Media = () => {
       icon: <ImageSearchOutlinedIcon fontSize="large" />,
       service: "BRANDING",
       itemText:
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque fuga dolore quasi",
+        "...that across Web Development, Brand Identity & Value Creation, Corperate Brand Design & Print",
       path: "branding",
     },
     {
       id: 2,
-      icon: <BarChartOutlinedIcon fontSize="large" />,
-      service: "DIGITAL MARKETING",
+      icon: <MovieOutlinedIcon fontSize="large" />,
+      service: "MULTIMEDIA STUDIO",
       itemText:
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque fuga dolore quasi",
-      path: "digital",
+        "...premium services from scripting, to audio & video recording to editing, to animations & photography",
+      path: "prod",
     },
     {
       id: 3,
       icon: <ScreenshotMonitorOutlinedIcon fontSize="large" />,
-      service: "PRE-PRODUCTION",
+      service: "CORPORATE COMMUNICATIONS & PR",
       itemText:
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque fuga dolore quasi",
-      path: "preprod",
+        "...communication & PR strategies for Pitch Books & Investor Pitch Decks, Written Communications & Press Releases and Presentations ",
+      path: "comms",
     },
     {
       id: 4,
-      icon: <MovieOutlinedIcon fontSize="large" />,
-      service: "PRODUCTION",
+      icon: <BarChartOutlinedIcon fontSize="large" />,
+      service: "DIGITAL MARKETING",
       itemText:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque fuga dolore quasi",
-      path: "prod",
-    },
-    {
-      id: 5,
-      icon: <ScreenShareOutlinedIcon fontSize="large" />,
-      service: "POST-PRODUCTION",
-      itemText:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque fuga dolore quasi",
-      path: "postprod",
-    },
-    {
-      id: 6,
-      icon: <LogoDevOutlinedIcon fontSize="large" />,
-      service: "WEB DEVELOPMENT AND MANAGEMENT",
-      itemText:
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque fuga dolore quasi",
-      path: "web",
+        "...effective marketing through campaigns, SEO, digital media marketing",
+      path: "digital",
     },
   ];
 
-  const StyledBox = styled(Box)``;
+  const StyledBox = styled(Box)`
+  `;
 
   const BgBox = styled(Box)`
     background: url(${redB}) center no-repeat;
-    // background-size: cover;
     background-size: 100%;
 
     & .help {
@@ -88,6 +72,11 @@ const Media = () => {
       border-radius: 2px;
       background-color: black;
     }
+
+    @media (max-width: 1000px) {
+      background-size: 100%;
+      padding: 2%;
+    }
   `;
 
   const IntroBox = styled(Box)`
@@ -100,18 +89,32 @@ const Media = () => {
     }
 
     @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+
+      & img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+      }
+
     }
   `;
 
   const ServicesList = styled(Box)`
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
   `;
   const StyledListItem = styled(ListItem)`
     transition: all 0.3s ease;
+    max-width: 100%;
 
     &:hover {
       transform: scale(1.02);
@@ -125,14 +128,14 @@ const Media = () => {
         <BgBox sx={{ textAlign: "center" }}>
           <Typography
             className="help"
-            sx={{ fontSize: "30px", fontWeight: "bold", pt: 20 }}
+            sx={{ fontSize: {sm: "30px", xs: "25px"}, fontWeight: "bold", pt: 20 }}
           >
             We help Scale your Business
           </Typography>
           <Typography
             sx={{
               textAlign: "left",
-              fontSize: "40px",
+              fontSize: {sm: "40px", xs: "30px"},
               ml: 10,
               mt: 3,
               fontWeght: "bold",
@@ -146,13 +149,13 @@ const Media = () => {
         <img src={Business} alt="" />
       </IntroBox>
 
-      <Box sx={{ px: 5, pt: 6 }}>
+      <Box sx={{ px: 5, pt: 3}}>
         <Typography variant="h6" sx={{ fontSize: "25px", fontWeight: "bold" }}>
           Multimedia and Branding
         </Typography>
         <Typography
           component="p"
-          sx={{ width: "60%", fontSize: "25px", letterSpacing: "2px", mt: 3 }}
+          sx={{ width: {sm:'60%', xs: '90%' }, fontSize: {sm: "25px", xs: "20px"}, letterSpacing: "2px", mt: 3 }}
         >
           Tongston Entrepreneurship Media is an award-winning media agency with
           the ability to make the most out of your media spend, whilst making
@@ -171,7 +174,7 @@ const Media = () => {
             variant="h5"
             component="div"
           >
-            Our Services
+            Our Services Covers
           </Typography>
           <StyledBox>
             <ServicesList>

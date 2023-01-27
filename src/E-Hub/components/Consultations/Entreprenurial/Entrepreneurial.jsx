@@ -9,7 +9,7 @@ const courses = [
   {
     id: 1,
     title: "Data Science",
-    text: "Data science training targeted at individuals between ages 15 and 50 who want to be well grounded in data science, analysis and research in whatever field thier in.",
+    text: "Data science training targeted at individuals who want to be well grounded in data science, analysis and research in whatever field thier in.",
     path: "/data",
   },
   {
@@ -116,7 +116,7 @@ const Entrepreneurial = () => {
           sx={{
             fontWeight: "bold",
             textAlign: "center",
-            fontSize: "30px",
+            fontSize: {sm: '30px', xs: '20px'},
             mb: "2em",
             color: "#373434",
           }}

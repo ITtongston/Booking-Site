@@ -30,9 +30,9 @@
   font-size: 30px;
   font-weight: 900;
   width: 90%;
+  padding: 0 2%;
   text-transform: uppercase;
   margin: 0 auto;
-  
 }
 
 .Hero h2 {
@@ -138,7 +138,8 @@
     font-weight: 700;
     text-align: center;
     margin: 1em auto 0;
-    width: 70%;
+    width: 60%;
+
   }
 
   .Hero h2 {
@@ -151,7 +152,7 @@
   .Hero  .Btncont .secondBtn  button {
     padding: 5px 5px;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 14px;
   }
   
   .Hero::before {
@@ -174,7 +175,7 @@
     gap: 1.5em;
     width: 75%;
     justify-content: center;
-    padding: 0 2%;
+    padding: 0 3%;
 
   }
 }

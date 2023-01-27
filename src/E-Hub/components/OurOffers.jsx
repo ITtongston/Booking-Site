@@ -48,7 +48,7 @@ const OurOffers = ({ products }) => {
               variant="h5"
               sx={{
                 fontWeight: "bold",
-                fontSize: "30px",
+                fontSize: {sm: '30px', xs: '20px'},
                 color: "#373434",
               }}>
               Focus on Your Core Business with our Entreprise-in-a-box and Consulting Services

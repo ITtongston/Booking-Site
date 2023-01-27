@@ -13,6 +13,7 @@ import Data from "./E-Hub/components/Consultations/Entreprenurial/Data";
 import MeetingFlow from "./E-Hub/pages/MeetingRoom/MeetingFlow";
 import CoworkigFlow from "./E-Hub/pages/CoworkingSpace/CoworkingFlow";
 import PackagePages from "./E-Hub/pages/VirtualOffice/PackagesPage";
+import PackagesForm from "./E-Hub/pages/VirtualOffice/PackagesForm";
 
 const override = {
   position: "absolute",
@@ -63,6 +64,7 @@ function App() {
             <Route path="/bookform" element={<BookingForm />} />
             <Route path="/data" element={<Data />} />
             <Route path="/plans" element={<PackagePages />} />
+            <Route path="/plans/form" element={<PackagesForm />} />
           </Routes>
         </div>
       )}

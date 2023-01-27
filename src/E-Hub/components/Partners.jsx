@@ -84,6 +84,7 @@ const Containdiv = styled.div`
   justify-content: center;
   margin-bottom: 4rem;
 `;
+
 const Partners = () => {
   return (
     <>
@@ -92,7 +93,7 @@ const Partners = () => {
         sx={{
           fontWeight: "bold",
           textAlign: "center",
-          fontSize: "30px",
+          fontSize: {sm: '30px', xs: '20px'},
           mb: "2em",
           color: "#373434",
         }}
@@ -106,7 +107,6 @@ const Partners = () => {
           ))}
         </ImgCon>
       </Containdiv>
-      
     </>
   );
 };

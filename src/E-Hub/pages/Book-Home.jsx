@@ -11,7 +11,7 @@ import { Divider } from "@mui/material";
 import Entrepreneurial from "../components/Consultations/Entreprenurial/Entrepreneurial";
 import HubSummary from "../components/HubSummary";
 import Partners from "../components/Partners";
-// import GoogleContainer from "../components/GoogleContainer";
+import GoogleContainer from "../components/GoogleContainer";
 
 
 const Home = () => {
@@ -26,7 +26,7 @@ const Home = () => {
       <MediaHome />
       <Entrepreneurial />
       <Partners/>
-      {/* <GoogleContainer/> */}
+      <GoogleContainer/>
       <Footer />
       <ScrollToTop />
     </>

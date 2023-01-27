@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { ThreeDots } from "svg-loaders-react";
 import { Typography } from "@mui/material";
 
 const Centralise = styled.div`
@@ -14,7 +13,7 @@ const GoogleContainer = () => {
   return (
     <>
       <Typography variant="h4" sx={{ fontWeight: "bold",
-            fontSize: "30px",
+            fontSize: {sm: '30px', xs: '20px'},
             color: "#373434",px: 10, mb: 2, mt: 4}}>Need Direction?</Typography>
       <Centralise>
         <div style={{ width: "70%",height: '300px' }}>

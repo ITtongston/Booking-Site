@@ -75,16 +75,16 @@ const MediaHome = () => {
         Entreprenuerial Multimedia
       </Typography>
       <StyledContainer data-aos="fade-up" data-aos-duration="1000">
-        <Box sx={{ width: {sm: '50%', xs: '100%'}, marginBottom: "6rem" }}>
-          <h3 style={{ fontSize: "1.7rem" }}>
+        <Box sx={{ width: {sm: '50%', xs: '100%'}, marginBottom: "6rem", textAlign: {sm: "left", xs: "center"} }}>
+          <Typography component="h2" style={{ fontSize: "1.7rem" }}>
             We help you break through the noise
-          </h3>
-          <p style={{ width: "70%", marginTop: "1rem" }}>
+          </Typography >
+          <Typography sx={{ width: {sm: '75%', xs: '90%'}, textAlign: {sm: 'left', xs: 'center'}}}>
             Elevate your brand with our suite of products and services. Make
             customized media decisions for your business, government, or
             yourself. We are an award-winning communications agency with the
             ability to make the most out of your marketing spend.
-          </p>
+          </Typography>
           <Button
             variant="text"
             sx={{

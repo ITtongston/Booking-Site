@@ -243,7 +243,7 @@ const Packages = () => {
       callback: (response) => {
         console.log(response);
         if (response.status === "completed") {
-          setOpen(true);
+          setOpen(true)
           setIsLoading(false);
           closePaymentModal(); // this will close the modal programmatically
           setInputValues({
@@ -307,7 +307,7 @@ const Packages = () => {
         </Typography>
         <Papercard>
           <Paper variant="outlined">
-            <form ref={form} onSubmit={handleSummitPayment} action="">
+            <form ref={form} onSubmit={handleSummitPayment}>
               <InputCont>
                 {Inputs.map((input) => (
                   <div key={input.id}>
@@ -382,46 +382,7 @@ const Packages = () => {
               </Typography>
             </form>
             
-            {open && (
-              <div>
-                <Backdrop
-                  sx={{
-                    zIndex: (theme) => theme.zIndex.drawer + 1,
-                  }}
-                  open={open}
-                  onClick={handleClose}
-                >
-                  <Box
-                    sx={{
-                      background: "white",
-                      borderRadius: "10px",
-                      p: 2,
-                      width: "50%",
-                      height: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                      gap: "1rem",
-                      boxShadow: "2px 2px 3px rgba(17, 17, 17, 0.25)",
-                    }}
-                  >
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        color: "rgba(194, 0, 0, 0.87)",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      Membership SignUp Succesful!
-                    </Typography>
-                    <Typography>
-                      Thank you for Subscribing for Virtual Membership..
-                    </Typography>
-                  </Box>
-                </Backdrop>
-              </div>
-            )}
+            
           </Paper>
         </Papercard>
       </FormCon>

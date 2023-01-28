@@ -38,6 +38,8 @@
         flex-direction: column;
         gap: 3em;
         padding: 2em 3em;
+        object-fit: cover;
+        
     } 
 
     .featurescont{

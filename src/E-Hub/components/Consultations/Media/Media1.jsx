@@ -128,7 +128,7 @@ const Media = () => {
         <BgBox sx={{ textAlign: "center" }}>
           <Typography
             className="help"
-            sx={{ fontSize: {sm: "30px", xs: "25px"}, fontWeight: "bold", pt: 20 }}
+            sx={{ fontSize: {sm: "30px", xs: "25px"}, fontWeight: "bold", pt: 10 }}
           >
             We help Scale your Business
           </Typography>
@@ -149,20 +149,20 @@ const Media = () => {
         <img src={Business} alt="" />
       </IntroBox>
 
-      <Box sx={{ px: 5, pt: 3}}>
+      <Box sx={{ px: 3, pt: 3}}>
         <Typography variant="h6" sx={{ fontSize: "25px", fontWeight: "bold" }}>
           Multimedia and Branding
         </Typography>
         <Typography
           component="p"
-          sx={{ width: {sm:'60%', xs: '90%' }, fontSize: {sm: "25px", xs: "20px"}, letterSpacing: "2px", mt: 3 }}
+          sx={{ width: {sm:'60%', xs: '100%' }, fontSize: {sm: "25px", xs: "20px"}, letterSpacing: "2px", mt: 3,textAlign: {sm: 'left', xs: 'center'} }}
         >
           Tongston Entrepreneurship Media is an award-winning media agency with
           the ability to make the most out of your media spend, whilst making
           you or your institution or government valuable, influential and
           profitable.
         </Typography>
-        <p style={{ marginTop: "10px", width: "60%", fontSize: "16px", letterSpacing: "2px" }}>
+        <p style={{ marginTop: "10px", width: "70%", fontSize: "16px", letterSpacing: "2px" }}>
           Whatever your needs are, we have the solution and more! Our aim is to
           make you valuable, influential & profitable. Break through the noise
           and stand out today

@@ -88,7 +88,7 @@ export default function TrainingFlow() {
         })}
       </Stepper>
       <React.Fragment>
-        <Typography sx={{ my: 6, mb: 1 }}>{flowContent}</Typography>
+        <Typography sx={{ pt: 6, pb: 5 }}>{flowContent}</Typography>
       </React.Fragment>
 
       {activeStep > 1 && (
@@ -101,9 +101,10 @@ export default function TrainingFlow() {
               height: "100%",
               flexDirection: "column",
               gap: "0.5rem",
+            textAlign: 'center'
             }}
           >
-            <Typography sx={{ mt: 5, fontSize: "20px" }}>
+            <Typography sx={{ mt: 5, fontSize: {sm: '20px', xs: '16px'} }}>
               Thanks For your Esteemed Interest in our Training Room, kindly
               check your email for confirmation!
             </Typography>

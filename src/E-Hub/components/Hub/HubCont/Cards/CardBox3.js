@@ -81,7 +81,6 @@ const CardBox3 = () => {
 
 export default CardBox3;
 <Typography sx={{ fontSize: "14px" }}>
-  {" "}
   <span>NGN6,000 per User/hr</span> <br />
   <span>NGN22,000 per User/day</span> <br />
   NGN20,000 per User/month

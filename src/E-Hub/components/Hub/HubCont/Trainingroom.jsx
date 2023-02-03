@@ -80,16 +80,6 @@ const Trainingroom = () => {
           boards, HMDI & VGA converters, TV screen, video and audio conferencing
           facilities and Wi-Fi.
         </Typography>
-        <Button
-          sx={{
-            fontSize: 12,
-            fontWeight: 400,
-            textDecoration: "underline",
-            color: "#862828",
-          }}
-        >
-          Learn More
-        </Button>
       </Box>
       <Divider
         sx={{ ml: 4, display: { xs: "none", sm: "block" } }}

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-
 
 const StyledInput = styled.input`
 border: none;
@@ -15,26 +14,46 @@ background-color: transparent;
  opacity: 0.5;
 }
 
-&:invalid ~ span{
+& ~ span{
+  display: none;
+  font-size: 12px;
+  color: rgba(254, 7, 7, 0.8);
+  padding: 3px 0;
+  }
+
+&:invalid ~  span{
 display: block;
 }
 
-&:is(:valid,:focus) & {
-  margin-bottom: 1em; 
-}
-
-`
-
+`;
 
 const FormInput = (props) => {
+  const [focused, setFocused] = useState(false);
   const { label, id, onChange, errowMessage, ...Inputprops } = props;
+  
 
+  const handleFocus = () => {
+    setFocused(true); 
+  }
+
+  console.log(focused)
   return (
-    <div style={{padding: '4% 0'}}>
-      <label style={{marginTop: "8px", fontFamily:'Arial', fontWeight: '600', color: "#2E2C2C"}}>{label}</label><br/>
-      <div style={{margin: '0 auto'}}><StyledInput  {...Inputprops} onChange={onChange} />
-      <span style={{fontSize: '12px', color: 'red', display: 'none'}}>{errowMessage}</span></div>
-      
+    <div style={{ padding: "4% 0" }}>
+      <label
+        style={{
+          marginTop: "8px",
+          fontFamily: "Arial",
+          fontWeight: "600",
+          color: "#2E2C2C",
+        }}
+      >
+        {label}
+      </label>
+      <br />
+      <div style={{ margin: "0 auto" }}>
+        <StyledInput {...Inputprops} onChange={onChange} onBlur={handleFocus} focused={focused.toString()} />
+        {focused && <span>{errowMessage}</span>}
+      </div>
     </div>
   );
 };

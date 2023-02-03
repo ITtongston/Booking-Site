@@ -1,19 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import PackageBg from "../../Assets/img/packageBg.svg";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import { Oval } from "svg-loaders-react";
 import dayjs from "dayjs";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { Box } from "@mui/system";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { Paper, Typography } from "@mui/material";
-import FormGroup from "@mui/material/FormGroup";
-import Checkbox from "@mui/material/Checkbox";
+import { Paper, Typography, Box } from "@mui/material";
 import PackagesDropDown from "./PackagesDropdown";
 import emailjs from "@emailjs/browser";
-import Backdrop from "@mui/material/Backdrop";
 
 const FormCon = styled.div`
   display: flex;
@@ -128,12 +121,7 @@ const Packages = () => {
   });
 
   const form = useRef();
-  const [CheckInDate, setCheckInDate] = React.useState(dayjs("2014-08-18").$d);
-  const [CheckOutDate, setCheckOutDate] = React.useState(
-    dayjs("2014-08-18").$d
-  );
   const [isLoading, setIsLoading] = useState(false);
-  const [open, setOpen] = useState(false);
 
   let naira = Intl.NumberFormat("en-US", {
     style: "currency",
@@ -211,17 +199,8 @@ const Packages = () => {
   // handleFunctions
 
   const handleOnchange = (e) => {
-    const { value, type, checked, name } = e.target;
-
+    const { value, name } = e.target;
     setInputValues((prevState) => ({ ...prevState, [name]: value }));
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleInDate = (newValue) => {
-    setCheckInDate(newValue);
   };
 
   // payments
@@ -242,33 +221,26 @@ const Packages = () => {
     handleFlutterPayment({
       callback: (response) => {
         console.log(response);
-        if (response.status === "completed") {
-          setOpen(true)
-          setIsLoading(false);
-          closePaymentModal(); // this will close the modal programmatically
-          setInputValues({
-            FullName: "",
-            contactEmail: "",
-            PhoneNumber: "",
-            capacity: "",
-            address: "",
-            checkIn: "",
-            Dates: "daily",
-            orgName: "",
-            planAmount: 75000,
-            UseFor: "",
-          });
-        } else {
-          closePaymentModal();
-          setIsLoading(false);
-        }
+        if (response.status === "completed") return;
+        setIsLoading(false);
+        // closePaymentModal(); // this will close the modal programmatically
       },
-      
-     
+
       onClose: () => {
         setIsLoading(false);
+        setInputValues({
+          FullName: "",
+          contactEmail: "",
+          PhoneNumber: "",
+          capacity: "",
+          address: "",
+          checkIn: "",
+          Dates: "daily",
+          orgName: "",
+          planAmount: 75000,
+          UseFor: "",
+        });
       },
-      
     });
 
     emailjs
@@ -285,11 +257,11 @@ const Packages = () => {
         (error) => {
           console.log(error.text);
         }
-      );    
+      );
   };
 
   // console.log(AmountPlan);
-  
+
   return (
     <>
       <FormCon>
@@ -325,6 +297,7 @@ const Packages = () => {
                       onChange={handleOnchange}
                       {...input}
                       value={inputValues[input.name]}
+                      required
                     />
                   </div>
                 ))}
@@ -361,7 +334,7 @@ const Packages = () => {
                   {AmountPlan}
                 </Box>
               </BoxAmount>
-              <StyledButton type="submit" onClick={handleSummitPayment}>
+              <StyledButton type="submit">
                 {isLoading ? (
                   <Oval stroke="#fff" width="25" height="25" />
                 ) : (
@@ -381,8 +354,6 @@ const Packages = () => {
                 Terms of Use, and Privacy Policy.
               </Typography>
             </form>
-            
-            
           </Paper>
         </Papercard>
       </FormCon>

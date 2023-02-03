@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Box} from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
+// import { Link } from "react-router-dom";
 import { FaCaretRight } from "react-icons/fa";
 import { Typography } from "@mui/material";
 
@@ -10,7 +10,7 @@ const courses = [
     id: 1,
     title: "Data Science",
     text: "Data science training targeted at individuals who want to be well grounded in data science, analysis and research in whatever field thier in.",
-    path: "/data",
+    path: "https://tongston.selar.co/a4ut",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const courses = [
   {
     id: 3,
     title: "Career & Business Advisory Session",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti odit at magni.",
+    text: "The Career and business advisory session covers budget preparation, risk analysis, competitor's behavior, project advisory and marketing. It sets individual in motion of being a strategic thinker.",
     path: "https://mailchi.mp/ace0a675887b/careerbusiness_advisory",
   },
   {
@@ -86,11 +86,9 @@ const StyledDiv = styled.div`
 
   @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
-
   }
   @media (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
-
   }
 `;
 
@@ -116,7 +114,7 @@ const Entrepreneurial = () => {
           sx={{
             fontWeight: "bold",
             textAlign: "center",
-            fontSize: {sm: '30px', xs: '20px'},
+            fontSize: { sm: "30px", xs: "20px" },
             mb: "2em",
             color: "#373434",
           }}

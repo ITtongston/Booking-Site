@@ -8,7 +8,7 @@ import { styled } from "@mui/material/styles";
 import Trainingroom from "./HubCont/Trainingroom";
 import CoworkSpace from "./HubCont/Coworkspace";
 import VirtualOffice from "./HubCont/VirtualOffice";
-import MeetingRoom from './HubCont/MeetingRoom';
+import MeetingRoom from "./HubCont/MeetingRoom";
 
 const StyledTabs = styled(Tabs)`
   & .MuiTab-textColorInherit {
@@ -39,7 +39,7 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
-      sx={{my: 10}}
+      sx={{ my: 10 }}
     >
       {value === index && (
         <Box>
@@ -71,19 +71,18 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "90%" , margin: '8rem auto 5rem'}}>
-      <Box >
+    <Box sx={{ width: "90%", margin: "8rem auto 5rem" }}>
+      <Box>
         <Typography
           variant="h5"
           sx={{
             fontWeight: "bold",
             textAlign: "center",
-            fontSize: {sm: '30px', xs: '20px'},
+            fontSize: { sm: "30px", xs: "20px" },
             mb: "2em",
             color: "#373434",
           }}
         >
-
           WorkSpace Profitability with Our Entrepreneurial WorkSpaces
         </Typography>
         <Box sx={{ borderBottom: 1, borderColor: "divider", my: "1em" }}>
@@ -92,11 +91,9 @@ export default function BasicTabs() {
             onChange={handleChange}
             textColor="inherit"
             indicatorColor="Secondary"
-            sx={{ color: "black",textAlign: "center" }}
-            centered
+            sx={{ color: "black", textAlign: "center" }}
             variant="scrollable"
             allowScrollButtonsMobile
-           
           >
             <Tab label="Training Room" {...a11yProps(0)} />
             <Tab label="Virtual Office" {...a11yProps(1)} />

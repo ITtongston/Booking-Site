@@ -1,17 +1,20 @@
 import styled from "styled-components";
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import training from "../../Assets/img/training.jpg";
+import Coworking from '../../Assets/img/coworking.jpg'
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import { Oval } from "svg-loaders-react";
 import dayjs from "dayjs";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { Paper, Box } from "@mui/material";
+import { Paper, Typography,Box } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import workspaceApi from "../../api/workspaceApi";
+import emailjs from "@emailjs/browser"
+
+
 
 const FormBg = styled.div`
   // background: rgba(98, 105, 158, 0.1);
@@ -24,12 +27,11 @@ const FormCont = styled(Paper)`
   display: flex;
   align-items: center;
   justify-content: center;
-  // gap: 1rem;
   position: relative;
-  max-width: 60%;
+  max-width: 70%;
   background-color: #fcf8dc;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23a2a2a1' fill-opacity='0.29'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
-  padding: 0 1.5%;
+  padding: 0 1%;
 
   & .imgdiv {
     width: 70%;
@@ -184,6 +186,7 @@ const Details = ({ onNext, goBack }) => {
     Dates: "daily",
     orgName: "",
     UseFor: "",
+    workSpace: "Coworking space"
   });
 
   const [CheckInDate, setCheckInDate] = React.useState(dayjs("2014-08-18").$d);
@@ -191,7 +194,7 @@ const Details = ({ onNext, goBack }) => {
     dayjs("2014-08-18").$d
   );
   
-  console.log(inputValues.UseFor);
+  const form = useRef();
 
   const [DayPrice, setDayPrice] = useState(3800);
   const [weekPrice, setWeekPrice] = useState(17100);
@@ -268,7 +271,7 @@ const Details = ({ onNext, goBack }) => {
   // handlers
 
   const handleOnchange = (e) => {
-    const { value, type, checked, name } = e.target;
+    const { value,name } = e.target;
 
     setInputValues((prevState) => ({ ...prevState, [name]: value }));
   };
@@ -373,8 +376,8 @@ const Details = ({ onNext, goBack }) => {
       name: inputValues.FullName,
     },
     customizations: {
-      title: "Training Room",
-      description: "Payment for Training Room",
+      title: "Coworking Space",
+      description: "Payment for Coworking Space",
       logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
     },
   };
@@ -395,6 +398,7 @@ const Details = ({ onNext, goBack }) => {
         capacity: inputValues.capacity,
         address: inputValues.address,
         CheckInDate: inputValues.Dates,
+        workSpace: inputValues.workSpace,
         finalTotalDayPrice,
         finalTotalWeekPrice,
       };
@@ -410,13 +414,9 @@ const Details = ({ onNext, goBack }) => {
     handleFlutterPayment({
       onNext: onNext(),
       callback: (response) => {
-        console.log(response);
-        if (response.status === "completed") {
-          closePaymentModal(); // this will close the modal programmatically
-          onNext();
-        }else{
-          closePaymentModal();
-        }
+        if (response.status !== "successful") return
+        closePaymentModal();
+        onNext();
       },
 
       onClose: () => {
@@ -424,6 +424,22 @@ const Details = ({ onNext, goBack }) => {
         goBack();
       },
     });
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID3,
+        process.env.REACT_APP_TEMPLATE_ID3,
+        form.current,
+        process.env.REACT_APP_PUBLIC_ID3
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -432,7 +448,7 @@ const Details = ({ onNext, goBack }) => {
         <FormCont>
           <Imgcon>
             <h3>Your Work Space</h3>
-            <img className="imgdiv" src={training} alt="" />
+            <img className="imgdiv" src={Coworking} alt="" />
           </Imgcon>
           <form onSubmit={handleSummitPayment} action="">
             <InputCont>
@@ -457,6 +473,7 @@ const Details = ({ onNext, goBack }) => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
+                flexDirection: {sm: 'row', xs: 'column'},
                 gap: "1rem",
                 mt: 3,
               }}
@@ -480,7 +497,7 @@ const Details = ({ onNext, goBack }) => {
                   name="CheckOutDate"
                   onChange={handleOutDate}
                   renderInput={(params) => <TextField {...params} />}
-                  sx={{}}
+                 
                 />
               </LocalizationProvider>
             </Box>
@@ -534,6 +551,7 @@ const Details = ({ onNext, goBack }) => {
                       name="Dates"
                       id="week"
                       checked={inputValues.Dates === "weekly"}
+                      required
                     />
                     <label
                       htmlFor=""
@@ -674,13 +692,25 @@ const Details = ({ onNext, goBack }) => {
                 )}
               </div>
             </DurAmount>
-            <StyledButton type="submit" onClick={handleSummitPayment}>
+            <StyledButton type="submit">
               {isLoading ? (
                 <Oval stroke="#fff" width="25" height="25" />
               ) : (
                 "Proceed to pay"
               )}
             </StyledButton>
+            <Typography
+                sx={{
+                  fontSize: "11px",
+                  width: "70%",
+                  color: "rgba(17, 17, 17, 0.72)",
+                  mt: "10px",
+                }}
+              >
+                By clicking sign up, I acknowledge that I have read and do
+                hereby accept the terms and conditions in the Tongston's Hub
+                Terms of Use, and Privacy Policy.
+              </Typography>
           </form>
         </FormCont>
       </FormBg>

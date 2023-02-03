@@ -60,12 +60,7 @@ const OurOffers = ({ products }) => {
                 data-aos-offset="100"
                 data-aos-easing="ease-in-sine"
               >
-                {/* <p style={{fontSize: '17px', fontWeight: 550, wordSpacing: '5px',textAlign: 'center'}}>
-                  
-                </p> */}
-
-                <StyledUL>
-                  {/* <h4>Available on-demand</h4> */}
+                 <StyledUL>
                   <li>
                   
                     <span>Administrative Services</span> through the Executive Admin Den
@@ -89,9 +84,9 @@ const OurOffers = ({ products }) => {
                   </li>
                 </StyledUL>
               </div>
-              <div className="span">
+              {/* <div className="span">
                 <Link to="/">Find out more</Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="classh4">
@@ -116,14 +111,14 @@ const OurOffers = ({ products }) => {
                 );
               })}
             </div>
-            <div className="moreservices">
+            {/* <div className="moreservices">
               <a href="/">
                 Explore more{" "}
                 <span>
                   <FaAngleDoubleRight size={25} />
                 </span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

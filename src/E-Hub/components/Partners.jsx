@@ -103,7 +103,7 @@ const Partners = () => {
       <Containdiv>
         <ImgCon data-aos-duration="1000" data-aos="fade-up">
           {Images.map((imgs) => (
-            <Img src={imgs.img} alt />
+            <Img key={imgs.id} src={imgs.img} alt="images" />
           ))}
         </ImgCon>
       </Containdiv>

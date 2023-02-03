@@ -68,7 +68,7 @@ const StyledTextarea = styled.textarea`
 const StyledButton = styled.button`
   padding: 10px 10px;
   border-radius: 10px;
-  width: 35%;
+  width: 30%;
   cursor: pointer;
   margin: 1rem auto 0;
   background: transparent;
@@ -80,7 +80,7 @@ const StyledButton = styled.button`
   transition: 0.3s all ease;
   font-weight: 600;
 
-  &:hover {
+  & Box:hover {
     gap: 15px;
   }
   @media (max-width: 1000px) {
@@ -116,37 +116,45 @@ const BookingForm = () => {
       name: "organisationName",
       type: "text",
       placeholder: "",
-      errowMessage: "Field is required...",
+      errowMessage: "Kindly Enter a valid input",
       label: "Organisation Name",
+      pattern: "^s*([0-9a-zA-Z]+)s*$",
+      required: true,
     },
     {
       id: 2,
       name: "contactPerson",
       type: "text",
       placeholder: "Full Name",
-      errowMessage: "Field is required...",
+      errowMessage: "name Should be at least two letter characters",
       label: "Contact Person",
+      pattern: "^[a-zA-Z0-9_.+-]*(?:[a-zA-Z][a-zA-Z0-9_.+-]*){2,}$",
+      required: true,
     },
     {
       id: 3,
       name: "contactEmail",
       type: "email",
       placeholder: "e.g you@company.com",
-      errowMessage: "kindly enter a valid email",
+      errowMessage: "please enter a valid email",
       label: "Contact Email",
+      pattern: `^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$`,
+      required: true,
     },
     {
       id: 4,
       name: "address",
       type: "text",
       placeholder: "organisation's address",
-      errowMessage: "Field is required...",
+      errowMessage: "please enter a valid Address",
       label: "Address",
+      required: true,
     },
     {
       id: 5,
       name: "dateOfInterest",
       type: "date",
+      pattern: "",
       label: "Date of Interest",
     },
   ];
@@ -180,17 +188,6 @@ const BookingForm = () => {
           console.log(result.text);
           setOpen(true);
           setIsLoading(false);
-          setValues({
-            organisationName: "",
-            contactPerson: "",
-            contactEmail: "",
-            organisationEmail: "",
-            organisationPhone: "",
-            address: "",
-            dateOfInterest: "",
-            mediaService: "",
-            moreInfo: "",
-          })
         },
         (error) => {
           console.log(error.text);
@@ -201,7 +198,6 @@ const BookingForm = () => {
         }
       );
   };
-  console.log(process.env.REACT_APP_SERVICE_ID2)
 
   return (
     <StyledCont>
@@ -248,9 +244,16 @@ const BookingForm = () => {
           {isLoading ? (
             <Oval stroke="rgba(0, 0, 0, 0.904)" width="25" height="25" />
           ) : (
-            <span>
-              Submit <FaEnvelope size={15} />
-            </span>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "7px",
+              }}
+            >
+              <span>Submit</span> <FaEnvelope size={15} />
+            </Box>
           )}
         </StyledButton>
         <Typography
@@ -288,7 +291,7 @@ const BookingForm = () => {
                 flexDirection: "column",
                 gap: "1rem",
                 boxShadow: "2px 2px 3px rgba(17, 17, 17, 0.25)",
-                textAlign: 'center'
+                textAlign: "center",
               }}
             >
               <Typography
@@ -296,13 +299,13 @@ const BookingForm = () => {
                 sx={{
                   color: "rgba(194, 0, 0, 0.67)",
                   fontWeight: "bold",
-                  fontSize: {sm: '25px', xs: '18px'}
+                  fontSize: { sm: "25px", xs: "18px" },
                 }}
               >
                 Thank you for your interest in our Media Services...
               </Typography>
-              <Typography sx={{fontSize: {sm: '16px', xs: '14px'}}}>
-                Our Team would review your sumission and get back to you!
+              <Typography sx={{ fontSize: { sm: "16px", xs: "14px" } }}>
+                Our Team would review your submission and get back to you!
               </Typography>
             </Box>
           </Backdrop>

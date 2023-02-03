@@ -9,15 +9,14 @@ export const products = [
     img: Business,
     prodName: "Finance & Accounting",
     info: "Access organisation standard Finance and Accounting Services for all business needs",
-    DetailsLink: "/",
+    DetailsLink: "/enterprise",
   },
-
   {
     id: "2",
     img: Group,
     prodName: "HR & Admin",
     info: "Access Administration, Recruitment, Talent and Incentive Management, Organizational Structuring and Performance Management services",
-    DetailsLink: "/",
+    DetailsLink: "/enterprise",
   },
 
   {
@@ -25,14 +24,13 @@ export const products = [
     img: Cooperate,
     prodName: "Data & Research",
     info: "Access Data Consulting, Collection, Analysis and Research Services",
-    DetailsLink: "/",
+    DetailsLink: "/enterprise",
   },
-
   {
     id: "4",
     img: Thinking,
     prodName: "Legal & Governance",
     info: "Access Legal, Governance & Corporate Secretarial Services",
-    DetailsLink: "/",
+    DetailsLink: "/enterprise",
   },
 ];

@@ -94,7 +94,7 @@ const BronzeTags = Bronze.map((tags) => (
   </ListItem>
 ));
 const GoldTags = Gold.map((tags) => (
-  <ListItem>
+  <ListItem key={tags.id}>
     <ListItemIcon>
       <DoneSharpIcon />
     </ListItemIcon>
@@ -102,7 +102,7 @@ const GoldTags = Gold.map((tags) => (
   </ListItem>
 ));
 const GoldPlusTags = GoldPlus.map((tags) => (
-  <ListItem>
+  <ListItem key={tags.id}>
     <ListItemIcon>
       <DoneSharpIcon />
     </ListItemIcon>
@@ -110,7 +110,7 @@ const GoldPlusTags = GoldPlus.map((tags) => (
   </ListItem>
 ));
 const SilverTags = Silver.map((tags) => (
-  <ListItem>
+  <ListItem key={tags.id}>
     <ListItemIcon>
       <DoneSharpIcon />
     </ListItemIcon>
@@ -118,7 +118,7 @@ const SilverTags = Silver.map((tags) => (
   </ListItem>
 ));
 const PlatinumTags = Platinum.map((tags) => (
-  <ListItem>
+  <ListItem key={tags.id}>
     <ListItemIcon>
       <DoneSharpIcon />
     </ListItemIcon>

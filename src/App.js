@@ -14,6 +14,7 @@ import MeetingFlow from "./E-Hub/pages/MeetingRoom/MeetingFlow";
 import CoworkigFlow from "./E-Hub/pages/CoworkingSpace/CoworkingFlow";
 import PackagePages from "./E-Hub/pages/VirtualOffice/PackagesPage";
 import PackagesForm from "./E-Hub/pages/VirtualOffice/PackagesForm";
+import FinanceAdmin from "./E-Hub/components/EnterpriseServices/FinanceAdmin/FinanceAdmin";
 
 const override = {
   position: "absolute",
@@ -65,6 +66,7 @@ function App() {
             <Route path="/data" element={<Data />} />
             <Route path="/plans" element={<PackagePages />} />
             <Route path="/plans/form" element={<PackagesForm />} />
+            <Route path="/enterprise" element={<FinanceAdmin />} />
           </Routes>
         </div>
       )}

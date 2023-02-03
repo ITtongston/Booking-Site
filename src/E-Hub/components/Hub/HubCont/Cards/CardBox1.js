@@ -37,15 +37,6 @@ const Adons = [
     id: 6,
     adon: "Access to Entrepreneurial Content through blogs & newsletters",
   },
-
-  //   Equipped Pantry
-  // Access Green Relaxation Lounge
-  // Nearby Food Facilities
-
-  // Access Entrepreneurial Thinkers Network
-  // Access Entrepreneurial Content through blogs & newsletters
-  // Access Tongston's entrepreneurial products & services
-
   {
     id: 7,
     adon: "Access Tongston's entrepreneurial products & services ",
@@ -54,14 +45,6 @@ const Adons = [
     id: 8,
     adon: "Nearby Food Facilities",
   },
-  // {
-  //   id: 9,
-  //   adon: "Lor",
-  // },
-  // {
-  //   id: 10,
-  //   adon: "Lor",
-  // },
 ];
 
 const CardBox1 = () => {

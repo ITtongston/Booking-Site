@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ProdustsSummary = ({ img, info, prodName,route }) => {
+  
   return (
     <div className="productListcon">
        <div className="prodlist">

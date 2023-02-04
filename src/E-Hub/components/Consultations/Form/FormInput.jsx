@@ -21,7 +21,7 @@ background-color: transparent;
   padding: 3px 0;
   }
 
-&:invalid ~  span{
+&:invalid ~ span{
 display: block;
 }
 

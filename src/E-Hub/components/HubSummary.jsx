@@ -131,7 +131,7 @@ const HubSummary = () => {
           </Card>
           <Card sx={{ minWidth: 275, textAlign: "center" }} variant="outlined">
             <CardContent>
-              <FaHubspot color="rgb(179, 36, 0)" />{" "}
+              <FaHubspot color="rgb(179, 36, 0)" />
               <span
                 style={{
                   textAlign: "center",

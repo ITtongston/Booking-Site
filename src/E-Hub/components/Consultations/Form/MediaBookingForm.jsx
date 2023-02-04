@@ -188,6 +188,7 @@ const BookingForm = () => {
           console.log(result.text);
           setOpen(true);
           setIsLoading(false);
+
         },
         (error) => {
           console.log(error.text);

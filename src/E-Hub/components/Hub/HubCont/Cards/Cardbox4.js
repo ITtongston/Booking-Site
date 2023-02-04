@@ -7,15 +7,15 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { Box } from "@mui/system";
 import { ListItemIcon, ListItemText, Typography } from "@mui/material";
-import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
+import AssuredWorkloadIcon from "@mui/icons-material/AssuredWorkload";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const Adons = [
   {
     id: 1,
-    adon: 'Wi-Fi'
+    adon: "Wi-Fi",
   },
   {
     id: 2,
@@ -37,15 +37,6 @@ const Adons = [
     id: 6,
     adon: "Access to Entrepreneurial Content through blogs & newsletters",
   },
-
-//   Equipped Pantry
-// Access Green Relaxation Lounge
-// Nearby Food Facilities
-
-// Access Entrepreneurial Thinkers Network
-// Access Entrepreneurial Content through blogs & newsletters
-// Access Tongston's entrepreneurial products & services
-
   {
     id: 7,
     adon: "Access Tongston's entrepreneurial products & services ",
@@ -54,7 +45,6 @@ const Adons = [
     id: 8,
     adon: "Nearby Food Facilities",
   },
-  
 ];
 
 const CardBox4 = () => {
@@ -67,16 +57,25 @@ const CardBox4 = () => {
           <Typography
             sx={{ fontSize: "14px", minWidth: { xs: 300, sm: "100%" } }}
           >
-             <span> <i>from ₦ 15,200  /day</i></span> <br />
-            <span><i>from ₦68,400  /week</i></span> <br/>
+            <span>
+              {" "}
+              <i>from ₦ 15,200 /day</i>
+            </span>{" "}
+            <br />
+            <span>
+              <i>from ₦68,400 /week</i>
+            </span>{" "}
+            <br />
           </Typography>
         </Box>
-        
+
         <List sx={{ backgroundColor: "#ffffe6", borderRadius: "5px", mt: 3 }}>
-        <spans style={{margin: '10px 0 15px 15px'}} >Access:</spans>
+          <spans style={{ margin: "10px 0 15px 15px" }}>Access:</spans>
           {Adons.map((item) => (
             <ListItem key={item.id} disablePadding={true}>
-              <ListItemIcon><CheckCircleIcon fontSize='small'/></ListItemIcon>
+              <ListItemIcon>
+                <CheckCircleIcon fontSize="small" />
+              </ListItemIcon>
               <ListItemText>{item.adon}</ListItemText>
             </ListItem>
           ))}

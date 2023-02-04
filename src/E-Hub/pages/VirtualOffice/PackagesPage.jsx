@@ -29,33 +29,28 @@ const HeadingText = styled.div`
 `;
 
 const Papercard = styled.div`
-display: flex;
-justify-content: center;
-alignItems: center;
-// flexWrap: wrap;
-gap: 1.5rem;
-padding: 0 5%;
-& > :not(style){
-  margin: 1;
-  max-width: 370px;
-  min-width: 300px;
-  padding: 1rem 1rem 0.5rem;
-  height: 80%;
-  margin-top: 4rem;
-  border-radius: 10px;
-  background-color: #f1f1f1;
-  background-image: url(
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23320008' fill-opacity='0.18' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"
-  )
+  display: flex;
+  justify-content: center;
+  alignitems: center;
+  // flexWrap: wrap;
+  gap: 1.5rem;
+  padding: 0 5%;
+  & > :not(style) {
+    margin: 1;
+    max-width: 370px;
+    min-width: 300px;
+    padding: 1rem 1rem 0.5rem;
+    height: 80%;
+    margin-top: 4rem;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23320008' fill-opacity='0.18' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   }
 
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     flex-direction: column;
     min-width: 50%;
-  }  
-
-
-  
+  }
 `;
 
 const PlanButton = styled(Link)`
@@ -170,9 +165,7 @@ const PackagePages = () => {
               <h2>
                 NGN 150000 <span style={{ fontSize: "0.8rem" }}>/yr</span>
               </h2>
-              <Typography>
-                Sure choice to boost business outcome 
-              </Typography>
+              <Typography>Sure choice to boost business outcome</Typography>
               <List>{GoldTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>
             </Paper>
@@ -181,9 +174,7 @@ const PackagePages = () => {
               <h2>
                 NGN 375000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
-              <Typography>
-                Uninterupted Productivity
-              </Typography>
+              <Typography>Uninterupted Productivity</Typography>
               <List>{GoldPlusTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>
             </Paper>
@@ -196,9 +187,7 @@ const PackagePages = () => {
               <h2>
                 NGN 900000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
-              <Typography>
-                Giving profitability superpowers
-              </Typography>
+              <Typography>Giving profitability superpowers</Typography>
               <List>{SilverTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>
             </Paper>

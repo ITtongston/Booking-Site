@@ -214,7 +214,7 @@ const Packages = () => {
     setIsLoading(true);
     e.preventDefault();
     const { name, value } = e.target;
-
+    
     // Payment
 
     // call FlutterModal

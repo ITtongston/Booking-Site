@@ -1,26 +1,12 @@
-import TextAnimation from "react-text-animations";
-
-
+import React from "react";
 
 const AnimatedText = () => {
-    return (
-        <TextAnimation.Slide 
-        target="services" 
-        text={['Entrepreneurial media','WorkSpace','enterprise','education']} 
-        cname="textAnimation"
-        id="textAnimation__slide"
-        animation={{
-            duration:1000,
-            delay:2000,
-            timingFunction:'ease-out',
-        }}
-        loop={true}
-    >
-    First Class blend of services
-    </TextAnimation.Slide>
-    )
-}
+  return (
+    <>
+      First Class blend of Entrepreneurial Media, WorkSpace, Enducation and
+      Enterprise.
+    </>
+  );
+};
 
-export default AnimatedText
-
-
+export default AnimatedText;

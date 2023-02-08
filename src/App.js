@@ -31,9 +31,7 @@ function App() {
   const { pathname } = useLocation();
   useEffect(() => {
     // setSpinner(false);
-    setTimeout(() => {
-      setSpinner(false);
-    }, 3000);
+    setSpinner(false);
 
     document.documentElement.scrollTo({
       top: 0,

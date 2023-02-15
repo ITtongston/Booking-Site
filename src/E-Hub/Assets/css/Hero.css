@@ -29,7 +29,7 @@
 .Hero h1{
   font-size: 30px;
   font-weight: 900;
-  width: 90%;
+  width: 100%;
   padding: 0 2%;
   text-transform: uppercase;
   margin: 0 auto;
@@ -139,7 +139,7 @@
     font-weight: 700;
     text-align: center;
     margin: 1em auto 0;
-    width: 60%;
+    width: 100%;
 
   }
 
@@ -185,7 +185,7 @@
 @media (max-width: 1000px) {
   
   .Hero h1{
-    width: 80%;  
+    width: 80%;
   }
   .Hero h2{
     width: 80%;

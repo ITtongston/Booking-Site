@@ -767,9 +767,7 @@ const Details = ({ onNext, goBack }) => {
                 mt: "10px",
               }}
             >
-              By clicking sign up, I acknowledge that I have read and do hereby
-              accept the terms and conditions in the Tongston's Hub Terms of
-              Use, and Privacy Policy.
+              By clicking sign up, I acknowledge that I have read and do hereby accept the terms and conditions in the Tongston's Hub Terms of Use, and Privacy Policy.
             </Typography>
           </form>
         </FormCont>

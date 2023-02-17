@@ -51,7 +51,7 @@ const OurOffers = ({ products }) => {
                 fontSize: {sm: '30px', xs: '20px'},
                 color: "#373434",
               }}>
-              Focus on Your Core Business with our Entreprise-in-a-box and Consulting Services
+              Focus on Your Core Business with our Enterprise-in-a-box and Consulting Services
 
               </Typography>
               <div

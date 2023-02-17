@@ -98,7 +98,7 @@ const Partners = () => {
           color: "#373434",
         }}
       >
-        Our Trusted partners
+        Our Trusted Partners
       </Typography>
       <Containdiv>
         <ImgCon data-aos-duration="1000" data-aos="fade-up">

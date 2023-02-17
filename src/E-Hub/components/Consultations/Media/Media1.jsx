@@ -162,7 +162,7 @@ const Media = () => {
           you or your institution or government valuable, influential and
           profitable.
         </Typography>
-        <p style={{ marginTop: "10px", width: "70%", fontSize: "16px", letterSpacing: "2px" }}>
+        <p style={{ width: "70%", fontSize: "16px", letterSpacing: "2px", margin: '15px auto 0', textAlign: 'center' }}>
           Whatever your needs are, we have the solution and more! Our aim is to
           make you valuable, influential & profitable. Break through the noise
           and stand out today

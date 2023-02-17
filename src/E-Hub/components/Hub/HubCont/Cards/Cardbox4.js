@@ -19,7 +19,7 @@ const Adons = [
   },
   {
     id: 2,
-    adon: "Projector & WhiteBoard",
+    adon: "WhiteBoard",
   },
   {
     id: 3,
@@ -44,6 +44,10 @@ const Adons = [
   {
     id: 8,
     adon: "Nearby Food Facilities",
+  },
+  {
+    id: 9,
+    adon: "Audio/video conferencing facilities",
   },
 ];
 

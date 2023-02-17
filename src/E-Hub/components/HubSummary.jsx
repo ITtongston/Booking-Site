@@ -24,7 +24,6 @@ const SummaryParent = styled.div`
   margin: 1rem 0 2rem;
   // padding: 0 2%;
   width: 100%;
-
 `;
 
 const RestyledUl = styled.ul`
@@ -55,6 +54,7 @@ const HubSummary = () => {
           display: "flex",
           fontSize: "25px",
           color: "#373434",
+          fontWeight: "bold",
         }}
       >
         <FaHubspot color="rgb(179, 36, 0)" size={50} />
@@ -75,10 +75,10 @@ const HubSummary = () => {
                 Entrepreneurial Workspaces
               </span>
               <RestyledUl>
-                <li>Training Room</li>
-                <li> Meeting Room</li>
                 <li>Co-Working Space</li>
+                <li>Training Room</li>
                 <li>Virtual Office</li>
+                <li> Meeting Room</li>
               </RestyledUl>
             </CardContent>
           </Card>
@@ -97,15 +97,18 @@ const HubSummary = () => {
               </span>
               <RestyledUl>
                 <li>Branding (Designs, Web Mgt & Identity)</li>
-                <li> Advertising</li>
                 <li>Public Relations & Communication</li>
                 <li>Audio & Video Production & Editing</li>
                 <li>Online Events Management</li>
+                <li> Advertising</li>
               </RestyledUl>
             </CardContent>
           </Card>
-          <Card sx={{ minWidth: 275, maxWidth: 300,textAlign: "center" }} variant="outlined">
-            <CardContent >
+          <Card
+            sx={{ minWidth: 275, maxWidth: 300, textAlign: "center" }}
+            variant="outlined"
+          >
+            <CardContent>
               <FaHubspot color="rgb(179, 36, 0)" />{" "}
               <span
                 style={{
@@ -117,15 +120,13 @@ const HubSummary = () => {
                 Entrepreneurial Enterprise
               </span>
               <RestyledUl>
-                <li>
-                  “Enterprise-in-a-box” Tools & Templates with how To Guides
-                </li>
-                <li>Opportunities Centre</li>
-                <li>Entrepreneurial Insights</li>
+                <li>“Enterprise-in-a-box” Tools & Templates.</li>
                 <li>
                   Consulting with Admin, HR, Data, Strategy, Technology, Legal,
-                  Governance, Finance Experts Virtual Office
+                  Governance, Finance Experts
                 </li>
+                <li>Entrepreneurial Insights</li>
+                <li>Opportunities Centre</li>
               </RestyledUl>
             </CardContent>
           </Card>
@@ -142,9 +143,10 @@ const HubSummary = () => {
                 Entrepreneurial Education
               </span>
               <RestyledUl>
-                <li>Data Science</li>
                 <li>Tongston Introduction to Entrepreneurial Education </li>
+                <li>Data Science</li>
                 <li>Career & Business Advisory</li>
+                <li>Finance and Fund Raising</li>
                 <li>Programmers Den</li>
               </RestyledUl>
             </CardContent>

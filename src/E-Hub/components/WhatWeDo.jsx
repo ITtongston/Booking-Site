@@ -2,15 +2,22 @@ import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import "../Assets/css/WhatWeDo.css";
 import Picture from "../Assets/img/Picture.png";
+import styled from "styled-components";
+import { Typography } from "@mui/material";
 
 const WhatWeDo = () => {
-
   return (
     <div className="whatweCont">
       <div className="whatwe" data-aos="fade-up" data-aos-duration="2000">
-        <h2>
+        <Typography
+          sx={{
+            fontWeight: "bold",
+            fontSize: { sm: "30px", xs: "20px" },
+            color: "#373434",
+          }}
+        >
           What We Stand For <span className="blink">__</span>
-        </h2>
+        </Typography>
         <p className="biggerp">
           We bridge the gap between Value-oriented Work-Spaces & Education,
           Media, Enterprise Services for your Brand

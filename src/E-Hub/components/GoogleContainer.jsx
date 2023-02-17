@@ -14,7 +14,7 @@ const GoogleContainer = () => {
     <>
       <Typography variant="h4" sx={{ fontWeight: "bold",
             fontSize: {sm: '30px', xs: '20px'},
-            color: "#373434",px: 10, mb: 2, mt: 4}}>Need Direction?</Typography>
+            color: "#373434",px: 10, mb: 2, mt: 4, textAlign: 'center'}}>Need Direction?</Typography>
       <Centralise>
         <div style={{ width: "70%",height: '300px' }}>
           <iframe

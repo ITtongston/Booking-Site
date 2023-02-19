@@ -72,7 +72,7 @@ const MediaHome = () => {
           color: "#373434",
         }}
       >
-        Entreprenuerial Multimedia
+        Entrepreneurial Multimedia
       </Typography>
       <StyledContainer data-aos="fade-up" data-aos-duration="1000">
         <Box sx={{ width: {sm: '50%', xs: '100%'}, marginBottom: "6rem", textAlign: {sm: "left", xs: "center"} }}>

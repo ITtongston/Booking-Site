@@ -9,6 +9,7 @@ import { FaEnvelope } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { Backdrop, Typography, Box } from "@mui/material";
 import { Oval } from "svg-loaders-react";
+import Logo from "../../../Assets/img/logo.png";
 
 // styles
 
@@ -87,6 +88,7 @@ const StyledButton = styled.button`
     width: 50%;
   }
 `;
+
 const Styledform = styled.form`
   max-width: 50%;
   min-width: 30%;
@@ -94,6 +96,24 @@ const Styledform = styled.form`
     min-width: 90%;
   }
 `;
+
+const ImgDiv = styled.div`
+      position: fixed;
+      left: 2rem;
+      top 2rem;
+
+      & img{
+        width: 13rem;
+      }
+
+      @media (max-width: 900px){
+        & img{
+          width: 5rem;
+        }
+      }
+  `;
+
+  
 const BookingForm = () => {
   const [values, setValues] = useState({
     organisationName: "",
@@ -202,6 +222,9 @@ const BookingForm = () => {
 
   return (
     <StyledCont>
+      <ImgDiv>
+        <img src={Logo} alt="logo" />
+      </ImgDiv>
       <Header>
         <h2>
           Help Us Know More About Your Media Interest!

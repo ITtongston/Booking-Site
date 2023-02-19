@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Divider from "@mui/material/Divider";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 import { useRef } from "react";
 import WavesComp from "./waves";
 import Logo from "../Assets/img/logo.png";
@@ -9,7 +14,7 @@ import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
 const FooterContainer2 = styled.div`
- background:rgba(32, 27, 47, 0.96);
+ background:rgba(10, 10, 10, 1);
  width: 100%;
  }
 `;
@@ -153,8 +158,9 @@ const Footer = () => {
               <img src={Logo} alt="footerLogo" />
             </FooterLogo>
             <p style={{ color: "rgba(221, 219, 234, 0.57)" }}>
-              More than a platform to meet, work, learn, network & access
-              Tongston’s world-class entrepreneurial Education, Media, Finance.
+              "More than a platform to meet, work, learn, network & access
+              Tongston’s world-class entrepreneurial Education, Media, Finance,
+              Legal, Technology, HR, Data, Research & Admin services."
             </p>
             <IconsUl>
               <li>
@@ -181,16 +187,24 @@ const Footer = () => {
           </div>
 
           <div className="seconddiv">
-            <h2 style={{ color: "white" }}>Company</h2>
+            <h2 style={{ color: "white" }}>About Us</h2>
             <Lists>
               <li>
                 <Anchorstyle to="/">Home</Anchorstyle>
               </li>
               <li>
-                <CareerAnchor href="">Careers</CareerAnchor>
+                <CareerAnchor href="https://www.tongston.com">
+                  workspaces
+                </CareerAnchor>
               </li>
               <li>
-                <Anchorstyle to="/plans">Membership</Anchorstyle>
+                <Anchorstyle to="/plans">media </Anchorstyle>
+              </li>
+              <li>
+                <Anchorstyle to="/plans">enterprise</Anchorstyle>
+              </li>
+              <li>
+                <Anchorstyle to="/plans">Virtual Office</Anchorstyle>
               </li>
             </Lists>
           </div>
@@ -295,7 +309,6 @@ const Footer = () => {
           </ul>
 
           <p style={{ color: "rgba(221, 219, 234, 0.57)" }}>
-            {" "}
             &copy; 2022, All rights reserved
           </p>
         </DividerEnd>

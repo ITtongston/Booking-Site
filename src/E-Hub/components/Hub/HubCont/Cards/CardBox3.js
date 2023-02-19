@@ -16,23 +16,35 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 const Adons = [
   {
     id: 1,
-    adon: "Business address",
+    adon: "Business address valid for tax & incorporation purposes",
   },
   {
     id: 2,
-    adon: "Telephone answering service",
+    adon: "Telephone answering & executive admin services",
   },
   {
     id: 3,
-    adon: "Hub green lounge",
+    adon: "Use our entrepreneurial green lounge to meet others and collaborate",
   },
   {
     id: 4,
-    adon: "Incorporation and tax registration",
+    adon: "Available to access for hours, days, weeks or unlimited months",
   },
   {
     id: 5,
-    adon: "Admin, legal, entrepreneurial education, HR, media, data &amp; finance services for all your business needs.",
+    adon: "Access our Entrepreneurial Content through blogs & news",
+  },
+  {
+    id: 6,
+    adon: "Access media, education and enterprise services with your membership",
+  },
+  {
+    id: 7,
+    adon: "Enjoy exclusive member discounts and benefits",
+  },
+  {
+    id: 8,
+    adon: "Access Legal, entrepreneurial education, HR, media, data & finance services for all your business needs",
   },
   
 ];

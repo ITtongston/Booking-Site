@@ -14,6 +14,7 @@ import LogoDevOutlinedIcon from "@mui/icons-material/LogoDevOutlined";
 import MovieOutlinedIcon from "@mui/icons-material/MovieOutlined";
 import ScreenshotMonitorOutlinedIcon from "@mui/icons-material/ScreenshotMonitorOutlined";
 import ScreenShareOutlinedIcon from "@mui/icons-material/ScreenShareOutlined";
+import Logo from "../../../Assets/img/logo.png";
 
 const Media = () => {
   const ListItems = [
@@ -51,8 +52,7 @@ const Media = () => {
     },
   ];
 
-  const StyledBox = styled(Box)`
-  `;
+  const StyledBox = styled(Box)``;
 
   const BgBox = styled(Box)`
     background: url(${redB}) center no-repeat;
@@ -96,7 +96,6 @@ const Media = () => {
         height: 70%;
         object-fit: cover;
       }
-
     }
   `;
 
@@ -110,7 +109,6 @@ const Media = () => {
     @media (max-width: 900px) {
       grid-template-columns: repeat(1, 1fr);
     }
-
   `;
   const StyledListItem = styled(ListItem)`
     transition: all 0.3s ease;
@@ -122,20 +120,43 @@ const Media = () => {
     }
   `;
 
+  const ImgDiv = styled(Box)`
+      position: absolute;
+      left: 2rem;
+      top:2rem;
+
+      & img{
+        width: 13rem;
+      }
+
+      @media (max-width: 900px){
+        & img{
+          width: 5rem;
+        }
+      }
+  `;
+
   return (
     <>
       <IntroBox>
+        <ImgDiv>
+          <img src={Logo} alt="logo" />
+        </ImgDiv>
         <BgBox sx={{ textAlign: "center" }}>
           <Typography
             className="help"
-            sx={{ fontSize: {sm: "30px", xs: "25px"}, fontWeight: "bold", pt: 10 }}
+            sx={{
+              fontSize: { sm: "30px", xs: "25px" },
+              fontWeight: "bold",
+              mt: 30,
+            }}
           >
             We help Scale your Business
           </Typography>
           <Typography
             sx={{
               textAlign: "left",
-              fontSize: {sm: "40px", xs: "30px"},
+              fontSize: { sm: "40px", xs: "30px" },
               ml: 10,
               mt: 3,
               fontWeght: "bold",
@@ -149,20 +170,34 @@ const Media = () => {
         <img src={Business} alt="" />
       </IntroBox>
 
-      <Box sx={{ px: 3, pt: 3}}>
+      <Box sx={{ px: 3, pt: 3 }}>
         <Typography variant="h6" sx={{ fontSize: "25px", fontWeight: "bold" }}>
           Multimedia and Branding
         </Typography>
         <Typography
           component="p"
-          sx={{ width: {sm:'60%', xs: '100%' }, fontSize: {sm: "25px", xs: "20px"}, letterSpacing: "2px", mt: 3,textAlign: {sm: 'left', xs: 'center'} }}
+          sx={{
+            width: { sm: "60%", xs: "100%" },
+            fontSize: { sm: "25px", xs: "20px" },
+            letterSpacing: "2px",
+            mt: 3,
+            textAlign: { sm: "left", xs: "center" },
+          }}
         >
           Tongston Entrepreneurship Media is an award-winning media agency with
           the ability to make the most out of your media spend, whilst making
           you or your institution or government valuable, influential and
           profitable.
         </Typography>
-        <p style={{ width: "70%", fontSize: "16px", letterSpacing: "2px", margin: '15px auto 0', textAlign: 'center' }}>
+        <p
+          style={{
+            width: "70%",
+            fontSize: "16px",
+            letterSpacing: "2px",
+            margin: "15px auto 0",
+            textAlign: "center",
+          }}
+        >
           Whatever your needs are, we have the solution and more! Our aim is to
           make you valuable, influential & profitable. Break through the noise
           and stand out today
@@ -174,7 +209,7 @@ const Media = () => {
             variant="h5"
             component="div"
           >
-            Our Services Covers
+            Our Services
           </Typography>
           <StyledBox>
             <ServicesList>

@@ -11,8 +11,10 @@ import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
 import PriceChangeOutlinedIcon from "@mui/icons-material/PriceChangeOutlined";
 import SupervisorAccountOutlinedIcon from "@mui/icons-material/SupervisorAccountOutlined";
-import TroubleshootOutlinedIcon from '@mui/icons-material/TroubleshootOutlined';
-import GavelOutlinedIcon from '@mui/icons-material/GavelOutlined';
+import TroubleshootOutlinedIcon from "@mui/icons-material/TroubleshootOutlined";
+import GavelOutlinedIcon from "@mui/icons-material/GavelOutlined";
+import Logo from "../../../Assets/img/logo.png";
+
 
 const StyledCont = styled.div`
   display: flex;
@@ -80,9 +82,28 @@ const EServices = styled.div`
   padding: 0 0 2rem;
 `;
 
+const ImgDiv = styled.div`
+      position: absolute;
+      left: 2rem;
+      top 2rem;
+
+      & img{
+        width: 13rem;
+      }
+
+      @media (max-width: 900px){
+        & img{
+          width: 5rem;
+        }
+      }
+  `;
+
 const FinanceAdmin = () => {
   return (
     <StyledCont>
+      <ImgDiv>
+        <img src={Logo} alt="logo" />
+      </ImgDiv>
       <Typography
         variant="h4"
         sx={{ fontWeight: { sm: "bold", xs: 600 }, color: "whitesmoke" }}
@@ -147,7 +168,12 @@ const FinanceAdmin = () => {
               >
                 <ListItem alignItems="flex-start">
                   <ListItemAvatar>
-                    <PriceChangeOutlinedIcon sx={{ fontSize: "4rem", color: "rgba(229, 133, 4, 0.97)" }} />
+                    <PriceChangeOutlinedIcon
+                      sx={{
+                        fontSize: "4rem",
+                        color: "rgba(229, 133, 4, 0.97)",
+                      }}
+                    />
                   </ListItemAvatar>
                   <StyledList
                     primary="Finance & Accounting"
@@ -174,7 +200,12 @@ const FinanceAdmin = () => {
                 <Divider variant="inset" component="li" />
                 <ListItem alignItems="flex-start">
                   <ListItemAvatar>
-                    <SupervisorAccountOutlinedIcon sx={{ fontSize: "4rem", color: "rgba(229, 133, 4, 0.97)" }} />
+                    <SupervisorAccountOutlinedIcon
+                      sx={{
+                        fontSize: "4rem",
+                        color: "rgba(229, 133, 4, 0.97)",
+                      }}
+                    />
                   </ListItemAvatar>
                   <StyledList
                     primary="HR & Admin"
@@ -205,7 +236,12 @@ const FinanceAdmin = () => {
                 <Divider variant="inset" component="li" />
                 <ListItem alignItems="flex-start">
                   <ListItemAvatar>
-                    <TroubleshootOutlinedIcon sx={{ fontSize: "4rem", color: "rgba(229, 133, 4, 0.97)" }}/>
+                    <TroubleshootOutlinedIcon
+                      sx={{
+                        fontSize: "4rem",
+                        color: "rgba(229, 133, 4, 0.97)",
+                      }}
+                    />
                   </ListItemAvatar>
                   <StyledList
                     primary="Data & Research"
@@ -228,12 +264,10 @@ const FinanceAdmin = () => {
                           <li> ● Introduction to Research </li>
                           <li> ● Data gathering methods and Techniques</li>
                           <li>
-                     
                             ● Results, Presentation of Finding, and Drawing
                             Conclusion
                           </li>
                           <li>
-        
                             ● Research Methodology and appropriateness of
                             methods
                           </li>
@@ -245,7 +279,12 @@ const FinanceAdmin = () => {
                 <Divider variant="inset" component="li" />
                 <ListItem alignItems="flex-start">
                   <ListItemAvatar>
-                    <GavelOutlinedIcon sx={{ fontSize: "4rem", color: "rgba(229, 133, 4, 0.97)" }}  />
+                    <GavelOutlinedIcon
+                      sx={{
+                        fontSize: "4rem",
+                        color: "rgba(229, 133, 4, 0.97)",
+                      }}
+                    />
                   </ListItemAvatar>
                   <StyledList
                     primary="Legal & Governance"
@@ -282,7 +321,7 @@ const FinanceAdmin = () => {
                 </ListItem>
               </List>
               <Box sx={{ textAlign: "center" }}>
-                <StyledBtn to="/" sx={{ }}>
+                <StyledBtn to="/" sx={{}}>
                   Get Started
                 </StyledBtn>
               </Box>

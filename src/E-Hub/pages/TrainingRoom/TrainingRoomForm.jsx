@@ -33,7 +33,7 @@ const FormCont = styled(Paper)`
   max-width: 60%;
   background-color: #fcf8dc;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23a2a2a1' fill-opacity='0.29'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
-  padding: 2% 1%;
+  padding: 3% 1% 2%;
 
   & .imgdiv {
     width: 70%;
@@ -51,8 +51,8 @@ const FormCont = styled(Paper)`
     flex-direction: column;
   }
 
-  @media (max-width: 1200px) {
-    // width: 60%;
+  @media (max-width: 1000px) {
+    max-width: 90%;
     flex-direction: column;
   }
 `;
@@ -62,6 +62,9 @@ const InputCont = styled.div`
   width: 100%;
   flex-wrap: wrap;
   gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+
 
   & input {
     width: 200px;
@@ -75,6 +78,11 @@ const InputCont = styled.div`
   & input:focus {
     border: 2px solid rgba(148, 216, 255, 0.66);
   }
+
+  @media (max-width: 1000px) {
+    & input {
+      width: 300px;
+    }
 `;
 
 const DurAmount = styled.div`
@@ -173,6 +181,10 @@ const Textarea = styled.textarea`
 
   &:focus {
     border: 2px solid rgba(148, 216, 255, 0.66);
+  }
+
+  @media (max-width: 1000px){
+    width: 70%;
   }
 `;
 

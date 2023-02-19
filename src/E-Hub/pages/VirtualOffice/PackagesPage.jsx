@@ -136,7 +136,7 @@ const PackagePages = () => {
               fontWeight: "bold",
             }}
           >
-            Membership Plans that suits your Brand
+            Virtual Office Membership Plans that suits your Brand
           </Typography>
           <Typography
             component="p"

@@ -14,7 +14,8 @@ import MeetingFlow from "./E-Hub/pages/MeetingRoom/MeetingFlow";
 import CoworkigFlow from "./E-Hub/pages/CoworkingSpace/CoworkingFlow";
 import PackagePages from "./E-Hub/pages/VirtualOffice/PackagesPage";
 import PackagesForm from "./E-Hub/pages/VirtualOffice/PackagesForm";
-import FinanceAdmin from "./E-Hub/components/EnterpriseServices/FinanceAdmin/FinanceAdmin";
+import EnterpriseCalendly from "./E-Hub/components/EnterpriseServices/FinanceAdmin/EnterpriseCalendly";
+import Enterprise from "./E-Hub/components/EnterpriseServices/FinanceAdmin/Enterprise";
 
 const override = {
   position: "absolute",
@@ -29,8 +30,10 @@ const override = {
 function App() {
   const [spinner, setSpinner] = useState(true);
   const { pathname } = useLocation();
+  
   useEffect(() => {
     // setSpinner(false);
+
     setSpinner(false);
 
     document.documentElement.scrollTo({
@@ -61,10 +64,10 @@ function App() {
             <Route path="/coworkingflow" element={<CoworkigFlow />} />
             <Route path="/media" element={<Media />} />
             <Route path="/bookform" element={<BookingForm />} />
-            <Route path="/data" element={<Data />} />
             <Route path="/plans" element={<PackagePages />} />
             <Route path="/plans/form" element={<PackagesForm />} />
-            <Route path="/enterprise" element={<FinanceAdmin />} />
+            <Route path="/enterprise" element={<Enterprise />} />
+            <Route path="/enterprise-calendly" element={<EnterpriseCalendly />} />
           </Routes>
         </div>
       )}

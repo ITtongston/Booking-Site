@@ -64,7 +64,7 @@ const Hero = (props) => {
                 data-aos-once="true"
                 className="Herobtn2"
               >
-                Book an Entreprise Service
+                Our Entreprise Services
               </button>
             </Link>
             <Link

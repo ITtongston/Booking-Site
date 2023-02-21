@@ -7,14 +7,12 @@ import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
 import PriceChangeOutlinedIcon from "@mui/icons-material/PriceChangeOutlined";
 import SupervisorAccountOutlinedIcon from "@mui/icons-material/SupervisorAccountOutlined";
 import TroubleshootOutlinedIcon from "@mui/icons-material/TroubleshootOutlined";
 import GavelOutlinedIcon from "@mui/icons-material/GavelOutlined";
 import Logo from "../../../Assets/img/logo.png";
-
 
 const StyledCont = styled.div`
   display: flex;
@@ -50,34 +48,6 @@ const StyledList = styled(ListItemText)`
   }
 `;
 
-const StyledBtn = styled(Link)`
-  max-width: 30%;
-  height: 40px;
-  color: #fff;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 5px;
-  border: none;
-  background: rgba(97, 4, 4, 0.663);
-  margin: 0 auto;
-  text-align: center;
-
-  &:hover {
-    background: #fff;
-    color: rgba(97, 4, 4, 0.663);
-    border: 2px solid rgba(97, 4, 4, 0.663);
-  }
-
-  @media (max-width: 1000px) {
-    font-size: 14px;
-  }
-`;
-
 const EServices = styled.div`
   padding: 0 0 2rem;
 `;
@@ -98,7 +68,51 @@ const ImgDiv = styled.div`
       }
   `;
 
-const FinanceAdmin = () => {
+const StyledButton = styled(Link)`
+  min-width: 130px;
+  margin: 0 auto;
+  height: 40px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  z-index: 0;
+  background: rgba(0, 0, 0, 1);
+  overflow: hidden;
+  border: 2px solid rgba(1, 2, 50, 0.97);
+  color: #fff;
+  font-size: 17px;
+  margin: 0 auto;
+  text-align: center;
+
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+    background: #fff;
+  }
+
+  &:hover:after {
+    height: 0%;
+    background: #fff;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+  }
+`;
+
+const Enterprise = () => {
   return (
     <StyledCont>
       <ImgDiv>
@@ -320,10 +334,10 @@ const FinanceAdmin = () => {
                   />
                 </ListItem>
               </List>
-              <Box sx={{ textAlign: "center" }}>
-                <StyledBtn to="/" sx={{}}>
-                  Get Started
-                </StyledBtn>
+              <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <StyledButton to="/enterprise-calendly">
+                  Get started
+                </StyledButton>
               </Box>
             </EServices>
           </Box>
@@ -333,4 +347,4 @@ const FinanceAdmin = () => {
   );
 };
 
-export default FinanceAdmin;
+export default Enterprise;

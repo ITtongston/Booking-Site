@@ -70,7 +70,6 @@ const VirtualOffice = () => {
             mb: 1,
           }}
         >
-          {" "}
           Your Office with a Difference
         </Typography>
         <Typography component="p" sx={{ fontSize: "15px", pt: "3" }}>

@@ -545,6 +545,8 @@ const Details = ({ onNext, goBack }) => {
       );
   };
   console.log(inputValues.UseFor);
+
+  
   return (
     <>
       <FormBg>

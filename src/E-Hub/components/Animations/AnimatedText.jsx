@@ -10,7 +10,7 @@ const TextDiv = styled.div`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    & span{
+    & span {
       text-align: center;
     }
   }
@@ -20,9 +20,7 @@ const AnimatedText = () => {
   return (
     <>
       <TextDiv>
-        <span>
-          First Class blend of Entrepreneurial
-        </span>
+        <span>First Class blend of Entrepreneurial</span>
         <MovingText
           type="typewriter"
           dataText={["Media", "WorkSpace", "Enducation", "Enterprise"]}

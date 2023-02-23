@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 // import { Link } from "react-router-dom";
 import { FaCaretRight } from "react-icons/fa";
 import { Typography } from "@mui/material";
+import BasicModal from "./Programmers";
 
 const courses = [
   {
@@ -23,12 +24,6 @@ const courses = [
     title: "Career & Business Advisory Session",
     text: "The Career and business advisory session covers budget preparation, risk analysis, competitor's behavior, project advisory and marketing. It sets individual in motion of being a strategic thinker.",
     path: "https://mailchi.mp/ace0a675887b/careerbusiness_advisory",
-  },
-  {
-    id: 4,
-    title: "Programmers Den",
-    text: "A platform to learn programming and leverage our access to new technologies such as Vue.js, NodeJs, Javascript and Python",
-    path: "/",
   },
 ];
 
@@ -83,7 +78,6 @@ const StyledDiv = styled.div`
   gap: 2em;
   align-items: center;
   justify-content: center;
-
   @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -134,6 +128,7 @@ const Entrepreneurial = () => {
               </Btn>
             </StyledBox>
           ))}
+          <BasicModal/>
         </StyledDiv>
       </div>
     </>

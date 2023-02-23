@@ -30,6 +30,7 @@ const Header = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 2%;
+  margin-top: 2rem;
 
   & h2 {
     display: flex;
@@ -45,6 +46,8 @@ const Header = styled.div`
   }
 
   @media (max-width: 1000px) {
+    margin-top: 4rem;
+
     & h2 {
       font-size: 20px;
       width: 80%;
@@ -98,7 +101,7 @@ const Styledform = styled.form`
 `;
 
 const ImgDiv = styled.div`
-      position: fixed;
+      position: absolute;
       left: 2rem;
       top 2rem;
 
@@ -108,7 +111,7 @@ const ImgDiv = styled.div`
 
       @media (max-width: 900px){
         & img{
-          width: 5rem;
+          width: 7rem;
         }
       }
   `;

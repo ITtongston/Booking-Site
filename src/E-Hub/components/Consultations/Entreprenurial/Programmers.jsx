@@ -13,11 +13,11 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "background.paper",
+  background: "whitesmoke",
   border: "2px solid #000",
   boxShadow: 24,
   borderRadius: "10px",
-  p: 4,
+  padding: "1rem",
 };
 
 const Btn = styled.a`
@@ -83,10 +83,11 @@ const InputCont = styled.div`
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
+  align-items
   gap: 0.6rem;
 
   & input {
-    width: 250px;
+    width: 300px;
     height: 2.3rem;
     border-radius: 5px;
     outline: none;
@@ -100,18 +101,60 @@ const InputCont = styled.div`
 `;
 
 const StyledTextarea = styled.textarea`
-  margin: 1rem 0;
   border: none;
   border-bottom: 2px solid #2e2c2c;
-  padding: 2px 4px 2px;
+  padding: 2px 4px 1px;
   outline: none;
-  width: 100%;
-  margin: 0 auto;
+  width: 300px;
   background-color: transparent;
   &::placeholder {
     opacity: 0.8;
   }
 `;
+
+const StyledButton = styled.button`
+  min-width: 100px;
+  margin: 0 auto;
+  height: 40px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  z-index: 0;
+  background: rgba(0, 0, 0, 1);
+  overflow: hidden;
+  border: 2px solid rgba(1, 2, 50, 0.97);
+  color: #fff;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+    background: #fff;
+  }
+
+  &:hover:after {
+    height: 0%;
+    background: #fff;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+  }
+`
 
 const Inputs = [
   {
@@ -188,7 +231,7 @@ export default function BasicModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <form style={style}>
           <Typography
             id="modal-modal-title"
             variant="h6"
@@ -227,14 +270,36 @@ export default function BasicModal() {
               </div>
             ))}
           </InputCont>
-          <StyledTextarea
-            placeholder="enter any other detail..."
-            name="moreInfo"
-            onChange={handleOnchange}
-            min="300"
-            max="1000"
-          />
-        </Box>
+          <div>
+            <label
+              htmlFor="details"
+              style={{
+                padding: "1rem 0  0",
+                fontWeight: "600",
+                color: "rgba(21, 21, 19, 0.87)",
+                textAlign: "left",
+                marginLeft: "2rem",
+                marginTop: "5px",
+              }}
+            >
+              Programming languange of Interest
+            </label>
+            <div style={{ textAlign: "center" }}>
+              <StyledTextarea
+                placeholder="e.g Python"
+                name="moreInfo"
+                onChange={handleOnchange}
+                min="300"
+                max="1000"
+              />
+            </div>
+          </div>
+          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', py: 2}}>
+                <StyledButton>
+                  Sign-Up
+                </StyledButton>
+              </Box>
+        </form>
       </Modal>
     </div>
   );

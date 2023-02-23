@@ -6,6 +6,7 @@ import Modal from "@mui/material/Modal";
 import styled from "styled-components";
 import { FaCaretRight } from "react-icons/fa";
 import prog from "../../../Assets/img/prog.gif";
+import workspaceApi from "../../../api/workspaceApi";
 
 const style = {
   position: "absolute",
@@ -154,37 +155,7 @@ const StyledButton = styled.button`
     width: 100%;
     background: rgba(0, 0, 0, 1);
   }
-`
-
-const Inputs = [
-  {
-    id: 1,
-    type: "text",
-    label: "Full Name",
-    name: "FullName",
-  },
-  {
-    id: 3,
-    type: "email",
-    label: "Email address",
-    placeholder: "name@email.com",
-    name: "contactEmail",
-  },
-  {
-    id: 4,
-    type: "text",
-    label: "Phone no",
-    placeholder: "phone number...",
-    name: "PhoneNumber",
-  },
-  {
-    id: 6,
-    type: "text",
-    label: "Organisation's Address",
-    placeholder: "enter address",
-    name: "address",
-  },
-];
+`;
 
 export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
@@ -192,14 +163,41 @@ export default function BasicModal() {
     FullName: "",
     contactEmail: "",
     PhoneNumber: "",
-    capacity: "",
-    address: "",
-    checkIn: "",
-    Dates: "daily",
-    orgName: "",
-    planAmount: 75000,
-    UseFor: "",
+    role: "",
+    progDetail: "",
   });
+
+  const [loading, setLoading] = React.useState(false);
+
+  const Inputs = [
+    {
+      id: 1,
+      type: "text",
+      label: "Full Name",
+      name: "FullName",
+    },
+    {
+      id: 3,
+      type: "email",
+      label: "Email address",
+      placeholder: "name@email.com",
+      name: "contactEmail",
+    },
+    {
+      id: 4,
+      type: "text",
+      label: "Phone no",
+      placeholder: "phone number...",
+      name: "PhoneNumber",
+    },
+    {
+      id: 6,
+      type: "text",
+      label: "Career/profession",
+      placeholder: "Full Stack Engineer..",
+      name: "role",
+    },
+  ];
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -207,6 +205,38 @@ export default function BasicModal() {
   const handleOnchange = (e) => {
     const { value, name } = e.target;
     setInputValues((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const formBody = {
+        name: inputValues.FullName,
+        email: inputValues.contactEmail,
+        Phone: inputValues.PhoneNumber,
+        designation: inputValues.address,
+        progDetail: inputValues.progDetail,
+      };
+      const response = await workspaceApi.post(
+        "/programmers-den.json",
+        formBody
+      );
+      console.log(response);
+    } catch (err) {
+      console.log(err.message);
+    }
+
+    setInputValues({
+      FullName: "",
+      contactEmail: "",
+      PhoneNumber: "",
+      role: "",
+      progDetail: "",
+    });
+    
+    setLoading(false);
   };
 
   return (
@@ -231,7 +261,7 @@ export default function BasicModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <form style={style}>
+        <form style={style} onSubmit={handleSubmit}>
           <Typography
             id="modal-modal-title"
             variant="h6"
@@ -287,18 +317,26 @@ export default function BasicModal() {
             <div style={{ textAlign: "center" }}>
               <StyledTextarea
                 placeholder="e.g Python"
-                name="moreInfo"
+                name="progDetail"
+                value={inputValues.progDetail}
                 onChange={handleOnchange}
                 min="300"
                 max="1000"
               />
             </div>
           </div>
-          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', py: 2}}>
-                <StyledButton>
-                  Sign-Up
-                </StyledButton>
-              </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              py: 2,
+            }}
+          >
+            <StyledButton type="submit">
+              {loading ? "registering..." : "Sign-Up"}
+            </StyledButton>
+          </Box>
         </form>
       </Modal>
     </div>

@@ -21,9 +21,7 @@ const override = {
   position: "absolute",
   top: "50%",
   left: "50%",
-  bottom: "50%",
-  right: "50%",
-  transform: "translate(-50,-50)",
+  transform: "translate(-50%,-50%)",
   borderColor: "red",
 };
 
@@ -66,7 +64,7 @@ function App() {
             <Route path="/bookform" element={<BookingForm />} />
             <Route path="/plans" element={<PackagePages />} />
             <Route path="/plans/form" element={<PackagesForm />} />
-            <Route path="/enterprise" element={<Enterprise />} />
+            <Route path="/enterprise" element={<Enterprise/>} />
             <Route path="/enterprise-calendly" element={<EnterpriseCalendly />} />
           </Routes>
         </div>

@@ -71,6 +71,7 @@ const MediaHome = () => {
           mt: "1.5em",
           color: "#373434",
         }}
+        id="media"
       >
         Entrepreneurial Multimedia
       </Typography>

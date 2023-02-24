@@ -10,8 +10,9 @@ import {
 import { useRef } from "react";
 import WavesComp from "./waves";
 import Logo from "../Assets/img/logo.png";
-import { Link } from "react-router-dom";
+
 import emailjs from "@emailjs/browser";
+import { Link } from "react-scroll";
 
 const FooterContainer2 = styled.div`
  background:rgba(10, 10, 10, 1);
@@ -141,9 +142,27 @@ const FooterLogo = styled.div`
 
 const Footer = () => {
   const form = useRef();
+  const [loading, setLoading] = React.useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID4,
+        process.env.REACT_APP_TEMPLATE_ID4,
+        form.current,
+        process.env.REACT_APP_PUBLIC_ID4
+      )
+      .then(
+        (result) => {
+          alert("Successfully Subscribed");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setLoading(false);
   };
 
   return (
@@ -193,18 +212,48 @@ const Footer = () => {
                 <Anchorstyle to="/">Home</Anchorstyle>
               </li>
               <li>
-                <CareerAnchor href="https://www.tongston.com">
-                  workspaces
-                </CareerAnchor>
+                <Anchorstyle
+                  to="workSpace"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  Workspaces
+                </Anchorstyle>
               </li>
               <li>
-                <Anchorstyle to="/plans">media </Anchorstyle>
+                <Anchorstyle
+                  to="media"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  Media
+                </Anchorstyle>
               </li>
               <li>
-                <Anchorstyle to="/plans">enterprise</Anchorstyle>
+                <Anchorstyle
+                  to="enterprise"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  Enterprise
+                </Anchorstyle>
               </li>
               <li>
-                <Anchorstyle to="/plans">Virtual Office</Anchorstyle>
+                <Anchorstyle
+                  to="workSpace"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  Virtual Office
+                </Anchorstyle>
               </li>
             </Lists>
           </div>
@@ -241,7 +290,6 @@ const Footer = () => {
                 Subscribe to Our Newsletter
               </h4>
               <form
-                action=""
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -263,9 +311,10 @@ const Footer = () => {
                     backgroundColor: "rgba(231, 230, 242, 0.76)",
                     paddingLeft: "10px",
                   }}
+                  required
                 />
                 <button
-                  type="button"
+                  type="submit"
                   style={{
                     height: "2rem",
                     outline: "none",
@@ -278,7 +327,7 @@ const Footer = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  Subscribe
+                  {loading ? "Subscribing..." : "Subscribe"}
                 </button>
               </form>
             </ul>
@@ -297,12 +346,12 @@ const Footer = () => {
         <DividerEnd>
           <ul style={{ listStyle: "none", display: "inline-flex", gap: "1em" }}>
             <li>
-              <a style={{ color: "rgba(221, 219, 234, 0.57)" }} href="">
+              <a style={{ color: "rgba(221, 219, 234, 0.57)" }} href="#">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="" style={{ color: "rgba(221, 219, 234, 0.57)" }}>
+              <a href="#" style={{ color: "rgba(221, 219, 234, 0.57)" }}>
                 Terms and Conditions
               </a>
             </li>

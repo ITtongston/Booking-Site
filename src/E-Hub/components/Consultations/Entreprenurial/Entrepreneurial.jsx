@@ -112,6 +112,7 @@ const Entrepreneurial = () => {
             mb: "2em",
             color: "#373434",
           }}
+          id="enterprise"
         >
           Entrepreneurial Education
         </Typography>

@@ -82,6 +82,7 @@ export default function BasicTabs() {
             mb: "2em",
             color: "#373434",
           }}
+          id="workSpace"
         >
           WorkSpace Profitability with Our Entrepreneurial WorkSpaces
         </Typography>
@@ -94,6 +95,7 @@ export default function BasicTabs() {
             sx={{ color: "black", textAlign: "center" }}
             variant="scrollable"
             allowScrollButtonsMobile
+            
           >
             <Tab label="Training Room" {...a11yProps(0)} />
             <Tab label="Virtual Office" {...a11yProps(1)} />

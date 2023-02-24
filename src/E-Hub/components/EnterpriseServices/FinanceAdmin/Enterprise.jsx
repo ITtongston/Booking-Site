@@ -120,7 +120,7 @@ const Enterprise = () => {
       </ImgDiv>
       <Typography
         variant="h4"
-        sx={{ fontWeight: { sm: "bold", xs: 600 }, color: "whitesmoke" }}
+        sx={{ fontWeight: { sm: "bold", xs: 600 }, color: "whitesmoke", textAlign: 'center', fontSize: {sm: '35px', xs: '17px'}, mt: 7 }}
       >
         Your Enterprise-In-A-Box
       </Typography>
@@ -129,7 +129,7 @@ const Enterprise = () => {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          mt: "2rem",
+          mt: {sm: "2rem", xs: '1rem'},
           position: "relative",
           "& > :not(style)": {
             mt: 1,

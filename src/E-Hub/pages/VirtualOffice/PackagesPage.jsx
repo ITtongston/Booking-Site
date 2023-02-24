@@ -197,7 +197,7 @@ const PackagePages = () => {
                 NGN 1.2m <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
-                Perfect for Business who wants to scale up
+                Unlimited tool-box for all Business needs 
               </Typography>
               <List>{PlatinumTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>

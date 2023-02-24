@@ -223,7 +223,8 @@ export default function BasicModal() {
         "/programmers-den.json",
         formBody
       );
-      console.log(response);
+      if (response.status === 200) alert('sign Successful!')
+      setLoading(false);
     } catch (err) {
       console.log(err.message);
     }
@@ -235,8 +236,8 @@ export default function BasicModal() {
       role: "",
       progDetail: "",
     });
+
     
-    setLoading(false);
   };
 
   return (
@@ -334,7 +335,7 @@ export default function BasicModal() {
             }}
           >
             <StyledButton type="submit">
-              {loading ? "registering..." : "Sign-Up"}
+              {loading ? "registering..." : "Sign Up"}
             </StyledButton>
           </Box>
         </form>

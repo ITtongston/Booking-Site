@@ -13,6 +13,8 @@ import Logo from "../Assets/img/logo.png";
 
 import emailjs from "@emailjs/browser";
 import { Link } from "react-scroll";
+import terms from "../Assets/files/terms-co.pdf";
+import policy from "../Assets/files/privacy-po.pdf";
 
 const FooterContainer2 = styled.div`
  background:rgba(10, 10, 10, 1);
@@ -113,18 +115,6 @@ const Anchorstyle = styled(Link)`
   &:hover {
     color: white;
     margin-left: 5px;
-
-    transition: all 0.3s ease;
-  }
-`;
-
-const CareerAnchor = styled.a`
-  color: rgba(221, 219, 234, 0.57);
-  font-weight: 600;
-  &:hover {
-    color: white;
-    margin-left: 5px;
-
     transition: all 0.3s ease;
   }
 `;
@@ -301,6 +291,7 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder=" Your email address..."
+                  name="subscriber-email"
                   style={{
                     outline: "none",
                     width: "70%",
@@ -346,19 +337,27 @@ const Footer = () => {
         <DividerEnd>
           <ul style={{ listStyle: "none", display: "inline-flex", gap: "1em" }}>
             <li>
-              <a style={{ color: "rgba(221, 219, 234, 0.57)" }} href="#">
+              <a
+                style={{ color: "rgba(221, 219, 234, 0.57)" }}
+                href={policy}
+                download
+              >
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" style={{ color: "rgba(221, 219, 234, 0.57)" }}>
+              <a
+                href={terms}
+                style={{ color: "rgba(221, 219, 234, 0.57)" }}
+                download
+              >
                 Terms and Conditions
               </a>
             </li>
           </ul>
 
           <p style={{ color: "rgba(221, 219, 234, 0.57)" }}>
-            &copy; 2022, All rights reserved
+            &copy; 2023, All rights reserved
           </p>
         </DividerEnd>
       </FooterContainer2>

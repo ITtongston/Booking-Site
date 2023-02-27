@@ -14,7 +14,7 @@ const FormCon = styled.div`
   justify-content: center;
   background: url(${PackageBg}) center no-repeat;
   background-size: 100vw;
-  padding: 0 4% 5%;
+  padding: 0 5% 5%;
   flex-direction: column;
 `;
 
@@ -24,6 +24,7 @@ const InputCont = styled.div`
   flex-wrap: wrap;
   // border: 2px solid rgba(4, 4, 4, 0.34);
   gap: 0.6rem;
+  
 
   & input {
     width: 200px;
@@ -37,6 +38,15 @@ const InputCont = styled.div`
   & input:focus {
     border: 2px solid rgba(148, 216, 255, 0.66);
   }
+  @media (max-width: 1000px) {
+    justify-content: center;
+  align-items: center;
+
+  & input {
+    width: 250px;
+  }
+  }
+
 `;
 
 const StyledButton = styled.button`
@@ -71,6 +81,10 @@ const Textarea = styled.textarea`
 
   &:focus {
     border: 2px solid rgba(148, 216, 255, 0.66);
+  }
+
+  @media (max-width: 1000px) {
+    width: 70%;
   }
 `;
 
@@ -214,7 +228,7 @@ const Packages = () => {
     setIsLoading(true);
     e.preventDefault();
     const { name, value } = e.target;
-    
+
     // Payment
 
     // call FlutterModal
@@ -303,20 +317,22 @@ const Packages = () => {
                 ))}
               </InputCont>
 
-              <div style={{ marginTop: "1rem" }}>
+              <Box sx={{marginTop: "1rem", marginLeft: {sm: 0, xs: '15%'}}}>
                 <label
                   htmlFor=""
                   style={{ fontWeight: 600, color: "rgba(21, 21, 19, 0.87)" }}
                 >
                   Details/Reason for Use
                 </label>
-              </div>
+              </Box>
 
-              <Textarea
-                name="UseFor"
-                value={inputValues.UseFor}
-                onChange={handleOnchange}
-              />
+              <Box sx={{display: 'flex', justifyContent: 'center'}}>
+                <Textarea
+                  name="UseFor"
+                  value={inputValues.UseFor}
+                  onChange={handleOnchange}
+                />
+              </Box>
 
               <BoxAmount>
                 <PackagesDropDown

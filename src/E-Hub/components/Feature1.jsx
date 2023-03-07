@@ -23,10 +23,10 @@ const Feature1 = () => {
           <h3
             style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px" }}
           >
-            MEDIA & ENTERPRISE SERVICES
+            MEDIA, FINANCE & ENTERPRISE SERVICES
           </h3>
           <p style={{ fontSize: "16px", fontWeight: 600 }}>
-            Boost Your profitability with Professional Media, HR, Legal and
+            Boost Your profitability with Professional Media, Finance HR, Legal and
             Admin services on the Go!
           </p>
         </div>

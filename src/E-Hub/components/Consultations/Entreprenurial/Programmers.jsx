@@ -35,7 +35,7 @@ const Btn = styled.a`
 `;
 
 const StyledBox = styled(Box)`
-  max-width: 100%;
+  max-width: 70%;
   color: #fff;
   padding: 5px 10px;
   cursor: pointer;
@@ -46,9 +46,9 @@ const StyledBox = styled(Box)`
   border: 1px solid #000;
   color: #000;
   background: transparent;
+  
   margin: 0 auto;
-
-  &:hover h2 {
+  tex &:hover h2 {
     transform: scale(0.9);
   }
 
@@ -74,7 +74,7 @@ const StyledBox = styled(Box)`
     left: 0;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     max-width: 80%;
   }
 `;
@@ -223,7 +223,7 @@ export default function BasicModal() {
         "/programmers-den.json",
         formBody
       );
-      if (response.status === 200) alert('sign Successful!')
+      if (response.status === 200) alert("sign Successful!");
       setLoading(false);
     } catch (err) {
       console.log(err.message);
@@ -236,25 +236,25 @@ export default function BasicModal() {
       role: "",
       progDetail: "",
     });
-
-    
   };
 
   return (
     <div>
-      <StyledBox>
-        <h2 style={{ width: "100%" }}>Programmers Den</h2>
-        <p>
-          A platform to learn programming and leverage our access to new
-          technologies such as Vue.js, NodeJs, Javascript and Python
-        </p>
-        <Btn onClick={handleOpen} sx={{ color: "rgba(217, 6, 6, 1)" }}>
-          More
-          <span>
-            <FaCaretRight />
-          </span>
-        </Btn>
-      </StyledBox>
+      <Box sx={{display: "flex", alignItems: 'center', justifyCenter: 'center'}}>
+        <StyledBox>
+          <h2 style={{ width: "100%" }}>Programmers Den</h2>
+          <p>
+            A platform to learn programming and leverage our access to new
+            technologies such as Vue.js, NodeJs, Javascript and Python
+          </p>
+          <Btn onClick={handleOpen} sx={{ color: "rgba(217, 6, 6, 1)" }}>
+            More
+            <span>
+              <FaCaretRight />
+            </span>
+          </Btn>
+        </StyledBox>
+      </Box>
 
       <Modal
         open={open}

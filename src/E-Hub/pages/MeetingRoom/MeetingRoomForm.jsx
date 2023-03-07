@@ -211,8 +211,8 @@ const Details = ({ onNext, goBack }) => {
 
   const form = useRef()
 
-  const [DayPrice, setDayPrice] = useState(15200);
-  const [weekPrice, setWeekPrice] = useState(68400);
+  const [DayPrice, setDayPrice] = useState(13718);
+  const [weekPrice, setWeekPrice] = useState(61731);
   const [dayDuration, setDAyDuration] = useState(1);
   const [weekDuration, setWeekDuration] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
@@ -359,33 +359,33 @@ const Details = ({ onNext, goBack }) => {
   }
 
   const handleDaysIncrease = () => {
-    setDayPrice((prevAmount) => prevAmount + 15200);
+    setDayPrice((prevAmount) => prevAmount + 13718);
     setDAyDuration((prevDuration) => prevDuration + 1);
   };
 
   const handleDaysDecrease = () => {
-    if (DayPrice < 15200) {
+    if (DayPrice < 13718) {
       return;
-    } else if (DayPrice === 15200) {
+    } else if (DayPrice === 13718) {
       return;
     } else {
-      setDayPrice((prevAmount) => prevAmount - 15200);
+      setDayPrice((prevAmount) => prevAmount - 13718);
       setDAyDuration((prevDuration) => prevDuration - 1);
     }
   };
 
   const handleWeekIncrease = () => {
-    setWeekPrice((prevAmount) => prevAmount + 68400);
+    setWeekPrice((prevAmount) => prevAmount + 61731);
     setWeekDuration((prevDuration) => prevDuration + 1);
   };
 
   const handleWeekDecrease = () => {
-    if (weekPrice < 68400) {
+    if (weekPrice < 61731) {
       return;
-    } else if (weekPrice === 68400) {
+    } else if (weekPrice === 61731) {
       return;
     } else {
-      setWeekPrice((prevAmount) => prevAmount - 68400);
+      setWeekPrice((prevAmount) => prevAmount - 61731);
       setWeekDuration((prevDuration) => prevDuration - 1);
     }
   };

@@ -49,8 +49,8 @@ const CardBox2 = () => {
         <Box sx={{ mt: 3 }}>
           <Typography sx={{ fontSize: "14px" , minWidth: {sm: '100%'}}}>
           
-          <span> <i>from ₦3,800  per desk/day </i></span> <br />
-            <span><i>from ₦17,100 per desk/week</i></span> <br/>
+          <span> <i>from ₦2,900 per desk/day </i></span> <br />
+            <span><i>from ₦11,600 per desk/week</i></span> <br/>
             
           </Typography>
         </Box>

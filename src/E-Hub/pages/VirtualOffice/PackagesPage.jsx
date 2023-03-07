@@ -142,7 +142,7 @@ const PackagePages = () => {
             component="p"
             sx={{ m: "1rem auto", textAlign: "center" }}
           >
-            Upgrade As your personal brand Grows
+            Upgrade as your Brand Grows
           </Typography>
         </HeadingText>
         <PackageCon>
@@ -154,7 +154,7 @@ const PackagePages = () => {
                 NGN 75000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
-                Perfect for Business who wants to scale up
+                Perfect for a business that is just starting
               </Typography>
               <List>{BronzeTags}</List>
 
@@ -174,7 +174,9 @@ const PackagePages = () => {
               <h2>
                 NGN 375000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
-              <Typography>Uninterupted Productivity</Typography>
+              <Typography>
+              Uninterupted Productivity for your business
+              </Typography>
               <List>{GoldPlusTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>
             </Paper>
@@ -187,18 +189,18 @@ const PackagePages = () => {
               <h2>
                 NGN 900000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
-              <Typography>Giving profitability superpowers</Typography>
+              <Typography>
+                Giving your business profitability superpowers
+              </Typography>
               <List>{SilverTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>
             </Paper>
             <Paper variant="outlined">
               <h3>Platinum</h3>
               <h2>
-                NGN 1.2m <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 1.25m <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
-              <Typography>
-                Unlimited tool-box for all Business needs 
-              </Typography>
+              <Typography>Unlimited tool-box for all Business needs</Typography>
               <List>{PlatinumTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>
             </Paper>

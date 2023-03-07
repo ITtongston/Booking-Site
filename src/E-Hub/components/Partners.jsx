@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import Bitrix from "../Assets/patnerlogo/Bitrix24.png";
 import CDI from "../Assets/patnerlogo/CDI.png";
 import GFEL2 from "../Assets/patnerlogo/GFEL2.jpg";
@@ -11,7 +11,7 @@ import Thinkific from "../Assets/patnerlogo/thinkific.png";
 import Raw from "../Assets/patnerlogo/Raw.jpg";
 import PF5 from "../Assets/patnerlogo/PF5.jpg";
 import Onegrey from "../Assets/patnerlogo/onegrey.png";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 
 const Images = [
@@ -66,23 +66,41 @@ const Img = styled.img`
   width: 6rem;
 `;
 
-const ImgCon = styled.div`
+const Slider = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 4rem;
-  width: 70%;
-  border: 1px solid rgba(95, 95, 95, 0.19);
-  border-radius: 15px;
-  padding: 1%;
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 `;
 
-const Containdiv = styled.div`
+const Slide = styled(Box)`
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 4rem;
+  padding: 15px;
+  perspective: 50px;
+  height: 250px;
+  width: 250px;
+
+  @media (max-width: 1000px){
+    padding: 5px;
+  }
+`;
+
+const ScrollAnimation = keyframes`
+0%{
+  transform: translateX(0);
+}
+100%{
+  transform: translateX(calc(-100px * 5.5));
+}
+`
+const SliderTrack = styled.div`
+  display: flex;
+  animation: ${ScrollAnimation} 20s linear infinite;
 `;
 
 const Partners = () => {
@@ -100,13 +118,16 @@ const Partners = () => {
       >
         Our Trusted Partners
       </Typography>
-      <Containdiv>
-        <ImgCon data-aos-duration="1000" data-aos="fade-up">
+      <Slider>
+        <SliderTrack data-aos-duration="1000" data-aos="fade-up">
           {Images.map((imgs) => (
-            <Img key={imgs.id} src={imgs.img} alt="images" />
+            <Slide>
+              <Img key={imgs.id} src={imgs.img} alt="images" />
+            </Slide>
+            
           ))}
-        </ImgCon>
-      </Containdiv>
+        </SliderTrack>
+      </Slider>
     </>
   );
 };

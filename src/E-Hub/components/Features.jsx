@@ -23,18 +23,18 @@ const Features = () => {
           <h3
             style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px" }}
           >
-            MEDIA & ENTERPRISE SERVICES
+           MEDIA, FINANCE & ENTERPRISE SERVICES
           </h3>
           <p style={{ fontSize: "16px", fontWeight: 600 }}>
             Boost your Value, Influence & Profitability with Entrepreneurial
-            Media, HR, Legal, Admin, Data, Technology & Accounting services on
+            Media, Finance HR, Legal, Admin, Data, Technology & Accounting services on
             the Go!
           </p>
         </div>
         <div className="divs">
           <FaUsersCog className="featicon3" size={40} />
           <h3
-            style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px" }}
+            style={{ padding: "0.5rem 0", fontWeight: 700, fontSize: "20px", width: '70%', margin: '0 auto' }}
           >
             {" "}
             UPSKILL YOUR HUMAN CAPITAL

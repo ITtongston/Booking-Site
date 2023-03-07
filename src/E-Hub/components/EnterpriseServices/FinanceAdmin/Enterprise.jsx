@@ -120,7 +120,13 @@ const Enterprise = () => {
       </ImgDiv>
       <Typography
         variant="h4"
-        sx={{ fontWeight: { sm: "bold", xs: 600 }, color: "whitesmoke", textAlign: 'center', fontSize: {sm: '35px', xs: '17px'}, mt: 7 }}
+        sx={{
+          fontWeight: { sm: "bold", xs: 600 },
+          color: "whitesmoke",
+          textAlign: "center",
+          fontSize: { sm: "35px", xs: "17px" },
+          mt: 7,
+        }}
       >
         Your Enterprise-In-A-Box
       </Typography>
@@ -129,7 +135,7 @@ const Enterprise = () => {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          mt: {sm: "2rem", xs: '1rem'},
+          mt: { sm: "2rem", xs: "1rem" },
           position: "relative",
           "& > :not(style)": {
             mt: 1,
@@ -156,7 +162,7 @@ const Enterprise = () => {
                   fontSize: "18px",
                   wordSpacing: "5px",
                   textAlign: "center",
-                  width: { sm: "70%", xs: "90%" },
+                  width: { sm: "75%", xs: "90%" },
                   margin: "1rem auto",
                 }}
               >
@@ -165,12 +171,16 @@ const Enterprise = () => {
                 administration. Our templates are at zero cost to you compared
                 to the cost of hiring HR experts, lawyers, strategy consultants,
                 governance & data experts, business & systems analysts or
-                administrators. Our professional Templates & Tools are organized
-                by category, document type, and business industry, and are
-                designed to enable you achieve value, influence and
-                profitability. Access templates, guides & tools; opportunities;
-                training, experts and consultation for all your business needs,
-                on demand, anywhere you are!
+                administrators.
+                <br />
+                <span style={{ marginTop: "1rem" }}>
+                  Our professional Templates & Tools are organized by category,
+                  document type, and business industry, and are designed to
+                  enable you achieve value, influence and profitability. Access
+                  templates, guides & tools; opportunities; training, experts
+                  and consultation for all your business needs, on demand,
+                  anywhere you are!
+                </span>
               </Typography>
             </Box>
 
@@ -232,7 +242,8 @@ const Enterprise = () => {
                           variant="body2"
                           color="text.primary"
                         >
-                          Access Administration, Recruitment, Talent
+                          Access Administration, Recruitment, Talent Mgt
+                          Services
                         </Typography>
                         <Typography sx={{ my: "1rem" }}>
                           <li> ● Meeting organization and management </li>
@@ -268,18 +279,18 @@ const Enterprise = () => {
                           variant="body2"
                           color="text.primary"
                         >
-                          Access Data Science Consulting and Research
+                          Access Data Science Consulting and Research Services
                         </Typography>
                         <Typography sx={{ my: "1rem" }}>
-                          <li> ● Introductory Data science</li>
+                          <li> ● Data Science - Introduction</li>
                           <li>● Data Science - intermediate </li>
-                          <li> ● Advance Data science</li>
-                          <li> ● Organizational Change </li>
-                          <li> ● Introduction to Research </li>
+                          <li> ● Data Science - Advanced</li>
+                          <li> ● Data Analysis </li>
+                          <li> ● Research </li>
                           <li> ● Data gathering methods and Techniques</li>
                           <li>
-                            ● Results, Presentation of Finding, and Drawing
-                            Conclusion
+                            ● Visual Presentation of Findings, Lessons Learnt,
+                            Results and Drawing Conclusions
                           </li>
                           <li>
                             ● Research Methodology and appropriateness of
@@ -324,17 +335,19 @@ const Enterprise = () => {
                             ● Development of a purpose-built governance
                             structure
                           </li>
-                          <li>
-                            ● Research Methodology and appropriateness of
-                            methods
-                          </li>
                         </Typography>
                       </React.Fragment>
                     }
                   />
                 </ListItem>
               </List>
-              <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <StyledButton to="/enterprise-calendly">
                   Get started
                 </StyledButton>

@@ -68,7 +68,7 @@ const CardBox1 = () => {
             </span>
             <br />
             <span>
-              <i>from ₦113,715 /week</i>
+              <i>from ₦108,029 /week</i>
             </span>
             <br />
           </Typography>

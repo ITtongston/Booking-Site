@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import MovingText from "react-moving-text";
 import styled from "styled-components";
@@ -21,10 +22,18 @@ const AnimatedText = () => {
     <>
       <TextDiv>
         <span>First Class blend of Entrepreneurial</span>
-        <MovingText
-          type="typewriter"
-          dataText={["Media", "WorkSpace", "Enducation", "Enterprise"]}
-        />
+        <Typography
+          sx={{
+            fontWeight: "bold",
+            fontSize: { sm: "30px", xs: "20px" },
+            color: "rgba(199, 0, 0, 0.88)",
+          }}
+        >
+          <MovingText
+            type="typewriter"
+            dataText={["Media", "WorkSpace", "Education", "Enterprise"]}
+          />
+        </Typography>
       </TextDiv>
     </>
   );

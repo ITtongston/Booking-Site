@@ -4,6 +4,12 @@ import { FaHubspot } from "react-icons/fa";
 import styled from "styled-components";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import { Education, workspaces, Media, Enterprise } from "./HubSummaryBullets";
+import { ListItemIcon, ListItemText} from "@mui/material";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+
 
 const Summarycon = styled.div`
   display: flex;
@@ -21,7 +27,7 @@ const SummaryParent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 2rem;
+  margin: 2rem 0 3rem;
   // padding: 0 2%;
   width: 100%;
 `;
@@ -29,6 +35,7 @@ const SummaryParent = styled.div`
 const RestyledUl = styled.ul`
   list-style: none;
   margin-top: 0.5em;
+
 
   & li {
     font-size: 0.8rem;
@@ -52,7 +59,7 @@ const HubSummary = () => {
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
-          fontSize: "25px",
+          fontSize: "30px",
           color: "#373434",
           fontWeight: "bold",
         }}
@@ -75,10 +82,14 @@ const HubSummary = () => {
                 Entrepreneurial Workspaces
               </span>
               <RestyledUl>
-                <li>Co-Working Space</li>
-                <li>Training Room</li>
-                <li>Virtual Office</li>
-                <li> Meeting Room</li>
+                {workspaces.map((tags) => (
+                  <ListItem key={tags.id} disablePadding={true}>
+                    <ListItemIcon>
+                      <RadioButtonCheckedIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>{tags.tag}</ListItemText>
+                  </ListItem>
+                ))}
               </RestyledUl>
             </CardContent>
           </Card>
@@ -96,11 +107,14 @@ const HubSummary = () => {
                 Entrepreneurial Media
               </span>
               <RestyledUl>
-                <li>Branding (Designs, Web Mgt & Identity)</li>
-                <li>Public Relations & Communication</li>
-                <li>Audio & Video Production & Editing</li>
-                <li>Online Events Management</li>
-                <li> Advertising</li>
+              {Media.map((tags) => (
+                  <ListItem key={tags.id} disablePadding={true}>
+                    <ListItemIcon>
+                      <RadioButtonCheckedIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>{tags.tag}</ListItemText>
+                  </ListItem>
+                ))}
               </RestyledUl>
             </CardContent>
           </Card>
@@ -120,13 +134,14 @@ const HubSummary = () => {
                 Entrepreneurial Enterprise
               </span>
               <RestyledUl>
-                <li>“Enterprise-in-a-box” Tools & Templates.</li>
-                <li>
-                  Consulting with Admin, HR, Data, Strategy, Technology, Legal,
-                  Governance, Finance Experts
-                </li>
-                <li>Entrepreneurial Insights</li>
-                <li>Opportunities Centre</li>
+              {Enterprise.map((tags) => (
+                  <ListItem key={tags.id} disablePadding={true}>
+                    <ListItemIcon>
+                      <RadioButtonCheckedIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>{tags.tag}</ListItemText>
+                  </ListItem>
+                ))}
               </RestyledUl>
             </CardContent>
           </Card>
@@ -143,11 +158,14 @@ const HubSummary = () => {
                 Entrepreneurial Education
               </span>
               <RestyledUl>
-                <li>Tongston Introduction to Entrepreneurial Education </li>
-                <li>Data Science</li>
-                <li>Career & Business Advisory</li>
-                <li>Finance and Fund Raising</li>
-                <li>Programmers Den</li>
+              {Education.map((tags) => (
+                  <ListItem key={tags.id} disablePadding={true}>
+                    <ListItemIcon>
+                      <RadioButtonCheckedIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>{tags.tag}</ListItemText>
+                  </ListItem>
+                ))}
               </RestyledUl>
             </CardContent>
           </Card>

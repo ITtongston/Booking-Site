@@ -5,7 +5,6 @@ import media from "../../../Assets/img/Mediahome.jpg";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
-
 const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -17,11 +16,9 @@ const StyledContainer = styled.div`
     & {
       flex-direction: column;
     }
-
   }
 `;
 // {}
-
 
 const BoxBg = styled(Box)`
   background: url(${media}) no-repeat center;
@@ -66,7 +63,7 @@ const MediaHome = () => {
         sx={{
           fontWeight: "bold",
           textAlign: "center",
-          fontSize: {sm: '30px', xs: '20px'},
+          fontSize: { sm: "30px", xs: "20px" },
           mb: "2em",
           mt: "1.5em",
           color: "#373434",
@@ -76,15 +73,28 @@ const MediaHome = () => {
         Entrepreneurial Multimedia
       </Typography>
       <StyledContainer data-aos="fade-up" data-aos-duration="1000">
-        <Box sx={{ width: {sm: '50%', xs: '100%'}, marginBottom: "6rem", textAlign: {sm: "left", xs: "center"} }}>
+        <Box
+          sx={{
+            width: { sm: "50%", xs: "100%" },
+            marginBottom: "6rem",
+            textAlign: { sm: "left", xs: "center" },
+          }}
+        >
           <Typography component="h2" style={{ fontSize: "1.7rem" }}>
             We help you break through the noise
-          </Typography >
-          <Typography sx={{ width: {sm: '75%', xs: '90%'}, textAlign: {sm: 'left', xs: 'center'}}}>
+          </Typography>
+          <Typography
+            sx={{
+              width: { sm: "75%", xs: "90%" },
+              textAlign: { sm: "left", xs: "center" },
+            }}
+          >
             Elevate your brand with our suite of products and services. Make
             customized media decisions for your business, government, or
-            yourself. We are an award-winning communications agency with the
-            ability to make the most out of your marketing spend.
+            yourself. We are an award-winning Branding, Communications, PR,
+            marketing & multimedia production agency. We enhance your brand so
+            that you may be more valuable and profitable, whilst making the most
+            of your media & communications spend.out of your marketing spend.
           </Typography>
           <Button
             variant="text"
@@ -100,7 +110,7 @@ const MediaHome = () => {
             Explore
           </Button>
         </Box>
-        <Box sx={{ width: {sm: '50%', xs: '90%'}}}>
+        <Box sx={{ width: { sm: "50%", xs: "90%" } }}>
           <BoxBg>
             <h4>Become That Choice Brand!</h4>
           </BoxBg>

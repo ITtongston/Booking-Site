@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import { FaCaretRight } from "react-icons/fa";
 import { Typography } from "@mui/material";
 import BasicModal from "./Programmers";
+import BasicModal2 from "./BasicModal2";
 
 const courses = [
   {
@@ -22,7 +23,7 @@ const courses = [
   {
     id: 3,
     title: "Career & Business Advisory Session",
-    text: "The Career and business advisory session covers budget preparation, risk analysis, competitor's behavior, project advisory and marketing. It sets individual in motion of being a strategic thinker.",
+    text: "The Tongston Global Career Business and Advisory (CBA) product is designed for adolescent intrapreneurs/entrepreneurs (ages 9 —18) in upper primary and secondary schools globally to discover their intrapreneurial & entrepreneurial paths by leveraging Tongston's proprietary entrepreneurial thinking model.",
     path: "https://mailchi.mp/ace0a675887b/careerbusiness_advisory",
   },
 ];
@@ -67,19 +68,19 @@ const StyledBox = styled(Box)`
     left: 0;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     max-width: 80%;
   }
 `;
 
 const StyledDiv = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
   align-items: center;
   justify-content: center;
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   @media (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
@@ -98,6 +99,20 @@ const Btn = styled.a`
     justify-content: center;
   }
 `;
+const SecondBox = styled(Box)`
+  display: grid;
+  align-items: center;
+  justifyContent: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+
 
 const Entrepreneurial = () => {
   return (
@@ -112,7 +127,6 @@ const Entrepreneurial = () => {
             mb: "2em",
             color: "#373434",
           }}
-          id="enterprise"
         >
           Entrepreneurial Education
         </Typography>
@@ -129,8 +143,12 @@ const Entrepreneurial = () => {
               </Btn>
             </StyledBox>
           ))}
-          <BasicModal/>
         </StyledDiv>
+        <SecondBox
+        >
+          <BasicModal />
+          <BasicModal2 />
+        </SecondBox>
       </div>
     </>
   );

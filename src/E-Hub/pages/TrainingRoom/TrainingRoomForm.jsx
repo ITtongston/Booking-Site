@@ -213,7 +213,7 @@ const Details = ({ onNext, goBack }) => {
   // console.log(CheckInDate.$d);
 
   const [DayPrice, setDayPrice] = useState(25270);
-  const [weekPrice, setWeekPrice] = useState(113715);
+  const [weekPrice, setWeekPrice] = useState(108029);
   const [dayDuration, setDAyDuration] = useState(1);
   const [weekDuration, setWeekDuration] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
@@ -376,17 +376,17 @@ const Details = ({ onNext, goBack }) => {
   };
 
   const handleWeekIncrease = () => {
-    setWeekPrice((prevAmount) => prevAmount + 113715);
+    setWeekPrice((prevAmount) => prevAmount + 108029);
     setWeekDuration((prevDuration) => prevDuration + 1);
   };
 
   const handleWeekDecrease = () => {
-    if (weekPrice < 113715) {
+    if (weekPrice < 108029) {
       return;
-    } else if (weekPrice === 113715) {
+    } else if (weekPrice === 108029) {
       return;
     } else {
-      setWeekPrice((prevAmount) => prevAmount - 113715);
+      setWeekPrice((prevAmount) => prevAmount - 108029);
       setWeekDuration((prevDuration) => prevDuration - 1);
     }
   };

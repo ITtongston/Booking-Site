@@ -2,19 +2,17 @@ import styled from "styled-components";
 import React from "react";
 import { useState, useRef } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import Coworking from '../../Assets/img/coworking.jpg'
+import Coworking from "../../Assets/img/coworking.jpg";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import { Oval } from "svg-loaders-react";
 import dayjs from "dayjs";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { Paper, Typography,Box } from "@mui/material";
+import { Paper, Typography, Box } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import workspaceApi from "../../api/workspaceApi";
-import emailjs from "@emailjs/browser"
-
-
+import emailjs from "@emailjs/browser";
 
 const FormBg = styled.div`
   // background: rgba(98, 105, 158, 0.1);
@@ -62,7 +60,7 @@ const InputCont = styled.div`
   gap: 0.6rem;
   justify-content: center;
   align-items: center;
-  
+
   & input {
     width: 200px;
     height: 2.3rem;
@@ -181,7 +179,7 @@ const Textarea = styled.textarea`
     border: 2px solid rgba(148, 216, 255, 0.66);
   }
 
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     width: 70%;
   }
 `;
@@ -198,18 +196,18 @@ const Details = ({ onNext, goBack }) => {
     Dates: "daily",
     orgName: "",
     UseFor: "",
-    workSpace: "Coworking space"
+    workSpace: "Coworking space",
   });
 
   const [CheckInDate, setCheckInDate] = React.useState(dayjs("2014-08-18").$d);
   const [CheckOutDate, setCheckOutDate] = React.useState(
     dayjs("2014-08-18").$d
   );
-  
+
   const form = useRef();
 
-  const [DayPrice, setDayPrice] = useState(3800);
-  const [weekPrice, setWeekPrice] = useState(17100);
+  const [DayPrice, setDayPrice] = useState(2900);
+  const [weekPrice, setWeekPrice] = useState(11600);
   const [dayDuration, setDAyDuration] = useState(1);
   const [weekDuration, setWeekDuration] = useState(1);
   const [noDayDesk, setDayNoDesk] = useState(1);
@@ -283,7 +281,7 @@ const Details = ({ onNext, goBack }) => {
   // handlers
 
   const handleOnchange = (e) => {
-    const { value,name } = e.target;
+    const { value, name } = e.target;
 
     setInputValues((prevState) => ({ ...prevState, [name]: value }));
   };
@@ -310,13 +308,13 @@ const Details = ({ onNext, goBack }) => {
     if (noDayDesk === 1)
       setDayPrice((prevAmount) => prevAmount * (noDayDesk + 1));
     if (noDayDesk > 1)
-      setDayPrice((prevAmount) => prevAmount + 3800 * dayDuration);
+      setDayPrice((prevAmount) => prevAmount + 2900 * dayDuration);
   };
 
   const handleDAyDeskDecrease = () => {
     if (noDayDesk === 1) return;
     else {
-      setDayPrice((prevAmount) => prevAmount - 3800 * dayDuration);
+      setDayPrice((prevAmount) => prevAmount - 2900 * dayDuration);
       setDayNoDesk((prev) => prev - 1);
     }
   };
@@ -326,41 +324,41 @@ const Details = ({ onNext, goBack }) => {
     if (noWeekDesk === 1)
       setWeekPrice((prevAmount) => prevAmount * (noWeekDesk + 1));
     if (noWeekDesk > 1)
-      setWeekPrice((prevAmount) => prevAmount + 17100 * weekDuration);
+      setWeekPrice((prevAmount) => prevAmount + 11600 * weekDuration);
   };
 
   const handleWeekDeskDecrease = () => {
     if (noWeekDesk === 1) return;
     else {
-      setWeekPrice((prevAmount) => prevAmount - 17100 * weekDuration);
+      setWeekPrice((prevAmount) => prevAmount - 11600 * weekDuration);
       setWeekNoDesk((prev) => prev - 1);
     }
   };
 
   const handleDaysIncrease = () => {
-    setDayPrice((prevAmount) => prevAmount + noDayDesk * 3800);
+    setDayPrice((prevAmount) => prevAmount + noDayDesk * 2900);
     setDAyDuration((prevDuration) => prevDuration + 1);
   };
 
   const handleDaysDecrease = () => {
-    if (DayPrice < 3800 || DayPrice === 3800) return;
-    else if (DayPrice > 3800 && dayDuration === 1) return;
+    if (DayPrice < 2900 || DayPrice === 2900) return;
+    else if (DayPrice > 2900 && dayDuration === 1) return;
     else {
-      setDayPrice((prevAmount) => prevAmount - noDayDesk * 3800);
+      setDayPrice((prevAmount) => prevAmount - noDayDesk * 2900);
       setDAyDuration((prevDuration) => prevDuration - 1);
     }
   };
 
   const handleWeekIncrease = () => {
-    setWeekPrice((prevAmount) => prevAmount + noWeekDesk * 17100);
+    setWeekPrice((prevAmount) => prevAmount + noWeekDesk * 11600);
     setWeekDuration((prevDuration) => prevDuration + 1);
   };
 
   const handleWeekDecrease = () => {
-    if (weekPrice < 17100 || weekPrice === 17100) return;
-    else if (weekPrice > 17100 && weekDuration === 1) return;
+    if (weekPrice < 11600 || weekPrice === 11600) return;
+    else if (weekPrice > 11600 && weekDuration === 1) return;
     else {
-      setWeekPrice((prevAmount) => prevAmount - noWeekDesk * 17100);
+      setWeekPrice((prevAmount) => prevAmount - noWeekDesk * 11600);
       setWeekDuration((prevDuration) => prevDuration - 1);
     }
   };
@@ -426,7 +424,7 @@ const Details = ({ onNext, goBack }) => {
     handleFlutterPayment({
       onNext: onNext(),
       callback: (response) => {
-        if (response.status !== "successful") return
+        if (response.status !== "successful") return;
         closePaymentModal();
         onNext();
       },
@@ -485,7 +483,7 @@ const Details = ({ onNext, goBack }) => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                flexDirection: {sm: 'row', xs: 'column'},
+                flexDirection: { sm: "row", xs: "column" },
                 gap: "1rem",
                 mt: 3,
               }}
@@ -509,7 +507,6 @@ const Details = ({ onNext, goBack }) => {
                   name="CheckOutDate"
                   onChange={handleOutDate}
                   renderInput={(params) => <TextField {...params} />}
-                 
                 />
               </LocalizationProvider>
             </Box>
@@ -712,17 +709,17 @@ const Details = ({ onNext, goBack }) => {
               )}
             </StyledButton>
             <Typography
-                sx={{
-                  fontSize: "11px",
-                  width: "70%",
-                  color: "rgba(17, 17, 17, 0.72)",
-                  mt: "10px",
-                }}
-              >
-                By clicking sign up, I acknowledge that I have read and do
-                hereby accept the terms and conditions in the Tongston's Hub
-                Terms of Use, and Privacy Policy.
-              </Typography>
+              sx={{
+                fontSize: "11px",
+                width: "70%",
+                color: "rgba(17, 17, 17, 0.72)",
+                mt: "10px",
+              }}
+            >
+              By clicking sign up, I acknowledge that I have read and do hereby
+              accept the terms and conditions in the Tongston's Hub Terms of
+              Use, and Privacy Policy.
+            </Typography>
           </form>
         </FormCont>
       </FormBg>

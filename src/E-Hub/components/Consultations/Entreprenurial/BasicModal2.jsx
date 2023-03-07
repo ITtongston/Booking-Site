@@ -95,7 +95,7 @@ export default function BasicModal2() {
         <StyledBox>
           <h2 style={{ width: "100%" }}>Finance & Fundraising</h2>
           <p>
-          The Career and business advisory session covers budget preparation, risk analysis, competitor's behavior, project advisory and marketing. It sets individual in motion of being a strategic thinker.
+          A 3-part comprehensive session on building & scaling a profitable, valuable & influential business; managing & projecting your business finances.
           </p>
           <Btn href="https://tongston.selar.co/ow9a" sx={{ color: "rgba(217, 6, 6, 1)" }}>
             More

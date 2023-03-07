@@ -245,7 +245,7 @@ export default function BasicModal() {
           <h2 style={{ width: "100%" }}>Programmers Den</h2>
           <p>
             A platform to learn programming and leverage our access to new
-            technologies such as Vue.js, NodeJs, Javascript and Python
+            technologies such as Vue.js, NodeJs, Javascript and Python.
           </p>
           <Btn onClick={handleOpen} sx={{ color: "rgba(217, 6, 6, 1)" }}>
             More

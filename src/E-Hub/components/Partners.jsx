@@ -87,6 +87,7 @@ const Slide = styled(Box)`
 
   @media (max-width: 1000px){
     padding: 5px;
+    width: 140px;
   }
 `;
 

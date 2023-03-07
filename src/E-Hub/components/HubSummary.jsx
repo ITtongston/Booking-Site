@@ -5,11 +5,10 @@ import styled from "styled-components";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Education, workspaces, Media, Enterprise } from "./HubSummaryBullets";
-import { ListItemIcon, ListItemText} from "@mui/material";
+import { ListItemIcon, ListItemText } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-
+import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 
 const Summarycon = styled.div`
   display: flex;
@@ -28,14 +27,16 @@ const SummaryParent = styled.div`
   align-items: center;
   justify-content: center;
   margin: 2rem 0 3rem;
-  // padding: 0 2%;
   width: 100%;
+
+  @media (max-width: 800px) {
+    padding: 0 2%;
+  }
 `;
 
 const RestyledUl = styled.ul`
   list-style: none;
   margin-top: 0.5em;
-
 
   & li {
     font-size: 0.8rem;
@@ -84,9 +85,11 @@ const HubSummary = () => {
               <RestyledUl>
                 {workspaces.map((tags) => (
                   <ListItem key={tags.id} disablePadding={true}>
-                    <ListItemIcon>
-                      <RadioButtonCheckedIcon fontSize="small" />
-                    </ListItemIcon>
+                    <RadioButtonCheckedIcon
+                      fontSize="small"
+                      sx={{ marginRight: "6px" }}
+                    />
+
                     <ListItemText>{tags.tag}</ListItemText>
                   </ListItem>
                 ))}
@@ -107,11 +110,12 @@ const HubSummary = () => {
                 Entrepreneurial Media
               </span>
               <RestyledUl>
-              {Media.map((tags) => (
+                {Media.map((tags) => (
                   <ListItem key={tags.id} disablePadding={true}>
-                    <ListItemIcon>
-                      <RadioButtonCheckedIcon fontSize="small" />
-                    </ListItemIcon>
+                    <RadioButtonCheckedIcon
+                      fontSize="small"
+                      sx={{ marginRight: "6px" }}
+                    />
                     <ListItemText>{tags.tag}</ListItemText>
                   </ListItem>
                 ))}
@@ -134,11 +138,12 @@ const HubSummary = () => {
                 Entrepreneurial Enterprise
               </span>
               <RestyledUl>
-              {Enterprise.map((tags) => (
+                {Enterprise.map((tags) => (
                   <ListItem key={tags.id} disablePadding={true}>
-                    <ListItemIcon>
-                      <RadioButtonCheckedIcon fontSize="small" />
-                    </ListItemIcon>
+                    <RadioButtonCheckedIcon
+                      fontSize="small"
+                      sx={{ marginRight: "6px" }}
+                    />
                     <ListItemText>{tags.tag}</ListItemText>
                   </ListItem>
                 ))}
@@ -158,11 +163,12 @@ const HubSummary = () => {
                 Entrepreneurial Education
               </span>
               <RestyledUl>
-              {Education.map((tags) => (
+                {Education.map((tags) => (
                   <ListItem key={tags.id} disablePadding={true}>
-                    <ListItemIcon>
-                      <RadioButtonCheckedIcon fontSize="small" />
-                    </ListItemIcon>
+                    <RadioButtonCheckedIcon
+                      fontSize="small"
+                      sx={{ marginRight: "6px" }}
+                    />
                     <ListItemText>{tags.tag}</ListItemText>
                   </ListItem>
                 ))}

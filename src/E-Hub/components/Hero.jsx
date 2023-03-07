@@ -64,7 +64,7 @@ const Hero = (props) => {
                 data-aos-once="true"
                 className="Herobtn2"
               >
-                See Our Enterprise services
+              See our  Enterprise services
               </button>
             </Link>
             <Link
@@ -81,7 +81,7 @@ const Hero = (props) => {
                 data-aos-once="true"
                 className="Herobtn2"
               >
-                Explore Our Workspaces
+                Book Our Workspaces
               </button>
             </Link>
           </div>

@@ -101,7 +101,7 @@ const ScrollAnimation = keyframes`
 `
 const SliderTrack = styled.div`
   display: flex;
-  animation: ${ScrollAnimation} 20s linear infinite;
+  animation: ${ScrollAnimation} 30s linear infinite;
 `;
 
 const Partners = () => {

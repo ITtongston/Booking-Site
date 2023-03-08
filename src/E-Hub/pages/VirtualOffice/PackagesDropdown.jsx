@@ -24,7 +24,7 @@ const PackagesDropdown = ({ onHandleChange, amount }) => {
           <MenuItem value={150000}>Gold</MenuItem>
           <MenuItem value={375000}>GoldPlus</MenuItem>
           <MenuItem value={900000}>Silver</MenuItem>
-          <MenuItem value={1200000}>Platinum</MenuItem>
+          <MenuItem value={1250000}>Platinum</MenuItem>
         </Select>
       </FormControl>
     </div>

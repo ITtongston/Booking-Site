@@ -151,7 +151,7 @@ const PackagePages = () => {
               <h3>Bronze</h3>
 
               <h2>
-                NGN 75000 <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 75,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
                 Perfect for a business that is just starting
@@ -163,7 +163,7 @@ const PackagePages = () => {
             <Paper variant="outlined">
               <h3>Gold</h3>
               <h2>
-                NGN 150000 <span style={{ fontSize: "0.8rem" }}>/yr</span>
+                NGN 150,000 <span style={{ fontSize: "0.8rem" }}>/yr</span>
               </h2>
               <Typography>Sure choice to boost business outcome</Typography>
               <List>{GoldTags}</List>
@@ -172,7 +172,7 @@ const PackagePages = () => {
             <Paper variant="outlined">
               <h3>GoldPlus</h3>
               <h2>
-                NGN 375000 <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 375,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
               Uninterupted Productivity for your business
@@ -187,7 +187,7 @@ const PackagePages = () => {
             <Paper variant="outlined">
               <h3>Silver</h3>
               <h2>
-                NGN 900000 <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 900,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
                 Giving your business profitability superpowers

@@ -27,21 +27,22 @@
 }
 
 .Hero h1{
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 900;
-  width: 100%;
-  padding: 0 2%;
+  width: 90%;
+  padding: 0 1%;
   text-transform: uppercase;
   margin: 0 auto;
+  border: 2px solid red;
 }
 
-.Hero h2 {
+.Hero h2{
   margin-top: 1rem;
   margin-left: 10%;
   font-size: 25px;
   padding: 10px 0 ;
-  width: 90%;
-  text-align: left;
+  width:70%;
+  text-align: center;
 }
 
 .Hero .secondBtn .white button {

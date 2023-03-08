@@ -43,11 +43,18 @@ const Hero = (props) => {
           <AnimatedText />
         </h1>
         <h2 data-aos="fade-up">
-          Become a valuable, influential & profitable brand with
+          Become a{" "}
+          <span style={{ color: "yellow", fontWeight: "bolder" }}>V</span>
+          aluable,{" "}
+          <span style={{ color: "yellow", fontWeight: "bolder" }}>I</span>
+          nfluential &{" "}
+          <span style={{ color: "yellow", fontWeight: "bolder" }}>P</span>
+          rofitable brand with
           <span style={{ color: "yellow", marginLeft: "10px" }}>
             Tongston Entrepreneurial Hub
           </span>
         </h2>
+
         <div className="Btncont">
           <div className="secondBtn">
             <Link
@@ -64,7 +71,7 @@ const Hero = (props) => {
                 data-aos-once="true"
                 className="Herobtn2"
               >
-              See our  Enterprise services
+                See our Enterprise services
               </button>
             </Link>
             <Link

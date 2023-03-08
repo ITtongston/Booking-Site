@@ -31,7 +31,7 @@ const AnimatedText = () => {
         >
           <MovingText
             type="typewriter"
-            dataText={["Media", "WorkSpace", "Education", "Enterprise"]}
+            dataText={["Media", "WorkSpaces", "Education", "Enterprise"]}
           />
         </Typography>
       </TextDiv>

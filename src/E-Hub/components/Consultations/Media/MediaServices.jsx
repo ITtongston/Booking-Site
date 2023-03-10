@@ -1,20 +1,21 @@
 import React from "react";
 import { Box } from "@mui/system";
 import {
+  Button,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography,
 } from "@mui/material";
 
-import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
+import styled from "styled-components";
 import web from "../../../Assets/img/web.jpg";
 import branding from "../../../Assets/img/branding.jpg";
 import marketing from "../../../Assets/img/marketing.jpg";
 import PostProd from "../../../Assets/img/postproduction.jpg";
 import ButtonConsult from "./Button";
 import { Branding, Digital, MediaStudio, Comms } from "./MediaData";
-
 
 const MediaServices = () => {
   const items1 = Branding.map((item) => (
@@ -24,23 +25,34 @@ const MediaServices = () => {
     </ListItem>
   ));
   const items2 = Digital.map((item) => (
-    <ListItem disablePadding="true" key={item.id} >
+    <ListItem disablePadding="true" key={item.id}>
       <ListItemIcon>{item.icon}</ListItemIcon>
       <ListItemText>{item.text}</ListItemText>
     </ListItem>
   ));
   const items3 = MediaStudio.map((item) => (
-    <ListItem disablePadding="true" key={item.id} >
+    <ListItem disablePadding="true" key={item.id}>
       <ListItemIcon>{item.icon}</ListItemIcon>
       <ListItemText>{item.text}</ListItemText>
     </ListItem>
   ));
   const items4 = Comms.map((item) => (
-    <ListItem disablePadding="true" key={item.id} >
+    <ListItem disablePadding="true" key={item.id}>
       <ListItemIcon>{item.icon}</ListItemIcon>
       <ListItemText>{item.text}</ListItemText>
     </ListItem>
   ));
+
+  const BookNow = styled(Button)`
+    outline: none;
+    transition: 0.3s all linear;
+    color: white;
+    &:hover {
+      color: #970b04;
+      border: none;
+      background: none;
+    }
+  `;
 
   const BrandingCon = styled(Box)`
     display: flex;
@@ -130,7 +142,7 @@ const MediaServices = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(251, 250, 250, 1);
+    color: #f6d620;
     transition: all 0.4s linear;
 
     &:hover {
@@ -153,8 +165,7 @@ const MediaServices = () => {
       border-radius: 5px;
     }
   `;
-  
- 
+
   const ImgBox4 = styled(Box)`
     background: url(${PostProd}) no-repeat center;
     background-size: cover;
@@ -220,7 +231,6 @@ const MediaServices = () => {
     }
   `;
 
-
   return (
     <Box sx={{ mt: "5rem", px: "3%" }}>
       <Box>
@@ -237,7 +247,15 @@ const MediaServices = () => {
                 customized decisions for your business.
               </Typography>
               <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items1}</Box>
-              <ButtonConsult />
+              <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                <ButtonConsult />
+                <BookNow
+                  sx={{ background: "#970b04", color: "white" }}
+                  href="https://tongston.selar.co/2p6v"
+                >
+                  Book Now
+                </BookNow>
+              </Box>
             </Box>
 
             <Box sx={{ width: { sm: "60%", xs: "80%" } }}>
@@ -271,7 +289,15 @@ const MediaServices = () => {
                   etc.
                 </Typography>
                 <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items2}</Box>
-                <ButtonConsult />
+                <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                  <ButtonConsult />
+                  <BookNow
+                    sx={{ background: "#970b04", color: "white" }}
+                    href="https://tongston.selar.co/ulp9"
+                  >
+                    Book Now
+                  </BookNow>
+                </Box>
               </Box>
               <Box sx={{ width: { sm: "60%", xs: "90%" } }}>
                 <ImgBox1
@@ -294,13 +320,21 @@ const MediaServices = () => {
                   component="p"
                   sx={{ width: { sm: "60%", xs: "100%" }, py: "1rem" }}
                 >
-                  Starting at ₦ 3,999, we have a range of premium services from
+                  We have a range of premium services from
                   scripting, to audio & video recording to editing, to
                   animations & photography in our state of the art studio to
                   meet all your needs.
                 </Typography>
                 <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items3}</Box>
-                <ButtonConsult />
+                <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                  <ButtonConsult />
+                  <BookNow
+                    sx={{ background: "#970b04", color: "white" }}
+                    href="https://tongston.selar.co/vio2"
+                  >
+                    Book Now
+                  </BookNow>
+                </Box>
               </Box>
               <Box sx={{ width: { sm: "60%", xs: "90%" } }}>
                 <ImgBox4
@@ -329,7 +363,15 @@ const MediaServices = () => {
                   organization
                 </Typography>
                 <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items4}</Box>
-                <ButtonConsult />
+                <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                  <ButtonConsult />
+                  <BookNow
+                    sx={{ background: "#970b04", color: "white" }}
+                    href="https://tongston.selar.co/wvee"
+                  >
+                    Book Now
+                  </BookNow>
+                </Box>
               </Box>
               <Box sx={{ width: { sm: "60%", xs: "90%" } }}>
                 <ImgBox5

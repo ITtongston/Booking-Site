@@ -7,6 +7,7 @@ import AnimatedText from "./Animations/AnimatedText";
 import { Link } from "react-scroll";
 import Logo from "../Assets/img/logo.png";
 import styled from "styled-components";
+import { Typography } from "@mui/material";
 
 const Hero = (props) => {
   // const {workspaces} = ref;
@@ -18,11 +19,11 @@ const Hero = (props) => {
 
   const ImgDiv = styled.div`
       position: absolute;
-      left: 2rem;
-      top 2rem;
+      left: 1rem;
+      top 1rem;
 
       & img{
-        width: 13rem;
+        width: 20rem;
       }
 
       @media (max-width: 900px){
@@ -44,13 +45,45 @@ const Hero = (props) => {
         </h1>
         <h2 data-aos="fade-up">
           Become a{" "}
-          <span style={{ color: "yellow", fontWeight: "bolder" }}>V</span>
+          <Typography
+            component="span"
+            sx={{
+              color: "yellow",
+              fontWeight: 900,
+              fontSize: { sm: "25px", xs: "17px" },
+            }}
+          >
+            V
+          </Typography>
           aluable,{" "}
-          <span style={{ color: "yellow", fontWeight: "bolder" }}>I</span>
+          <Typography
+            component="span"
+            sx={{
+              color: "yellow",
+              fontWeight: "900",
+              fontSize: { sm: "25px", xs: "17px" },
+            }}
+          >
+            I
+          </Typography>
           nfluential &{" "}
-          <span style={{ color: "yellow", fontWeight: "bolder" }}>P</span>
+          <Typography
+            component="span"
+            sx={{
+              color: "yellow",
+              fontWeight: "900",
+              fontSize: { sm: "25px", xs: "17px" },
+            }}
+          >
+            P
+          </Typography>
           rofitable brand with
-          <span style={{ color: "yellow", marginLeft: "10px" }}>
+          <span
+            style={{
+              color: "yellow",
+              marginLeft: "10px",
+            }}
+          >
             Tongston Entrepreneurial Hub
           </span>
         </h2>
@@ -71,7 +104,7 @@ const Hero = (props) => {
                 data-aos-once="true"
                 className="Herobtn2"
               >
-                See our Enterprise services
+                See our Enterprise Services
               </button>
             </Link>
             <Link

@@ -122,11 +122,11 @@ const Media = () => {
 
   const ImgDiv = styled(Box)`
       position: absolute;
-      left: 2rem;
-      top:2rem;
+      left: 1rem;
+      top:1rem;
 
       & img{
-        width: 13rem;
+        width: 18rem;
       }
 
       @media (max-width: 900px){
@@ -172,7 +172,7 @@ const Media = () => {
 
       <Box sx={{ px: 3, pt: 3 }}>
         <Typography variant="h6" sx={{ fontSize: "25px", fontWeight: "bold" }}>
-          Multimedia and Branding
+          MEDIA AND MORE
         </Typography>
         <Typography
           component="p"

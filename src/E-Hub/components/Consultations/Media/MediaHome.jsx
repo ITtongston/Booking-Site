@@ -4,6 +4,7 @@ import styled from "styled-components";
 import media from "../../../Assets/img/Mediahome.jpg";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
+import MovingComponent from "react-moving-text";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -26,10 +27,11 @@ const BoxBg = styled(Box)`
   height: 350px;
   text-align: center;
   width: 100%;
+  fontWeight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f6d620;
+  color: rgba(27, 29, 71, 1);
   transition: all 0.4s linear;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -80,13 +82,28 @@ const MediaHome = () => {
             textAlign: { sm: "left", xs: "center" },
           }}
         >
-          <Typography component="h2" style={{ fontSize: "1.7rem" }}>
-            We help you break through the noise
+          <Typography
+            component="h2"
+            style={{ fontSize: "1.7rem", fontWeight: "bold" }}
+          >
+
+            <MovingComponent
+              type="bounce"
+              duration="1000ms"
+              delay="0s"
+              direction="normal"
+              timing="ease"
+              iteration="15"
+              fillMode="none"
+            >
+              Break through the Noise
+            </MovingComponent>
           </Typography>
           <Typography
             sx={{
               width: { sm: "75%", xs: "90%" },
               textAlign: { sm: "left", xs: "center" },
+              mt: "1em",
             }}
           >
             Elevate your brand with our suite of products and services. Make

@@ -103,10 +103,10 @@ const Styledform = styled.form`
 const ImgDiv = styled.div`
       position: absolute;
       left: 2rem;
-      top 2rem;
+      top 1rem;
 
       & img{
-        width: 13rem;
+        width: 15rem;
       }
 
       @media (max-width: 900px){

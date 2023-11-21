@@ -10,6 +10,7 @@ import emailjs from "@emailjs/browser";
 import { Backdrop, Typography, Box } from "@mui/material";
 import { Oval } from "svg-loaders-react";
 import Logo from "../../../Assets/img/logo.png";
+import { Link } from "react-router-dom";
 
 // styles
 
@@ -116,7 +117,6 @@ const ImgDiv = styled.div`
       }
   `;
 
-  
 const BookingForm = () => {
   const [values, setValues] = useState({
     organisationName: "",
@@ -211,7 +211,6 @@ const BookingForm = () => {
           console.log(result.text);
           setOpen(true);
           setIsLoading(false);
-
         },
         (error) => {
           console.log(error.text);
@@ -225,9 +224,11 @@ const BookingForm = () => {
 
   return (
     <StyledCont>
-      <ImgDiv>
-        <img src={Logo} alt="logo" />
-      </ImgDiv>
+      <Link style={{ cursor: "pointer" }} to="/">
+        <ImgDiv>
+          <img src={Logo} alt="logo" />
+        </ImgDiv>
+      </Link>
       <Header>
         <h2>
           Help Us Know More About Your Media Interest!

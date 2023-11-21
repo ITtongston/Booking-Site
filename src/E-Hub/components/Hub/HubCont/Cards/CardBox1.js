@@ -64,11 +64,11 @@ const CardBox1 = () => {
             sx={{ fontSize: "14px", minWidth: { xs: 300, sm: "100%" } }}
           >
             <span>
-              <i>from ₦25,270 /day</i>
+              <i>from ₦34,580 /day</i>
             </span>
             <br />
             <span>
-              <i>from ₦108,029 /week</i>
+              <i>from ₦147,830 /week</i>
             </span>
             <br />
           </Typography>

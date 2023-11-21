@@ -16,6 +16,7 @@ import PackagePages from "./E-Hub/pages/VirtualOffice/PackagesPage";
 import PackagesForm from "./E-Hub/pages/VirtualOffice/PackagesForm";
 import EnterpriseCalendly from "./E-Hub/components/EnterpriseServices/FinanceAdmin/EnterpriseCalendly";
 import Enterprise from "./E-Hub/components/EnterpriseServices/FinanceAdmin/Enterprise";
+import styled from "styled-components";
 
 const override = {
   position: "absolute",
@@ -25,10 +26,105 @@ const override = {
   borderColor: "red",
 };
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+`;
+
+const ModalContent = styled.div`
+  background: white;
+  padding: 20px;
+  // height: 400px;
+  // width: 700px;
+  border-radius: 8px;
+  min-width: 400px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  color: #333;
+`;
+const ModalDiv = styled.div`
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+`;
+const ModalIcon = styled.div`
+  font-size: 4rem;
+  color: red;
+`;
+const ModalTitle = styled.div`
+  font-size: 24px;
+  font-weight: bolder;
+`;
+const ModalText = styled.p`
+  padding-top: 10px;
+  text-align: center;
+  margin: auto;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: semibold;
+`;
+
+const DiscountModal = ({ onClose }) => {
+  return (
+    <ModalOverlay>
+      <ModalContent>
+        <CloseButton onClick={onClose}>&times;</CloseButton>
+        <ModalDiv>
+          <ModalIcon>
+            <i class="fas fa-gift"></i>
+          </ModalIcon>
+          <ModalTitle>Get 20% discount</ModalTitle>
+          <ModalText>
+            On all our Admin Hub services (VO, Training +Meeting Room) if booked
+            on or before the <b> 31st of December 2023.</b>
+          </ModalText>
+        </ModalDiv>
+      </ModalContent>
+    </ModalOverlay>
+  );
+};
+
 function App() {
   const [spinner, setSpinner] = useState(true);
   const { pathname } = useLocation();
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    sessionStorage.setItem("modalClosed", "true");
+  };
+
+  useEffect(() => {
+    const isModalClosedInThisSession = sessionStorage.getItem("modalClosed");
+    if (!isModalClosedInThisSession) {
+      const timeout = setTimeout(() => {
+        setIsModalOpen(true);
+      }, 5000);
+      return () => {
+        clearTimeout(timeout);
+      };
+    }
+  }, []);
+
   useEffect(() => {
     // setSpinner(false);
 
@@ -43,6 +139,8 @@ function App() {
 
   return (
     <>
+      {isModalOpen && <DiscountModal onClose={closeModal} />}
+
       {spinner ? (
         <HashLoader
           color={"#D0021B"}
@@ -64,8 +162,11 @@ function App() {
             <Route path="/bookform" element={<BookingForm />} />
             <Route path="/plans" element={<PackagePages />} />
             <Route path="/plans/form" element={<PackagesForm />} />
-            <Route path="/enterprise" element={<Enterprise/>} />
-            <Route path="/enterprise-calendly" element={<EnterpriseCalendly />} />
+            <Route path="/enterprise" element={<Enterprise />} />
+            <Route
+              path="/enterprise-calendly"
+              element={<EnterpriseCalendly />}
+            />
           </Routes>
         </div>
       )}

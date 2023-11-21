@@ -115,9 +115,11 @@ const StyledButton = styled(Link)`
 const Enterprise = () => {
   return (
     <StyledCont>
-      <ImgDiv>
-        <img src={Logo} alt="logo" />
-      </ImgDiv>
+      <Link style={{ cursor: "pointer" }} to="/">
+        <ImgDiv>
+          <img src={Logo} alt="logo" />
+        </ImgDiv>
+      </Link>
       <Typography
         variant="h4"
         sx={{
@@ -166,23 +168,19 @@ const Enterprise = () => {
                   margin: "1rem auto",
                 }}
               >
-                
-                  We have created templates for your business needs across
-                  finance, legal, governance, data, strategy, technology, HR and
-                  administration.
-                <Typography sx={{fontSize: "18px",
-                  wordSpacing: "5px",}}>
+                We have created templates for your business needs across
+                finance, legal, governance, data, strategy, technology, HR and
+                administration.
+                <Typography sx={{ fontSize: "18px", wordSpacing: "5px" }}>
                   Our templates are at zero cost to you compared to the cost of
                   hiring HR experts, lawyers, strategy consultants, governance &
                   data experts, business & systems analysts or administrators.
                 </Typography>
-                <Typography sx={{fontSize: "18px",
-                  wordSpacing: "5px"}}>
+                <Typography sx={{ fontSize: "18px", wordSpacing: "5px" }}>
                   Our professional Templates & Tools are organized by category,
                   document type, and business industry, and are designed to
                   enable you achieve value, influence and profitability.
-                  <Typography sx={{fontSize: "18px",
-                  wordSpacing: "5px"}}>
+                  <Typography sx={{ fontSize: "18px", wordSpacing: "5px" }}>
                     Access templates, guides & tools; opportunities; training,
                     experts and consultation for all your business needs, on
                     demand, anywhere you are!

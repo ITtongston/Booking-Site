@@ -36,9 +36,11 @@ const Hero = (props) => {
 
   return (
     <div className="HeroContainer">
-      <ImgDiv>
-        <img src={Logo} alt="logo" />
-      </ImgDiv>
+      <Link style={{ cursor: "pointer" }} to="/">
+        <ImgDiv>
+          <img src={Logo} alt="logo" />
+        </ImgDiv>
+      </Link>
       <div className="Hero">
         <h1>
           <AnimatedText />

@@ -151,7 +151,7 @@ const PackagePages = () => {
               <h3>Bronze</h3>
 
               <h2>
-                NGN 75,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 99,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
                 Perfect for a business that is just starting
@@ -163,7 +163,7 @@ const PackagePages = () => {
             <Paper variant="outlined">
               <h3>Gold</h3>
               <h2>
-                NGN 150,000 <span style={{ fontSize: "0.8rem" }}>/yr</span>
+                NGN 198,000 <span style={{ fontSize: "0.8rem" }}>/yr</span>
               </h2>
               <Typography>Sure choice to boost business outcome</Typography>
               <List>{GoldTags}</List>
@@ -172,10 +172,10 @@ const PackagePages = () => {
             <Paper variant="outlined">
               <h3>GoldPlus</h3>
               <h2>
-                NGN 375,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 495,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
-              Uninterupted Productivity for your business
+                Uninterupted Productivity for your business
               </Typography>
               <List>{GoldPlusTags}</List>
               <PlanButton to="/plans/form">Choose Plan</PlanButton>
@@ -187,7 +187,7 @@ const PackagePages = () => {
             <Paper variant="outlined">
               <h3>Silver</h3>
               <h2>
-                NGN 900,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 1,188,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>
                 Giving your business profitability superpowers
@@ -198,7 +198,7 @@ const PackagePages = () => {
             <Paper variant="outlined">
               <h3>Platinum</h3>
               <h2>
-                NGN 1.25m <span style={{ fontSize: ".8rem" }}>/yr</span>
+                NGN 1,650,000 <span style={{ fontSize: ".8rem" }}>/yr</span>
               </h2>
               <Typography>Unlimited tool-box for all Business needs</Typography>
               <List>{PlatinumTags}</List>

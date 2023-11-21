@@ -121,19 +121,19 @@ const Media = () => {
   `;
 
   const ImgDiv = styled(Box)`
-      position: absolute;
-      left: 1rem;
-      top:1rem;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
 
-      & img{
-        width: 18rem;
-      }
+    & img {
+      width: 18rem;
+    }
 
-      @media (max-width: 900px){
-        & img{
-          width: 5rem;
-        }
+    @media (max-width: 900px) {
+      & img {
+        width: 5rem;
       }
+    }
   `;
 
   return (

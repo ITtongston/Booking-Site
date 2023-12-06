@@ -3,10 +3,14 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CardBox2 from "./Cards/CardBox2";
 import Coworking from "../../../Assets/img/coworking.jpg";
+import Coworking1 from "../../../Assets/img/workspace/Coworking1.jpg";
+import Coworking2 from "../../../Assets/img/workspace/Coworking2.jpg";
+import Coworking3 from "../../../Assets/img/workspace/Coworking3.jpg";
 import Divider from "@mui/material/Divider";
 import backpat from "../../../Assets/img/Picture3.png";
 import Button from "@mui/material/Button";
 import { Train } from "@mui/icons-material";
+import { Carousel } from "react-responsive-carousel";
 
 const BoxFeatures = styled(Box)`
   display: flex;
@@ -51,6 +55,25 @@ const ContainerBox = styled(Box)`
 // SC
 
 const CoworkingSpace = () => {
+  const images = [
+    {
+      id: 1,
+      url: Coworking,
+    },
+    {
+      id: 2,
+      url: Coworking1,
+    },
+    {
+      id: 3,
+      url: Coworking2,
+    },
+    {
+      id: 3,
+      url: Coworking3,
+    },
+  ];
+
   return (
     <ContainerBox className="Hub1">
       <Box
@@ -92,7 +115,24 @@ const CoworkingSpace = () => {
         <div data-aos="fade-up" data-aos-duration="900">
           <CardBox2 />
         </div>
-        <img src={Coworking} alt="" className="img" />
+        {/* <img src={Coworking} alt="" className="img" /> */}
+
+        <Carousel
+          className="crsl"
+          autoFocus={true}
+          autoPlay={true}
+          infiniteLoop
+          centerMode
+        >
+          {images.map((image) => (
+            <img
+              key={image.id}
+              src={image.url}
+              alt=""
+              // className="img"
+            />
+          ))}
+        </Carousel>
       </BoxFeatures>
     </ContainerBox>
   );

@@ -3,10 +3,15 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CardBox1 from "./Cards/CardBox1";
 import Training from "../../../Assets/img/Trainingroom.jpg";
+import Training1 from "../../../Assets/img/workspace/TrainingRoom1.jpg";
+import Training2 from "../../../Assets/img/workspace/TrainingRoom2.jpg";
+import Training3 from "../../../Assets/img/workspace/TrainingRoom3.jpg";
+import Training4 from "../../../Assets/img/workspace/TrainingRoom4.jpg";
+import Training5 from "../../../Assets/img/workspace/TrainingRoom5.jpg";
 import Divider from "@mui/material/Divider";
 import backpat from "../../../Assets/img/Picture3.png";
 import Button from "@mui/material/Button";
-
+import { Carousel } from "react-responsive-carousel";
 
 const BoxFeatures = styled(Box)`
   display: flex;
@@ -51,7 +56,32 @@ const ContainerBox = styled(Box)`
 // SC
 
 const Trainingroom = () => {
-  
+  const images = [
+    {
+      id: 1,
+      url: Training,
+    },
+    {
+      id: 2,
+      url: Training1,
+    },
+    {
+      id: 3,
+      url: Training2,
+    },
+    {
+      id: 4,
+      url: Training3,
+    },
+    {
+      id: 5,
+      url: Training4,
+    },
+    {
+      id: 6,
+      url: Training5,
+    },
+  ];
   return (
     <ContainerBox className="Hub1">
       <Box
@@ -91,7 +121,24 @@ const Trainingroom = () => {
         <div data-aos="fade-up" data-aos-duration="900">
           <CardBox1 />
         </div>
-        <img src={Training} alt="" className="img" />
+
+        <Carousel
+          className="crsl"
+          autoFocus={true}
+          autoPlay={true}
+          infiniteLoop
+          centerMode
+        >
+          {images.map((image) => (
+            <img
+              key={image.id}
+              src={image.url}
+              alt=""
+              // className="img"
+            />
+          ))}
+        </Carousel>
+        {/* <img src={Training} alt="" className="img" /> */}
       </BoxFeatures>
     </ContainerBox>
   );

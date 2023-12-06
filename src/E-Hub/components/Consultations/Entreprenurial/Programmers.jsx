@@ -46,7 +46,7 @@ const StyledBox = styled(Box)`
   border: 1px solid #000;
   color: #000;
   background: transparent;
-  
+
   margin: 0 auto;
   tex &:hover h2 {
     transform: scale(0.9);
@@ -240,7 +240,9 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Box sx={{display: "flex", alignItems: 'center', justifyCenter: 'center'}}>
+      <Box
+        sx={{ display: "flex", alignItems: "center", justifyCenter: "center" }}
+      >
         <StyledBox>
           <h2 style={{ width: "100%" }}>Programmers Den</h2>
           <p>
@@ -313,7 +315,7 @@ export default function BasicModal() {
                 marginTop: "5px",
               }}
             >
-              Programming languange of Interest
+              Other Interest
             </label>
             <div style={{ textAlign: "center" }}>
               <StyledTextarea

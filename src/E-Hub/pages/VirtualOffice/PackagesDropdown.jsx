@@ -5,11 +5,13 @@ import Select from "@mui/material/Select";
 import { MenuItem } from "@mui/material";
 
 const PackagesDropdown = ({ onHandleChange, amount }) => {
-    
   return (
     <div>
       <FormControl variant="standard" sx={{ m: 1, width: 150 }}>
-        <InputLabel sx={{ fontWeight: "bold" }} id="demo-simple-select-standard-label">
+        <InputLabel
+          sx={{ fontWeight: "bold" }}
+          id="demo-simple-select-standard-label"
+        >
           Choose Plan
         </InputLabel>
         <Select
@@ -20,11 +22,11 @@ const PackagesDropdown = ({ onHandleChange, amount }) => {
           onChange={onHandleChange}
           value={amount}
         >
-          <MenuItem value={75000}>Bronze</MenuItem>
-          <MenuItem value={150000}>Gold</MenuItem>
-          <MenuItem value={375000}>GoldPlus</MenuItem>
-          <MenuItem value={900000}>Silver</MenuItem>
-          <MenuItem value={1250000}>Platinum</MenuItem>
+          <MenuItem value={99000}>Bronze</MenuItem>
+          <MenuItem value={198000}>Gold</MenuItem>
+          <MenuItem value={495000}>GoldPlus</MenuItem>
+          <MenuItem value={1188000}>Silver</MenuItem>
+          <MenuItem value={1650000}>Platinum</MenuItem>
         </Select>
       </FormControl>
     </div>

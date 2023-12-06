@@ -17,6 +17,7 @@ import PackagesForm from "./E-Hub/pages/VirtualOffice/PackagesForm";
 import EnterpriseCalendly from "./E-Hub/components/EnterpriseServices/FinanceAdmin/EnterpriseCalendly";
 import Enterprise from "./E-Hub/components/EnterpriseServices/FinanceAdmin/Enterprise";
 import styled from "styled-components";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const override = {
   position: "absolute",
@@ -50,6 +51,11 @@ const ModalContent = styled.div`
   text-align: center;
   position: relative;
   margin: 10px;
+
+  @media (max-width: 600px) {
+    min-width: 250px;
+    max-width: 300px;
+  }
 `;
 
 const CloseButton = styled.button`

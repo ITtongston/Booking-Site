@@ -3,9 +3,11 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Cardbox4 from "./Cards/Cardbox4";
 import MeetImg from "../../../Assets/img/meeting.jpg";
+import MeetImg1 from "../../../Assets/img/workspace/BoardRoom.jpg";
 import Divider from "@mui/material/Divider";
 import backpat from "../../../Assets/img/Picture3.png";
 import Button from "@mui/material/Button";
+import { Carousel } from "react-responsive-carousel";
 
 const BoxFeatures = styled(Box)`
   display: flex;
@@ -50,6 +52,17 @@ const ContainerBox = styled(Box)`
 // SC
 
 const Meetingroom = () => {
+  const images = [
+    {
+      id: 1,
+      url: MeetImg,
+    },
+    {
+      id: 2,
+      url: MeetImg1,
+    },
+  ];
+
   return (
     <ContainerBox className="Hub1">
       <Box
@@ -89,7 +102,23 @@ const Meetingroom = () => {
         <div data-aos="fade-up" data-aos-duration="900">
           <Cardbox4 />
         </div>
-        <img src={MeetImg} alt="" className="img" />
+        {/* <img src={MeetImg} alt="" className="img" /> */}
+        <Carousel
+          className="crsl"
+          autoFocus={true}
+          autoPlay={true}
+          infiniteLoop
+          centerMode
+        >
+          {images.map((image) => (
+            <img
+              key={image.id}
+              src={image.url}
+              alt=""
+              // className="img"
+            />
+          ))}
+        </Carousel>
       </BoxFeatures>
     </ContainerBox>
   );

@@ -24,7 +24,6 @@ const InputCont = styled.div`
   flex-wrap: wrap;
   // border: 2px solid rgba(4, 4, 4, 0.34);
   gap: 0.6rem;
-  
 
   & input {
     width: 200px;
@@ -40,13 +39,12 @@ const InputCont = styled.div`
   }
   @media (max-width: 1000px) {
     justify-content: center;
-  align-items: center;
+    align-items: center;
 
-  & input {
-    width: 250px;
+    & input {
+      width: 250px;
+    }
   }
-  }
-
 `;
 
 const StyledButton = styled.button`
@@ -130,7 +128,7 @@ const Packages = () => {
     checkIn: "",
     Dates: "daily",
     orgName: "",
-    planAmount: 75000,
+    planAmount: 99000,
     UseFor: "",
   });
 
@@ -317,7 +315,7 @@ const Packages = () => {
                 ))}
               </InputCont>
 
-              <Box sx={{marginTop: "1rem", marginLeft: {sm: 0, xs: '15%'}}}>
+              <Box sx={{ marginTop: "1rem", marginLeft: { sm: 0, xs: "15%" } }}>
                 <label
                   htmlFor=""
                   style={{ fontWeight: 600, color: "rgba(21, 21, 19, 0.87)" }}
@@ -326,7 +324,7 @@ const Packages = () => {
                 </label>
               </Box>
 
-              <Box sx={{display: 'flex', justifyContent: 'center'}}>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <Textarea
                   name="UseFor"
                   value={inputValues.UseFor}

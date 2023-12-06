@@ -249,12 +249,12 @@ const MediaServices = () => {
               <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items1}</Box>
               <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
                 <ButtonConsult />
-                <BookNow
+                {/* <BookNow
                   sx={{ background: "#970b04", color: "white" }}
                   href="https://tongston.selar.co/2p6v"
                 >
                   Book Now
-                </BookNow>
+                </BookNow> */}
               </Box>
             </Box>
 
@@ -291,12 +291,12 @@ const MediaServices = () => {
                 <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items2}</Box>
                 <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
                   <ButtonConsult />
-                  <BookNow
+                  {/* <BookNow
                     sx={{ background: "#970b04", color: "white" }}
                     href="https://tongston.selar.co/ulp9"
                   >
                     Book Now
-                  </BookNow>
+                  </BookNow> */}
                 </Box>
               </Box>
               <Box sx={{ width: { sm: "60%", xs: "90%" } }}>
@@ -320,20 +320,19 @@ const MediaServices = () => {
                   component="p"
                   sx={{ width: { sm: "60%", xs: "100%" }, py: "1rem" }}
                 >
-                  We have a range of premium services from
-                  scripting, to audio & video recording to editing, to
-                  animations & photography in our state of the art studio to
-                  meet all your needs.
+                  We have a range of premium services from scripting, to audio &
+                  video recording to editing, to animations & photography in our
+                  state of the art studio to meet all your needs.
                 </Typography>
                 <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items3}</Box>
                 <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
                   <ButtonConsult />
-                  <BookNow
+                  {/* <BookNow
                     sx={{ background: "#970b04", color: "white" }}
                     href="https://tongston.selar.co/vio2"
                   >
                     Book Now
-                  </BookNow>
+                  </BookNow> */}
                 </Box>
               </Box>
               <Box sx={{ width: { sm: "60%", xs: "90%" } }}>
@@ -365,12 +364,12 @@ const MediaServices = () => {
                 <Box sx={{ width: { sm: "70%", xs: "100%" } }}>{items4}</Box>
                 <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
                   <ButtonConsult />
-                  <BookNow
+                  {/* <BookNow
                     sx={{ background: "#970b04", color: "white" }}
                     href="https://tongston.selar.co/wvee"
                   >
                     Book Now
-                  </BookNow>
+                  </BookNow> */}
                 </Box>
               </Box>
               <Box sx={{ width: { sm: "60%", xs: "90%" } }}>

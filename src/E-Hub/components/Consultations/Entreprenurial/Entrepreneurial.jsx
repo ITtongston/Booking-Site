@@ -4,16 +4,17 @@ import { Box } from "@mui/material";
 // import { Link } from "react-router-dom";
 import { FaCaretRight } from "react-icons/fa";
 import { Typography } from "@mui/material";
+import BasicModal3 from "./DataScience";
 import BasicModal from "./Programmers";
 import BasicModal2 from "./BasicModal2";
 
 const courses = [
-  {
-    id: 1,
-    title: "Data Science",
-    text: "Data science training targeted at individuals who want to be well grounded in data science, analysis and research in whatever field thier in.",
-    path: "https://tongston.selar.co/a4ut",
-  },
+  // {
+  //   id: 1,
+  //   title: "Data Science",
+  //   text: "Data science training targeted at individuals who want to be well grounded in data science, analysis and research in whatever field their in.",
+  //   path: "https://tongston.selar.co/a4ut",
+  // },
   {
     id: 2,
     title: "Tongston Introduction to Entrepreneurial Education",
@@ -102,7 +103,7 @@ const Btn = styled.a`
 const SecondBox = styled(Box)`
   display: grid;
   align-items: center;
-  justifyContent: center;
+  justifycontent: center;
   margin-top: 2rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -111,8 +112,6 @@ const SecondBox = styled(Box)`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
-
-
 
 const Entrepreneurial = () => {
   return (
@@ -131,6 +130,7 @@ const Entrepreneurial = () => {
           Entrepreneurial Education
         </Typography>
         <StyledDiv>
+          <BasicModal3 />
           {courses.map((items) => (
             <StyledBox key={items.id}>
               <h2 style={{ width: "100%" }}>{items.title}</h2>
@@ -144,8 +144,7 @@ const Entrepreneurial = () => {
             </StyledBox>
           ))}
         </StyledDiv>
-        <SecondBox
-        >
+        <SecondBox>
           <BasicModal />
           <BasicModal2 />
         </SecondBox>

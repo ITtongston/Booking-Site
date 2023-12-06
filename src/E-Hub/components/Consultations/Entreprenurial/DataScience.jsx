@@ -157,7 +157,7 @@ const StyledButton = styled.button`
   }
 `;
 
-export default function BasicModal() {
+export default function BasicModal3() {
   const [open, setOpen] = React.useState(false);
   const [inputValues, setInputValues] = React.useState({
     FullName: "",
@@ -194,7 +194,7 @@ export default function BasicModal() {
       id: 6,
       type: "text",
       label: "Career/profession",
-      placeholder: "Full Stack Engineer..",
+      placeholder: "Data science..",
       name: "role",
     },
   ];
@@ -244,10 +244,11 @@ export default function BasicModal() {
         sx={{ display: "flex", alignItems: "center", justifyCenter: "center" }}
       >
         <StyledBox>
-          <h2 style={{ width: "100%" }}>Programmers Den</h2>
+          <h2 style={{ width: "100%" }}>Data Science</h2>
           <p>
-            A platform to learn programming and leverage our access to new
-            technologies such as Vue.js, NodeJs, Javascript and Python.
+            Data science training targeted at individuals who want to be well
+            grounded in data science, analysis and research in whatever field
+            their in.
           </p>
           <Btn onClick={handleOpen} sx={{ color: "rgba(217, 6, 6, 1)" }}>
             More
@@ -319,7 +320,7 @@ export default function BasicModal() {
             </label>
             <div style={{ textAlign: "center" }}>
               <StyledTextarea
-                placeholder="e.g Python"
+                placeholder="e.g Data Analyst"
                 name="progDetail"
                 value={inputValues.progDetail}
                 onChange={handleOnchange}

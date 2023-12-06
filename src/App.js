@@ -41,14 +41,15 @@ const ModalOverlay = styled.div`
 
 const ModalContent = styled.div`
   background: white;
-  padding: 20px;
+  padding: 10px;
   // height: 400px;
   // width: 700px;
   border-radius: 8px;
-  min-width: 400px;
+  min-width: 320px;
   max-width: 400px;
   text-align: center;
   position: relative;
+  margin: 10px;
 `;
 
 const CloseButton = styled.button`

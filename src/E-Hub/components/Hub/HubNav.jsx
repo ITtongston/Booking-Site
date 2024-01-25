@@ -95,27 +95,26 @@ export default function BasicTabs() {
             sx={{ color: "black", textAlign: "center" }}
             variant="scrollable"
             allowScrollButtonsMobile
-            
           >
-            <Tab label="Training Room" {...a11yProps(0)} />
-            <Tab label="Virtual Office" {...a11yProps(1)} />
-            <Tab label="CoWorking Space" {...a11yProps(2)} />
             <Tab label="Meeting Room" {...a11yProps(3)} />
+            <Tab label="Training Room" {...a11yProps(0)} />
+            <Tab label="CoWorking Space" {...a11yProps(2)} />
+            <Tab label="Virtual Office" {...a11yProps(1)} />
             {/* <Tab label="Media,Finance,Admin,HR,Data and Legal Services" {...a11yProps(4)} />
           <Tab label="Programmers Den" {...a11yProps(5)} /> */}
           </StyledTabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <Trainingroom />
+          <MeetingRoom />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <VirtualOffice />
+          <Trainingroom />
         </TabPanel>
         <TabPanel value={value} index={2}>
           <CoworkSpace />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          <MeetingRoom />
+          <VirtualOffice />
         </TabPanel>
       </Box>
     </Box>

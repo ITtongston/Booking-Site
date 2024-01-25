@@ -82,14 +82,27 @@ const Meetingroom = () => {
             fontWeight: 600,
           }}
         >
-          Meeting Room For Your Team
+          {/* Meeting Room For Your Team */}
+          Superior meeting room with professional Assistance
         </Typography>
 
         <Typography component="p" sx={{ fontSize: "15px", pt: "3" }}>
-          Our entrepreneurial training & meeting rooms are state-of-the-art in
+          {/* Our entrepreneurial training & meeting rooms are state-of-the-art in
           the heart of the city of Abuja, fully equipped with projector, white
           boards, HMDI & VGA converters, TV screen, video and audio conferencing
-          facilities and Wi-Fi.
+          facilities and Wi-Fi. */}
+          Our entrepreneurial meeting room is state-of-the-art in the heart of
+          the city of Abuja, by the Central Bank of Nigeria, fully equipped with
+          projector, whiteboards, HMDI & VGA converters, TV screen, video and
+          audio-conferencing facilities for a hybrid or virtual experience, and
+          Wi-Fi. Can take up to 10 people. Our meeting room comes with access to
+          our multi-media studio services to capture your event with
+          high-definition pictures and videos for marketing purposes. We provide
+          design services to put together marketing collateral to amplify your
+          meetings, events or workshops. We have an on-site team that can
+          arrange refreshments & food for your guests to have a great
+          experience. You can also access our fully equipped pantry. <br />
+          Book now!
         </Typography>
       </Box>
       <Divider

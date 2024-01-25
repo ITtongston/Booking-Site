@@ -11,7 +11,7 @@ import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import EmojiTransportationIcon from "@mui/icons-material/EmojiTransportation";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const Adons = [
   {
@@ -24,29 +24,40 @@ const Adons = [
   },
   {
     id: 3,
-    adon: "Use our entrepreneurial green lounge to meet others and collaborate",
+    adon: "Flexible access – monthly or annually",
   },
   {
     id: 4,
-    adon: "Available to access for hours, days, weeks or unlimited months",
+    adon: " Access media, education, finance and enterprise services with your membership",
   },
   {
     id: 5,
-    adon: "Access our Entrepreneurial Content through blogs & news",
+    adon: "Access Legal, entrepreneurial education, HR, media, data & finance services for all your business needs",
   },
   {
     id: 6,
-    adon: "Access media, education and enterprise services with your membership",
+    adon: "Bundle with co-working space, meeting and training room solutions to give you a complete corporate work presence",
   },
   {
     id: 7,
-    adon: "Enjoy exclusive member discounts and benefits",
+    adon: " Access Multimedia studio services",
   },
   {
     id: 8,
-    adon: "Access Legal, entrepreneurial education, HR, media, data & finance services for all your business needs",
+    adon: " Easy access to Bolt/Uber/Rider ng, with Public Transport Nearby",
   },
-  
+  {
+    id: 9,
+    adon: "Access to Entrepreneurial Content through Tongston events, blog & newsletters",
+  },
+  {
+    id: 10,
+    adon: "Make use of our green lounge to meet others and collaborate",
+  },
+  {
+    id: 11,
+    adon: "Enjoy exclusive member discounts and benefits",
+  },
 ];
 
 const CardBox3 = () => {
@@ -63,8 +74,7 @@ const CardBox3 = () => {
         </Box>
 
         <List sx={{ backgroundColor: "#ffffe6", borderRadius: "5px", mt: 3 }}>
-      
-          <spans style={{margin: '10px 0 15px 15px'}} >Access:</spans>
+          <spans style={{ margin: "10px 0 15px 15px" }}>Access:</spans>
 
           {Adons.map((item) => (
             <ListItem key={item.id} disablePadding={true}>

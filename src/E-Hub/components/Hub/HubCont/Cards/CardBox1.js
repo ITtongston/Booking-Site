@@ -19,31 +19,47 @@ const Adons = [
   },
   {
     id: 2,
-    adon: "Projector & WhiteBoard",
+    adon: "Complimentary Projector & WhiteBoard",
   },
   {
     id: 3,
-    adon: "Free Parking & Public Transport Nearby",
+    adon: "Complimentary Video & Audio-Conferencing Facilities",
   },
   {
     id: 4,
-    adon: "HDMI / VGA Cable",
+    adon: " Free Parking",
   },
   {
     id: 5,
-    adon: "Equipped Pantry & Green Relaxation Lounge",
+    adon: "Easy access to Bolt/Uber/Rider ng, with Public Transport Nearby",
   },
   {
     id: 6,
-    adon: "Access to Entrepreneurial Content through blogs & newsletters",
+    adon: "Complimentary HDMI / VGA Cable Converters",
   },
   {
     id: 7,
-    adon: "Access Tongston's entrepreneurial products & services ",
+    adon: " Complimentary Equipped Pantry & Green Relaxation Lounge",
   },
   {
     id: 8,
-    adon: "Nearby Food Facilities",
+    adon: " Photography & Videography from our studio",
+  },
+  {
+    id: 9,
+    adon: " Marketing & Brand collateral for your event from our multi-media studio",
+  },
+  {
+    id: 10,
+    adon: "  Weekend and public holiday access",
+  },
+  {
+    id: 11,
+    adon: "  Nearby Refreshment Facilities arranged by the team",
+  },
+  {
+    id: 10,
+    adon: "Corporate workshop/events management services",
   },
 ];
 
@@ -51,7 +67,7 @@ const CardBox1 = () => {
   return (
     <Card
       sx={{
-        minWidth: { sm: 250, xs: 200 },
+        minWidth: { sm: 300, xs: 200 },
         ml: { sm: 6, xs: "0 auto" },
         my: { sm: "3rem" },
       }}

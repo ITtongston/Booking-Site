@@ -113,6 +113,16 @@ const SecondBox = styled(Box)`
   }
 `;
 
+const SubText = styled.p`
+  text-align: center;
+  font-weight: medium;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 5px 15px 10px 15px;
+  margin-bottom: 1em;
+`;
+
 const Entrepreneurial = () => {
   return (
     <>
@@ -123,12 +133,17 @@ const Entrepreneurial = () => {
             fontWeight: "bold",
             textAlign: "center",
             fontSize: { sm: "30px", xs: "20px" },
-            mb: "2em",
+            mb: "0.7em",
             color: "#373434",
           }}
         >
           Entrepreneurial Education
         </Typography>
+        <SubText>
+          Check out our range of Entrepreneurial Education services for learners
+          across all levels primary, secondary, tertiary to professional
+          education delivered online or in-person.
+        </SubText>
         <StyledDiv>
           <BasicModal3 />
           {courses.map((items) => (

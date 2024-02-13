@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Divider from "@mui/material/Divider";
 import {
@@ -132,7 +132,8 @@ const FooterLogo = styled.div`
 
 const Footer = () => {
   const form = useRef();
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -357,7 +358,7 @@ const Footer = () => {
           </ul>
 
           <p style={{ color: "rgba(221, 219, 234, 0.57)" }}>
-            &copy; 2023, All rights reserved
+            &copy; {currentYear}, All rights reserved
           </p>
         </DividerEnd>
       </FooterContainer2>

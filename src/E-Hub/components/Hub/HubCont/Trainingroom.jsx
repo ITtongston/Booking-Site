@@ -17,7 +17,7 @@ const BoxFeatures = styled(Box)`
   display: flex;
   align-items: center;
   max-width: 90%;
-  gap: 10%;
+  gap: 5%;
   margin-left: 1em;
 
   & .img {
@@ -102,13 +102,27 @@ const Trainingroom = () => {
             mb: 1,
           }}
         >
-          Training Room For Your Team
+          Superior training room with professional Assistance
+          {/* Training Room For Your Team */}
         </Typography>
         <Typography component="p" sx={{ fontSize: "15px", pt: "3" }}>
           Our entrepreneurial training & meeting rooms are state-of-the-art in
           the heart of the city of Abuja, fully equipped with projector, white
           boards, HMDI & VGA converters, TV screen, video and audio conferencing
           facilities and Wi-Fi.
+          {/* Our entrepreneurial training room is state-of-the-art in the heart of
+          the city of Abuja, by the Central Bank of Nigeria, fully equipped with
+          a projector, whiteboards, HMDI & VGA converters, video and
+          audio-conferencing facilities for a hybrid or virtual experience, and
+          Wi-Fi. Can take up to 25 people. Our training room comes with access
+          to our multi-media studio services to capture your event with
+          high-definition pictures and videos for marketing purposes. 
+          We provide design services to put together marketing collateral to
+          amplify your events or workshops. */}
+          We have an on-site team that can arrange refreshments & food for your
+          guests to have a great experience. You can also access our fully
+          equipped pantry.
+          <br /> Book now!
         </Typography>
       </Box>
       <Divider

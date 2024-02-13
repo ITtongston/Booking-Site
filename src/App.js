@@ -102,7 +102,14 @@ const DiscountModal = ({ onClose }) => {
           <ModalTitle>Get 20% discount</ModalTitle>
           <ModalText>
             On all our Admin Hub services (VO, Training +Meeting Room) if booked
-            on or before the <b> 31st of December 2023.</b>
+            on or before the <b> 31st of March 2024.</b>
+          </ModalText>
+          <ModalText>
+            "use the code:{" "}
+            <span style={{ color: "#ff0000" }}>
+              <b> HUB20 </b>{" "}
+            </span>{" "}
+            upon checkout"
           </ModalText>
         </ModalDiv>
       </ModalContent>

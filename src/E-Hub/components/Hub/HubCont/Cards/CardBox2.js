@@ -57,7 +57,7 @@ const Adons = [
 
 const CardBox2 = () => {
   return (
-    <Card sx={{ minWidth: { sm: 250, xs: 200 }, ml: { sm: 6, xs: "0 auto" } }}>
+    <Card sx={{ minWidth: { sm: 300, xs: 200 }, ml: { sm: 6, xs: "0 auto" } }}>
       <CardContent>
         <DashboardCustomizeIcon sx={{ fontSize: 40, ml: 5 }} />
         <Divider sx={{}} variant="middle" flexItem />

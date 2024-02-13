@@ -67,7 +67,7 @@ const CardBox1 = () => {
   return (
     <Card
       sx={{
-        minWidth: { sm: 250, xs: 200 },
+        minWidth: { sm: 300, xs: 200 },
         ml: { sm: 6, xs: "0 auto" },
         my: { sm: "3rem" },
       }}
